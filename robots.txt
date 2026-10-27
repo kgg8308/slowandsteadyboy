@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kgg8308.github.io/slowandsteadyboy/sitemap.xml

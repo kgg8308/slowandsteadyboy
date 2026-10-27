@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slowandsteadyboy</title>
+<meta name="description" content="Slowandsteadyboy — 부산 해운대 4년차 러너의 러닝 기록. 부산 러닝 코스, 대회 후기, 러닝 기어, 영상">
+<link rel="canonical" href="https://kgg8308.github.io/slowandsteadyboy/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slowandsteadyboy">
+<meta property="og:title" content="Slowandsteadyboy">
+<meta property="og:description" content="Slowandsteadyboy — 부산 해운대 4년차 러너의 러닝 기록. 부산 러닝 코스, 대회 후기, 러닝 기어, 영상">
+<meta property="og:url" content="https://kgg8308.github.io/slowandsteadyboy/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=Gothic+A1:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: 육상 트랙 — 레인 줄무늬 구분선, 스플릿 기록판 같은 숫자 지표, 섹션마다 레인 번호(실제 내비 순서) */
+:root{
+  --bg:#F6F4F0; --surface:#FFFFFF; --ink:#16181D; --muted:#686B72; --line:#DEDBD4;
+  --track:#C2452D; --track-ink:#FFFFFF; --lane:#E9E5DD; --dawn:#2B3A55;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111317; --surface:#181B20; --ink:#EDEBE7; --muted:#9A9DA4; --line:#2A2E35;
+  --track:#E5654B; --track-ink:#111317; --lane:#1E2228; --dawn:#9FB3D9; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111317; --surface:#181B20; --ink:#EDEBE7; --muted:#9A9DA4; --line:#2A2E35;
+  --track:#E5654B; --track-ink:#111317; --lane:#1E2228; --dawn:#9FB3D9; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--track);outline-offset:3px}
+.num{font-family:var(--display);font-variant-numeric:tabular-nums}
+.draft{display:inline-block;font-size:11px;font-weight:700;color:var(--track);border:1px dashed var(--track);padding:1px 7px;border-radius:3px;vertical-align:middle}
+
+/* 상단 */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.bar .wrap{height:58px;display:flex;align-items:center;gap:24px}
+.logo{font-family:var(--display);font-weight:800;font-style:italic;font-size:24px;letter-spacing:.01em;text-transform:uppercase;margin-right:auto;display:flex;gap:8px;align-items:center}
+.logo i{width:22px;height:4px;background:var(--track);display:inline-block;transform:skewX(-20deg)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:14px;font-weight:500;color:var(--muted);padding:6px 10px;white-space:nowrap;border-radius:6px}
+.nav a:hover{color:var(--ink);background:var(--lane)}
+@media (max-width:760px){.bar .wrap{height:auto;flex-wrap:wrap;padding-block:10px;row-gap:6px}.nav{width:100%}}
+
+/* 히어로 */
+.hero{border-bottom:1px solid var(--line);background:repeating-linear-gradient(180deg,transparent 0 63px,var(--lane) 63px 64px)}
+.hero .wrap{padding-block:56px 48px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px}}
+.kicker{font-size:13px;font-weight:700;color:var(--track);letter-spacing:.04em}
+.hero h1{font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(64px,13vw,150px);line-height:.86;letter-spacing:-.01em;margin:12px 0 18px}
+.hero h1 span{display:block;color:var(--track)}
+.hero p{max-width:40ch;color:var(--muted);margin:0 0 22px;font-size:16px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font-size:14px;font-weight:700;padding:11px 18px;border-radius:999px;border:1.5px solid var(--ink);display:inline-flex;gap:8px;align-items:center}
+.btn.solid{background:var(--track);border-color:var(--track);color:var(--track-ink)}
+.btn:hover{transform:translateY(-1px)}
+
+.splits{background:var(--ink);color:var(--bg);border-radius:10px;padding:18px 20px;display:grid;gap:2px}
+.splits .lbl{font-size:12px;opacity:.65;letter-spacing:.08em}
+.split{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}
+.split:last-child{border-bottom:0}
+.split span{font-size:13.5px;opacity:.8}
+.split b{font-family:var(--display);font-weight:700;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.split b small{font-size:15px;opacity:.7;margin-left:3px}
+
+/* 섹션 */
+section.s .wrap{padding-block:64px 0}
+.s-head{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:end;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:26px}
+.lane-no{font-family:var(--display);font-weight:800;font-style:italic;font-size:44px;line-height:.8;color:var(--track)}
+.s-head h2{font-size:clamp(22px,3vw,28px);font-weight:800;margin:0;letter-spacing:-.02em}
+.s-head p{grid-column:2;margin:0;color:var(--muted);font-size:14px}
+.s-head .more{grid-row:1;grid-column:3;font-size:13.5px;font-weight:700;border-bottom:1.5px solid var(--ink)}
+@media (max-width:560px){.s-head{grid-template-columns:auto 1fr}.s-head .more{grid-column:1/-1;grid-row:auto;justify-self:start}}
+
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.ph{position:relative;max-width:100%;border-radius:8px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--lane) 0 22px,color-mix(in srgb,var(--lane) 70%,var(--line)) 22px 24px);display:grid;place-items:center;color:var(--muted);font-size:13px}
+.ph .tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:700;background:var(--track);color:var(--track-ink);padding:2px 8px;border-radius:3px}
+.ph .play{width:46px;height:46px;border-radius:50%;background:var(--ink);display:grid;place-items:center;position:relative;z-index:1}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+a.item:hover h3{text-decoration:underline;text-underline-offset:2px}
+.item{display:grid;gap:9px;min-width:0}
+.item h3{font-size:15.5px;font-weight:700;line-height:1.45;margin:0}
+.item .sub{font-size:13px;color:var(--muted)}
+
+/* 코스 */
+.course{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:12px;min-width:0}
+.course svg{width:100%;height:auto;max-width:100%}
+.course .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.course h3{font-size:17px;font-weight:800;margin:0}
+.course .km{font-family:var(--display);font-weight:700;font-size:26px;color:var(--track)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips span{font-size:12px;padding:2px 9px;border-radius:999px;background:var(--lane);color:var(--muted)}
+
+/* 대회 기록 */
+.races{display:grid;border-top:1px solid var(--line)}
+.race{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.race time{font-family:var(--display);font-weight:500;font-size:18px;color:var(--muted)}
+.race h3{font-size:16px;font-weight:700;margin:0}
+.race p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.race .rec{font-family:var(--display);font-weight:800;font-size:30px;font-variant-numeric:tabular-nums}
+.race .rec.pb{color:var(--track)}
+.race .rec small{display:block;font-family:var(--body);font-size:11px;font-weight:700;text-align:right;letter-spacing:.06em}
+@media (max-width:600px){.race{grid-template-columns:1fr auto}.race time{grid-column:1/-1;font-size:15px}}
+
+/* 인스타 */
+.insta{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+@media (max-width:760px){.insta{grid-template-columns:repeat(3,1fr)}}
+.insta .ph{aspect-ratio:1}
+
+/* 협업 */
+.collab{margin-top:72px;background:var(--dawn);color:var(--bg)}
+.collab .wrap{padding-block:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+@media (max-width:760px){.collab .wrap{grid-template-columns:1fr}}
+.collab h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;margin:0 0 10px;letter-spacing:-.02em}
+.collab p{margin:0;opacity:.82;max-width:44ch}
+.collab ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.collab li{display:flex;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid color-mix(in srgb,var(--bg) 25%,transparent);font-size:14.5px}
+.collab li span{opacity:.7}
+footer{font-size:12.5px;color:var(--muted)}
+footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 아웃라인 안내 */
+.outline{margin:48px 0 0;background:var(--surface);border:1px dashed var(--track);border-radius:10px;padding:22px}
+.outline h2{font-size:17px;margin:0 0 12px;font-weight:800}
+.outline table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+.outline th,.outline td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.outline th{font-size:12px;color:var(--muted);font-weight:700}
+.outline td:first-child{font-family:var(--display);font-weight:700;font-size:16px;color:var(--track);white-space:nowrap}
+.scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <a class="logo" href="#top" id="top"><i></i>Slowandsteadyboy</a>
+  <nav class="nav" aria-label="메뉴">
+    <a href="#videos">영상</a><a href="#courses">부산 코스</a><a href="#races">대회 기록</a><a href="#gear">기어</a><a href="#insta">인스타</a><a href="#collab">협업</a>
+  </nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="kicker">부산 해운대 4년차 러너 · 러닝 기록</span>
+    <h1>Slow and<span>Steady Boy</span></h1>
+    <p>동백섬에서 시작한 아침 러닝이 하프 마라톤까지 왔습니다. 부산 러닝 코스, 대회 후기, 직접 신어본 기어를 기록합니다.</p>
+    <div class="cta">
+      <a class="btn solid" href="https://www.youtube.com/channel/UChaaZzKxKoZBqmkXMBugDyg?sub_confirmation=1" target="_blank" rel="noopener">유튜브 구독</a>
+      <a class="btn" href="https://www.instagram.com/slowandsteadyboy/" target="_blank" rel="noopener">@slowandsteadyboy</a>
+    </div>
+  </div>
+  <aside class="splits" aria-label="러닝 기록 요약">
+    <span class="lbl">PERSONAL RECORDS</span>
+    <div class="split"><span>하프 마라톤 · 2026.10</span><b>1:46</b></div>
+    <div class="split"><span>러닝 경력</span><b>4<small>년차</small></b></div>
+    <div class="split"><span>홈 코스</span><b>동백섬</b></div>
+    <div class="split"><span>인스타 팔로워</span><b>3.2<small>K</small></b></div>
+  </aside>
+</div></header>
+
+<section class="s" id="videos"><div class="wrap">
+  <div class="s-head"><span class="lane-no">01</span><h2>최신 영상</h2><p>유튜브에 올리면 6시간 안에 이곳에 자동으로 올라옵니다.</p><a class="more" href="https://www.youtube.com/channel/UChaaZzKxKoZBqmkXMBugDyg/videos" target="_blank" rel="noopener">채널 전체 보기</a></div>
+  <div class="grid">
+  <!-- videos:start -->
+    <div class="item"><div class="ph" style="aspect-ratio:16/9">영상을 불러오는 중</div></div>
+  <!-- videos:end -->
+  </div>
+</div></section>
+
+<section class="s" id="courses"><div class="wrap">
+  <div class="s-head"><span class="lane-no">02</span><h2>부산 러닝 코스</h2><p>직접 뛰어본 코스만. 거리, 노면, 추천 시간대를 정리합니다.</p></div>
+  <div class="grid">
+    <article class="course">
+      <svg viewBox="0 0 200 90" aria-hidden="true"><path d="M30 60 C 30 20, 90 15, 120 30 S 175 70, 140 75 S 40 85, 30 60 Z" fill="none" stroke="var(--track)" stroke-width="4" stroke-linecap="round"/><circle cx="30" cy="60" r="5" fill="var(--ink)"/></svg>
+      <div class="row"><h3>동백섬 순환</h3><span class="km">홈 코스</span></div>
+      <div class="chips"><span>해운대</span><span>바다 뷰</span><span>새벽 추천</span></div>
+    </article>
+    <article class="course">
+      <svg viewBox="0 0 200 90" aria-hidden="true"><path d="M15 70 Q 100 20, 185 55" fill="none" stroke="var(--track)" stroke-width="4" stroke-linecap="round"/><circle cx="15" cy="70" r="5" fill="var(--ink)"/></svg>
+      <div class="row"><h3>해운대 → 광안리</h3><span class="km">장거리</span></div>
+      <div class="chips"><span>해안로</span><span>LSD</span><span>예시</span></div>
+    </article>
+    <article class="course">
+      <svg viewBox="0 0 200 90" aria-hidden="true"><ellipse cx="100" cy="45" rx="75" ry="30" fill="none" stroke="var(--track)" stroke-width="4"/><circle cx="25" cy="45" r="5" fill="var(--ink)"/></svg>
+      <div class="row"><h3>후쿠오카 오호리공원</h3><span class="km">원정</span></div>
+      <div class="chips"><span>여행 러닝</span><span>호수 한 바퀴</span></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="s" id="races"><div class="wrap">
+  <div class="s-head"><span class="lane-no">03</span><h2>대회 · 러닝 이벤트</h2><p>참가한 대회와 러닝 이벤트 기록.</p></div>
+  <div class="races">
+    <div class="race"><time>2026.10</time><div><h3>첫 하프 마라톤</h3><p>평소 5~10km만 뛰다 첫 21.1km 도전. 목표였던 2시간 이내 달성.</p></div><span class="rec pb">1:46<small>PB</small></span></div>
+    <div class="race"><time>2026</time><div><h3>올소울즈런 부산</h3><p>스탠리 협찬, 수나요가·로우앤스윗·BRC와 함께한 러닝 이벤트.</p></div><span class="rec">FUN</span></div>
+    <div class="race"><time>2026</time><div><h3>무신사 런 서울숲</h3><p>서울숲 러닝 이벤트 참가 후기.</p></div><span class="rec">FUN</span></div>
+  </div>
+</div></section>
+
+<section class="s" id="gear"><div class="wrap">
+  <div class="s-head"><span class="lane-no">04</span><h2>러닝 기어 <span class="draft">상품 선정 필요</span></h2><p>직접 신고 입어본 것만. 쿠팡파트너스 링크로 수익 연결.</p></div>
+  <div class="grid">
+    <div class="item"><div class="ph" style="aspect-ratio:4/3"><span class="tag">예시</span>러닝화</div><h3>데일리 러닝화</h3><span class="sub">실착 거리 · 장단점 · 구매 링크</span></div>
+    <div class="item"><div class="ph" style="aspect-ratio:4/3"><span class="tag">예시</span>트레일화</div><h3>트레일 러닝화</h3><span class="sub">동백섬 트레일 촬영용</span></div>
+    <div class="item"><div class="ph" style="aspect-ratio:4/3"><span class="tag">예시</span>액세서리</div><h3>러닝 벨트 · 이어폰 · 워치</h3><span class="sub">카테고리별 추천</span></div>
+  </div>
+</div></section>
+
+<section class="s" id="insta"><div class="wrap">
+  <div class="s-head"><span class="lane-no">05</span><h2>인스타그램 <span class="draft">API 연동 필요</span></h2><p>@slowandsteadyboy 최신 게시물 6개.</p><a class="more" href="https://www.instagram.com/slowandsteadyboy/" target="_blank" rel="noopener">팔로우하기</a></div>
+  <div class="insta"><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+
+  <div class="outline">
+    <h2>초안 아웃라인 — 오늘 저녁 채울 것</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>레인</th><th>섹션</th><th>내용</th><th>데이터 소스</th><th>상태</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td>최신 영상</td><td>최근 영상 6~8개, 사이트 안 재생</td><td>유튜브 RSS (채널 ID 확보)</td><td>바로 가능</td></tr>
+        <tr><td>02</td><td>부산 러닝 코스</td><td>코스별 거리·노면·시간대, 지도</td><td>직접 입력 (코스 목록 필요)</td><td>목록 받기</td></tr>
+        <tr><td>03</td><td>대회 기록</td><td>대회명·날짜·기록·후기 링크</td><td>직접 입력</td><td>초안 3건</td></tr>
+        <tr><td>04</td><td>러닝 기어</td><td>실착 기어 + 쿠팡파트너스 링크</td><td>직접 입력</td><td>상품 선정</td></tr>
+        <tr><td>05</td><td>인스타그램</td><td>최신 게시물 그리드</td><td>Instagram API (프로페셔널 계정 + 토큰)</td><td>세팅 필요</td></tr>
+        <tr><td>06</td><td>협업</td><td>크루·브랜드 협업 문의 창구</td><td>고정 문구</td><td>문구 확인</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div></section>
+
+<section class="collab" id="collab"><div class="wrap">
+  <div><h2>같이 달릴 브랜드와 크루를 찾습니다</h2><p>부산 해운대 기반 러닝 콘텐츠 촬영, 러닝 이벤트, 제품 실착 리뷰 협업을 받습니다. 문의는 인스타그램 DM으로 주세요.</p></div>
+  <ul>
+    <li>함께한 크루<span>Team R&amp;T · BRC</span></li>
+    <li>함께한 브랜드<span>Stanley · 무신사 런</span></li>
+    <li>주 활동 지역<span>해운대 · 동백섬 · 광안리</span></li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Slowandsteadyboy · 부산</span><span>기어 섹션의 쿠팡 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span></div></footer>
+</body>
+</html>
