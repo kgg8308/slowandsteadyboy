@@ -32,10 +32,18 @@ const pick = (xml, tag) => {
   return m ? m[1].trim() : '';
 };
 
+// 깃허브 액션은 UTC 로 도는데 보는 사람은 한국에 있다. 한국 시간으로 고정하지
+// 않으면 밤늦게 올린 영상이 하루 전 날짜로 찍히고, 로컬에서 돌릴 때마다 뒤집힌다.
 const fmtDate = (iso) => {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '';
-  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+  const [y, m, day] = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(d).split('-');
+  return `${y}.${m}.${day}`;
 };
 
 function parseFeed(xml) {
