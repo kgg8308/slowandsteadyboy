@@ -114,9 +114,14 @@ a.item:hover h3{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:600px){.race{grid-template-columns:1fr auto}.race time{grid-column:1/-1;font-size:15px}}
 
 /* 인스타 */
-.insta{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
-@media (max-width:760px){.insta{grid-template-columns:repeat(3,1fr)}}
-.insta .ph{aspect-ratio:1}
+.follow{background:var(--ink);color:var(--bg);border-radius:10px;padding:26px 24px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between}
+.follow .who{display:grid;gap:5px;min-width:0}
+.follow .handle{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,36px);line-height:1;letter-spacing:-.01em}
+.follow .who em{font-style:normal;font-size:13.5px;opacity:.7}
+.follow .n{display:flex;align-items:baseline;gap:8px}
+.follow .n b{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.follow .n b small{font-size:17px;opacity:.7;margin-left:2px}
+.follow .n span{font-size:13px;opacity:.7}
 
 /* 협업 */
 .collab{margin-top:72px;background:var(--dawn);color:var(--bg)}
@@ -269,8 +274,15 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 </div></section>
 
 <section class="s" id="insta"><div class="wrap">
-  <div class="s-head"><span class="lane-no">05</span><h2>인스타그램 <span class="draft">API 연동 필요</span></h2><p>@slowandsteadyboy 최신 게시물 6개.</p><a class="more" href="https://www.instagram.com/slowandsteadyboy/" target="_blank" rel="noopener">팔로우하기</a></div>
-  <div class="insta"><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+  <div class="s-head"><span class="lane-no">05</span><h2>인스타그램</h2><p>러닝 일상과 코스 사진은 인스타에 올립니다.</p></div>
+  <div class="follow">
+    <div class="who">
+      <span class="handle">@slowandsteadyboy</span>
+      <em>부산 해운대 · 러닝 기록과 일상</em>
+    </div>
+    <div class="n"><b>3.2<small>K</small></b><span>팔로워</span></div>
+    <a class="btn solid" href="https://www.instagram.com/slowandsteadyboy/" target="_blank" rel="noopener">인스타에서 보기</a>
+  </div>
 
   <div class="outline">
     <h2>초안 아웃라인 — 오늘 저녁 채울 것</h2>
@@ -281,7 +293,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
         <tr><td>02</td><td>부산 러닝 코스</td><td>코스별 거리·노면·시간대, 지도</td><td>직접 입력 (코스 목록 필요)</td><td>목록 받기</td></tr>
         <tr><td>03</td><td>대회 기록</td><td>대회명·날짜·기록·후기 링크</td><td>직접 입력</td><td>초안 3건</td></tr>
         <tr><td>04</td><td>러닝 기어</td><td>실착 기어 + 쿠팡파트너스 링크</td><td>직접 입력</td><td>상품 선정</td></tr>
-        <tr><td>05</td><td>인스타그램</td><td>최신 게시물 그리드</td><td>Instagram API (프로페셔널 계정 + 토큰)</td><td>세팅 필요</td></tr>
+        <tr><td>05</td><td>인스타그램</td><td>팔로우 카드</td><td>고정 링크 (API 안 씀)</td><td>정리 완료</td></tr>
         <tr><td>06</td><td>협업</td><td>크루·브랜드 협업 문의 창구</td><td>고정 문구</td><td>문구 확인</td></tr>
       </tbody>
     </table></div>
