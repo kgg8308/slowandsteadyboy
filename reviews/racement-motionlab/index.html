@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>레이스먼트 해운대점 모션랩 후기 — 왼쪽 무릎이 아팠던 이유 | Slowandsteadyboy</title>
+<meta name="description" content="레이스먼트 해운대점 모션랩 러닝자세 분석 후기. 3'30&quot; 페이스로 1분 달리고 골반·무릎·발 정렬을 측정, 왼쪽 무릎 내전과 왼발 회내의 연결고리, 처방 보강운동, 3D 발 스캔과 러닝화 사이즈까지.">
+<link rel="canonical" href="https://kgg8308.github.io/slowandsteadyboy/reviews/racement-motionlab/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Slowandsteadyboy">
+<meta property="og:title" content="레이스먼트 모션랩 후기 — 왼쪽 무릎이 아팠던 이유">
+<meta property="og:description" content="3'30&quot; 페이스 1분 측정으로 찾은 왼쪽 무릎 내전과 왼발 회내, 처방 보강운동, 발 스캔 결과까지.">
+<meta property="og:url" content="https://kgg8308.github.io/slowandsteadyboy/reviews/racement-motionlab/">
+<meta property="og:image" content="https://kgg8308.github.io/slowandsteadyboy/reviews/racement-motionlab/01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=Gothic+A1:wght@400;500;700;800&display=swap">
+<style>
+:root{
+  --bg:#F6F4F0; --surface:#FFFFFF; --ink:#16181D; --muted:#686B72; --line:#DEDBD4;
+  --track:#C2452D; --track-ink:#FFFFFF; --lane:#E9E5DD; --dawn:#2B3A55;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111317; --surface:#181B20; --ink:#EDEBE7; --muted:#9A9DA4; --line:#2A2E35;
+  --track:#E5654B; --track-ink:#111317; --lane:#1E2228; --dawn:#9FB3D9; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111317; --surface:#181B20; --ink:#EDEBE7; --muted:#9A9DA4; --line:#2A2E35;
+  --track:#E5654B; --track-ink:#111317; --lane:#1E2228; --dawn:#9FB3D9; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--track);outline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.bar .wrap{max-width:1140px;height:58px;display:flex;align-items:center;gap:16px}
+.logo{font-family:var(--display);font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase;text-decoration:none;margin-right:auto;display:flex;gap:8px;align-items:center}
+.logo i{width:22px;height:4px;background:var(--track);display:inline-block;transform:skewX(-20deg)}
+.back{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);white-space:nowrap}
+.back:hover{color:var(--ink)}
+
+.head{padding-block:40px 8px}
+.kicker{font-size:13px;font-weight:700;color:var(--track);letter-spacing:.04em}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.25;font-weight:800;letter-spacing:-.02em;margin:10px 0 14px}
+.lead{color:var(--muted);margin:0 0 20px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--ink);color:var(--bg);border-radius:10px;padding:14px 18px}
+.facts div{display:grid;padding:8px 0}
+.facts span{font-size:12px;opacity:.65;letter-spacing:.04em}
+.facts b{font-family:var(--display);font-weight:700;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts b small{font-family:var(--body);font-size:13px;font-weight:700;opacity:.75}
+
+/* 슬라이드 넘겨보기 */
+.slides{margin:28px 0 8px}
+.slides .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.slides figure{flex:0 0 min(78%,360px);margin:0;scroll-snap-align:start}
+.slides img{width:100%;height:auto;aspect-ratio:4/5;display:block;border-radius:8px;background:var(--lane)}
+.slides figcaption,.cap{font-size:12.5px;color:var(--muted);margin-top:6px}
+.hint{font-size:13px;color:var(--muted)}
+
+article h2{font-size:21px;font-weight:800;letter-spacing:-.02em;margin:44px 0 10px;padding-top:14px;border-top:2px solid var(--ink);display:flex;gap:12px;align-items:baseline}
+article h2 .no{font-family:var(--display);font-style:italic;font-weight:800;font-size:28px;color:var(--track);line-height:1}
+article p{margin:0 0 14px}
+article figure{margin:18px 0 6px}
+article figure img,article figure video{width:100%;max-width:420px;height:auto;display:block;border-radius:8px;background:var(--lane)}
+article figure img{aspect-ratio:4/5}
+article figure video{aspect-ratio:9/16;max-width:320px}
+ul.info,ol.ex{margin:0 0 14px;padding-left:1.2em}
+ul.info li,ol.ex li{margin:2px 0}
+.chain{display:grid;gap:6px;margin:6px 0 16px;max-width:420px}
+.chain div{background:var(--surface);border:1.5px solid var(--track);border-radius:8px;padding:8px 14px;font-weight:700}
+.chain i{font-style:normal;text-align:center;color:var(--track);line-height:1}
+.note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--track);border-radius:8px;padding:14px 16px;margin:18px 0}
+.note b{display:block;font-size:12px;letter-spacing:.06em;color:var(--track);margin-bottom:4px}
+.end{margin:40px 0 0;padding:20px;border-radius:10px;background:var(--dawn);color:var(--bg)}
+.end h2{border:0;margin:0 0 6px;padding:0;font-size:19px}
+.end p{margin:0;opacity:.88}
+.disc{font-size:13px;color:var(--muted);margin-top:22px}
+.next{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 0}
+.btn{font-size:14px;font-weight:700;padding:11px 18px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;display:inline-flex}
+.btn.solid{background:var(--track);border-color:var(--track);color:var(--track-ink)}
+footer{font-size:12.5px;color:var(--muted)}
+footer .wrap{padding-block:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <a class="logo" href="../../"><i></i>Slowandsteadyboy</a>
+  <a class="back" href="../../#reviews">← 리뷰 목록</a>
+</div></div>
+
+<main class="wrap">
+<header class="head">
+  <span class="kicker">EVENT · RUNNING LAB · 2026.11</span>
+  <h1>레이스먼트 해운대점 모션랩 후기<br>왼쪽 무릎이 아팠던 이유</h1>
+  <p class="lead">한때 왼쪽 무릎 때문에 달리기를 그만둘까 고민했다. 러닝 자세를 숫자로 재 보니, 원인과 해야 할 운동이 한 번에 보였다.</p>
+  <div class="facts" aria-label="측정 요약">
+    <div><span>측정 페이스</span><b>3'30"<small> /km · 1분</small></b></div>
+    <div><span>왼쪽 무릎</span><b>-4.33°<small> 내전</small></b></div>
+    <div><span>왼발</span><b>-6.31°<small> 회내</small></b></div>
+    <div><span>러닝화 사이즈</span><b>270→285</b></div>
+  </div>
+</header>
+
+<section class="slides" aria-label="리뷰 슬라이드">
+  <div class="rail">
+    <figure><img src="01.jpg" alt="인트로: 왼쪽 무릎이 아팠던 이유, 레이스먼트 해운대점 모션랩" loading="lazy"></figure>
+    <figure><img src="02.jpg" alt="해운대점 모션랩 공간, 트레드밀과 분석 모니터" loading="lazy"></figure>
+    <figure><img src="03.jpg" alt="3분 30초 페이스로 1분 달리며 후면 영상 측정" loading="lazy"></figure>
+    <figure><img src="04.jpg" alt="골반 분석: 좌 1.02도 83점, 우 0.85도 86점" loading="lazy"></figure>
+    <figure><img src="05.jpg" alt="무릎 분석: 좌 -4.33도 44점 경미한 내전, 우 -2.57도 71점 정렬" loading="lazy"></figure>
+    <figure><img src="06.jpg" alt="발 분석: 좌 -6.31도 58점 회내전, 우 -4.37도 71점 중립" loading="lazy"></figure>
+    <figure><img src="07.jpg" alt="원인 사슬: 왼발 회내에서 정강이 회전, 왼무릎 내전으로" loading="lazy"></figure>
+    <figure><img src="08.jpg" alt="처방받은 왼쪽 무릎 보강운동 4종" loading="lazy"></figure>
+    <figure><img src="09.jpg" alt="3D 발 스캔: 발 길이 L 270, R 267mm, 발등·아치 높음" loading="lazy"></figure>
+    <figure><img src="10.jpg" alt="러닝화 사이즈 270에서 285로" loading="lazy"></figure>
+    <figure><img src="11.jpg" alt="마무리: 측정비 3만원은 신발 구매 시 차감" loading="lazy"></figure>
+  </div>
+  <p class="hint">옆으로 넘겨서 11장 전체를 볼 수 있어요.</p>
+</section>
+
+<article>
+  <h2><span class="no">00</span>모션랩 정보</h2>
+  <ul class="info">
+    <li>장소: 레이스먼트 해운대점 RACEMENT RUNNING LAB</li>
+    <li>비용: 30,000원 (예약제) — 신발 구매 시 3만원 차감</li>
+    <li>측정: 트레드밀 1분 주행, 후면 영상으로 골반·무릎·발 정렬 분석 + 3D 발 스캔</li>
+    <li>결과: 부위별 각도·점수 + 맞춤 보강운동 영상</li>
+  </ul>
+
+  <h2><span class="no">01</span>매장 안의 작은 연구실</h2>
+  <p>레이스먼트 해운대점 매장 안쪽, 유리 부스로 된 공간이 모션랩이다. 트레드밀 한 대와 분석 결과를 띄우는 모니터가 있고, 달리는 뒷모습을 촬영해 바로 분석한다.</p>
+  <figure><video src="lab.mp4" poster="lab-poster.jpg" controls playsinline preload="metadata" aria-label="레이스먼트 해운대점 매장과 모션랩 공간 영상"></video></figure>
+
+  <h2><span class="no">02</span>왜 3분 30초 페이스였나</h2>
+  <p>평소 5분~5분 30초 페이스로 달린다고 하니, 평소보다 빠르게 달려야 유의미한 값이 나온다고 했다. 편하게 뛸 땐 자세가 덜 흐트러지고, 속도가 붙어야 약점이 정직하게 드러난다는 것. 그래서 330 페이스로 1분을 달리고 측정했다.</p>
+  <figure><img src="03.jpg" alt="3분 30초 페이스 측정 화면" loading="lazy"></figure>
+
+  <h2><span class="no">03</span>골반: 합격</h2>
+  <p>왼쪽 1.02°(83점), 오른쪽 0.85°(86점). 둘 다 정렬 구간 안이라 좌우 높이가 고르게 유지되고 있었다. 골반이 버텨준다는 건 엉덩이 쪽 기본 안정성은 갖춰졌다는 뜻이다.</p>
+  <figure><img src="04.jpg" alt="골반 분석 결과" loading="lazy"></figure>
+
+  <h2><span class="no">04</span>무릎: 왼쪽만 안으로 들어온다</h2>
+  <p>오른쪽 무릎은 -2.57°로 정렬(71점). 왼쪽은 -4.33°로 '경미한 내전'(44점)이 나왔다. 착지 때 왼쪽 무릎이 안쪽으로 모인다는 뜻이다.</p>
+  <p>한때 왼쪽 무릎이 안 좋아서 달리기를 그만둘까 고민했던 적이 있다. 이 수치 하나로 원인을 단정할 수는 없지만, 내가 느꼈던 불편과 같은 쪽에서 같은 방향의 문제가 보였다는 게 꽤 납득이 됐다.</p>
+  <figure><img src="05.jpg" alt="무릎 분석 결과" loading="lazy"></figure>
+
+  <h2><span class="no">05</span>발: 왼발이 안쪽으로 무너진다</h2>
+  <p>오른발은 -4.37°로 중립(71점), 왼발은 -6.31°로 회내전(58점). 착지할 때 발이 안쪽으로 주저앉는 패턴이다. 계속되면 정강이 통증, 족저근막염, 아킬레스건염, 무릎 통증으로 이어질 수 있다고 해서 발 고유감각 훈련을 권장받았다.</p>
+  <figure><img src="06.jpg" alt="발 분석 결과" loading="lazy"></figure>
+
+  <h2><span class="no">06</span>코치처럼 정리하면: 발에서 무릎으로</h2>
+  <div class="chain" aria-label="왼쪽 하체 정렬 사슬">
+    <div>왼발 회내전 -6.31°</div><i aria-hidden="true">↓</i>
+    <div>정강이가 안쪽으로 회전</div><i aria-hidden="true">↓</i>
+    <div>왼무릎 내전 -4.33°</div>
+  </div>
+  <p>오른쪽은 발이 중립이니 무릎도 정렬. 결국 왼쪽 하체가 한 세트로 무너지는 구조라, 무릎만이 아니라 발과 엉덩이까지 같이 잡아야 한다.</p>
+  <figure><img src="07.jpg" alt="원인 사슬 정리" loading="lazy"></figure>
+
+  <h2><span class="no">07</span>처방받은 왼쪽 무릎 보강운동</h2>
+  <ol class="ex">
+    <li>볼 니 플렉션·익스텐션 — 3세트 × 10~15회</li>
+    <li>측면 스텝업 후 한 발 균형 — 3세트 × 6~10회</li>
+    <li>펜듈럼 한 발 균형잡기 — 3세트 × 6~12회</li>
+    <li>포워드 런지 — 3세트 × 6~10회</li>
+  </ol>
+  <p>분석 결과에서는 내전근·둔근·대퇴사두근 강화를 권했다.</p>
+  <div class="note"><b>ON THE RUN</b>달릴 때는 무릎이 두 번째 발가락 방향을 향하도록 의식하는 것부터 시작하려 한다.</div>
+  <figure><img src="08.jpg" alt="보강운동 4종" loading="lazy"></figure>
+
+  <h2><span class="no">08</span>발 스캔: 길이보다 높이가 문제</h2>
+  <p>스캔 결과 발 길이는 왼발 270mm, 오른발 267mm로 왼발이 3mm 더 컸다. 너비는 평균, 발등 높이와 아치는 '높음'. 길이만 보면 정사이즈 그대로지만, 발등이 높으면 신발이 위에서 누르기 쉽고 오래 달리면 발이 붓기 때문에 여유를 둬야 한다는 해석이다.</p>
+  <figure><img src="09.jpg" alt="3D 발 스캔 결과" loading="lazy"></figure>
+
+  <h2><span class="no">09</span>러닝화 사이즈: 270 → 285</h2>
+  <p>내 정사이즈는 270이라 러닝화도 같은 사이즈나 반 업으로 신어왔다. 그런데 측정 결과 러닝화는 285를 신어야 한다는 이야기를 들었고, 그대로 써코니 아주라를 구매했다. 신발 리뷰는 다음 편에 따로 올릴 예정.</p>
+  <figure><img src="10.jpg" alt="러닝화 사이즈 정리" loading="lazy"></figure>
+
+  <div class="end">
+    <h2>한 줄 정리</h2>
+    <p>막연히 '왼쪽 무릎이 안 좋다'였던 게, 숫자와 원인과 해야 할 운동으로 바뀌었다. 측정비 3만원은 신발을 사면 그대로 차감되니, 러닝화 살 계획이 있다면 사실상 무료. 신발 사기 전에 꼭 먼저 받아보길 권한다.</p>
+  </div>
+  <p class="disc">※ 측정 결과는 매장 분석 기준이며 의학적 진단이 아닙니다. 통증이 계속되면 전문의 상담을 권합니다.</p>
+
+  <div class="next">
+    <a class="btn solid" href="https://www.instagram.com/slowandsteadyboy/" target="_blank" rel="noopener">인스타그램 @slowandsteadyboy</a>
+    <a class="btn" href="../../#reviews">다른 러닝 리뷰 보기</a>
+  </div>
+</article>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Slowandsteadyboy · 부산</span><span>직접 측정받고 남긴 후기입니다.</span></div></footer>
+</body>
+</html>
