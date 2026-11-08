@@ -1,18 +1,18 @@
 {
- "updated": "2026-11-08T12:35:21.761Z",
+ "updated": "2026-11-08T14:22:11.718Z",
  "month": {
   "key": "2026-11",
-  "km": 0,
-  "runs": 0
+  "km": 21.2,
+  "runs": 3
  },
  "year": {
   "key": "2026",
-  "km": 180.9,
-  "runs": 34
+  "km": 765.1,
+  "runs": 129
  },
  "longest": {
-  "date": "2025-11-15",
-  "km": 15.37
+  "date": "2026-10-17",
+  "km": 21.32
  },
  "monthly": [
   {
@@ -22,132 +22,897 @@
   },
   {
    "month": "2026-01",
-   "km": 36.8,
-   "runs": 7
-  },
-  {
-   "month": "2026-02",
-   "km": 30.8,
-   "runs": 6
-  },
-  {
-   "month": "2026-03",
-   "km": 20.8,
-   "runs": 5
-  },
-  {
-   "month": "2026-04",
-   "km": 49.3,
+   "km": 44.2,
    "runs": 8
   },
   {
+   "month": "2026-02",
+   "km": 43.1,
+   "runs": 7
+  },
+  {
+   "month": "2026-03",
+   "km": 40.7,
+   "runs": 8
+  },
+  {
+   "month": "2026-04",
+   "km": 64,
+   "runs": 9
+  },
+  {
    "month": "2026-05",
-   "km": 36.9,
-   "runs": 6
+   "km": 54.7,
+   "runs": 10
   },
   {
    "month": "2026-06",
-   "km": 6.3,
-   "runs": 2
+   "km": 63.2,
+   "runs": 12
   },
   {
    "month": "2026-07",
-   "km": 0,
-   "runs": 0
+   "km": 85.4,
+   "runs": 14
   },
   {
    "month": "2026-08",
-   "km": 0,
-   "runs": 0
+   "km": 104,
+   "runs": 18
   },
   {
    "month": "2026-09",
-   "km": 0,
-   "runs": 0
+   "km": 138.3,
+   "runs": 22
   },
   {
    "month": "2026-10",
-   "km": 0,
-   "runs": 0
+   "km": 106.3,
+   "runs": 18
   },
   {
    "month": "2026-11",
-   "km": 0,
-   "runs": 0
+   "km": 21.2,
+   "runs": 3
   }
  ],
  "recent": [
   {
-   "id": "23085545792",
-   "date": "2026-06-01",
+   "id": "s20835168505",
+   "date": "2026-11-03",
    "type": "running",
-   "distance": 887,
-   "moving": 290,
-   "hr": 140,
-   "elev": 1
-  },
-  {
-   "id": "23085545744",
-   "date": "2026-06-01",
-   "type": "running",
-   "distance": 5441,
-   "moving": 1694,
-   "hr": 138,
-   "elev": 26
-  },
-  {
-   "id": "23073187163",
-   "date": "2026-05-31",
-   "type": "running",
-   "distance": 7328,
-   "moving": 2391,
-   "hr": 142,
-   "elev": 52
-  },
-  {
-   "id": "22923701239",
-   "date": "2026-05-18",
-   "type": "running",
-   "distance": 4671,
-   "moving": 2087,
-   "hr": 121,
-   "elev": 23
-  },
-  {
-   "id": "22918590936",
-   "date": "2026-05-18",
-   "type": "running",
-   "distance": 5201,
-   "moving": 1799,
-   "hr": 132,
-   "elev": 11
-  },
-  {
-   "id": "22918590845",
-   "date": "2026-05-13",
-   "type": "running",
-   "distance": 5006,
-   "moving": 1698,
+   "distance": 6450,
+   "moving": 2233,
    "hr": 135,
-   "elev": 31
+   "elev": 36
+  },
+  {
+   "id": "s20828871127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 8778,
+   "moving": 3672,
+   "hr": 125,
+   "elev": 74
+  },
+  {
+   "id": "s20823535127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 5958,
+   "moving": 2199,
+   "hr": 131,
+   "elev": 81
+  },
+  {
+   "id": "s20796989022",
+   "date": "2026-10-31",
+   "type": "running",
+   "distance": 5494,
+   "moving": 2717,
+   "hr": null,
+   "elev": 110
+  },
+  {
+   "id": "s20771790008",
+   "date": "2026-10-28",
+   "type": "running",
+   "distance": 5464,
+   "moving": 1808,
+   "hr": 150,
+   "elev": 72
+  },
+  {
+   "id": "s20743873024",
+   "date": "2026-10-27",
+   "type": "running",
+   "distance": 4145,
+   "moving": 1552,
+   "hr": 141,
+   "elev": 50
   }
  ],
  "runs": [
   {
-   "id": "23085545792",
-   "date": "2026-06-01",
+   "id": "s20835168505",
+   "date": "2026-11-03",
    "type": "running",
-   "distance": 887,
-   "moving": 290,
-   "hr": 140,
-   "elev": 1
+   "distance": 6450,
+   "moving": 2233,
+   "hr": 135,
+   "elev": 36
   },
   {
-   "id": "23085545744",
+   "id": "s20828871127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 8778,
+   "moving": 3672,
+   "hr": 125,
+   "elev": 74
+  },
+  {
+   "id": "s20823535127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 5958,
+   "moving": 2199,
+   "hr": 131,
+   "elev": 81
+  },
+  {
+   "id": "s20796989022",
+   "date": "2026-10-31",
+   "type": "running",
+   "distance": 5494,
+   "moving": 2717,
+   "hr": null,
+   "elev": 110
+  },
+  {
+   "id": "s20771790008",
+   "date": "2026-10-28",
+   "type": "running",
+   "distance": 5464,
+   "moving": 1808,
+   "hr": 150,
+   "elev": 72
+  },
+  {
+   "id": "s20743873024",
+   "date": "2026-10-27",
+   "type": "running",
+   "distance": 4145,
+   "moving": 1552,
+   "hr": 141,
+   "elev": 50
+  },
+  {
+   "id": "s20732012838",
+   "date": "2026-10-26",
+   "type": "running",
+   "distance": 5206,
+   "moving": 2036,
+   "hr": 126,
+   "elev": 90
+  },
+  {
+   "id": "s20693759090",
+   "date": "2026-10-23",
+   "type": "running",
+   "distance": 3990,
+   "moving": 2351,
+   "hr": 142,
+   "elev": 132
+  },
+  {
+   "id": "s20686639135",
+   "date": "2026-10-22",
+   "type": "running",
+   "distance": 6330,
+   "moving": 2288,
+   "hr": 147,
+   "elev": 174
+  },
+  {
+   "id": "s20674017740",
+   "date": "2026-10-21",
+   "type": "running",
+   "distance": 5493,
+   "moving": 1928,
+   "hr": 131,
+   "elev": 83
+  },
+  {
+   "id": "s20646504541",
+   "date": "2026-10-19",
+   "type": "running",
+   "distance": 4867,
+   "moving": 1830,
+   "hr": 163,
+   "elev": 131
+  },
+  {
+   "id": "s20615778814",
+   "date": "2026-10-17",
+   "type": "running",
+   "distance": 21320,
+   "moving": 6401,
+   "hr": 166,
+   "elev": 50
+  },
+  {
+   "id": "s20601626003",
+   "date": "2026-10-16",
+   "type": "running",
+   "distance": 1065,
+   "moving": 357,
+   "hr": 169,
+   "elev": 4
+  },
+  {
+   "id": "s20601232452",
+   "date": "2026-10-16",
+   "type": "running",
+   "distance": 3204,
+   "moving": 1200,
+   "hr": 159,
+   "elev": 24
+  },
+  {
+   "id": "s20595334557",
+   "date": "2026-10-15",
+   "type": "running",
+   "distance": 1552,
+   "moving": 1385,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s20582372094",
+   "date": "2026-10-14",
+   "type": "running",
+   "distance": 5550,
+   "moving": 1771,
+   "hr": 152,
+   "elev": 81
+  },
+  {
+   "id": "s20553337588",
+   "date": "2026-10-12",
+   "type": "running",
+   "distance": 11071,
+   "moving": 4714,
+   "hr": null,
+   "elev": 59
+  },
+  {
+   "id": "s20521522522",
+   "date": "2026-10-10",
+   "type": "running",
+   "distance": 5321,
+   "moving": 1720,
+   "hr": null,
+   "elev": 4
+  },
+  {
+   "id": "s20474464358",
+   "date": "2026-10-05",
+   "type": "running",
+   "distance": 6316,
+   "moving": 2409,
+   "hr": 134,
+   "elev": 36
+  },
+  {
+   "id": "s20454336660",
+   "date": "2026-10-05",
+   "type": "running",
+   "distance": 6091,
+   "moving": 1962,
+   "hr": null,
+   "elev": 13
+  },
+  {
+   "id": "s20440655261",
+   "date": "2026-10-04",
+   "type": "running",
+   "distance": 3823,
+   "moving": 2033,
+   "hr": 154,
+   "elev": 14
+  },
+  {
+   "id": "s20391930180",
+   "date": "2026-09-30",
+   "type": "running",
+   "distance": 4688,
+   "moving": 1845,
+   "hr": 137,
+   "elev": 23
+  },
+  {
+   "id": "s20384734344",
+   "date": "2026-09-28",
+   "type": "running",
+   "distance": 5145,
+   "moving": 1939,
+   "hr": 150,
+   "elev": 33
+  },
+  {
+   "id": "s20350667018",
+   "date": "2026-09-27",
+   "type": "running",
+   "distance": 8027,
+   "moving": 3412,
+   "hr": 126,
+   "elev": 61
+  },
+  {
+   "id": "s20342925001",
+   "date": "2026-09-27",
+   "type": "running",
+   "distance": 5118,
+   "moving": 1488,
+   "hr": 155,
+   "elev": 51
+  },
+  {
+   "id": "s20273537325",
+   "date": "2026-09-22",
+   "type": "running",
+   "distance": 1324,
+   "moving": 711,
+   "hr": 119,
+   "elev": 13
+  },
+  {
+   "id": "s20268694973",
+   "date": "2026-09-21",
+   "type": "running",
+   "distance": 10573,
+   "moving": 3416,
+   "hr": 152,
+   "elev": 131
+  },
+  {
+   "id": "s20255164709",
+   "date": "2026-09-20",
+   "type": "running",
+   "distance": 5440,
+   "moving": 1869,
+   "hr": null,
+   "elev": 14
+  },
+  {
+   "id": "s20213024060",
+   "date": "2026-09-17",
+   "type": "running",
+   "distance": 8737,
+   "moving": 3448,
+   "hr": null,
+   "elev": 41
+  },
+  {
+   "id": "s20198550646",
+   "date": "2026-09-16",
+   "type": "running",
+   "distance": 4661,
+   "moving": 1666,
+   "hr": null,
+   "elev": 29
+  },
+  {
+   "id": "s20192711670",
+   "date": "2026-09-16",
+   "type": "running",
+   "distance": 5211,
+   "moving": 1713,
+   "hr": 135,
+   "elev": 65
+  },
+  {
+   "id": "s20170745751",
+   "date": "2026-09-14",
+   "type": "running",
+   "distance": 6029,
+   "moving": 2279,
+   "hr": 149,
+   "elev": 37
+  },
+  {
+   "id": "s20135725645",
+   "date": "2026-09-12",
+   "type": "running",
+   "distance": 5303,
+   "moving": 1914,
+   "hr": null,
+   "elev": 4
+  },
+  {
+   "id": "s20118618031",
+   "date": "2026-09-10",
+   "type": "running",
+   "distance": 9742,
+   "moving": 3853,
+   "hr": 129,
+   "elev": 98
+  },
+  {
+   "id": "s20081045747",
+   "date": "2026-09-08",
+   "type": "running",
+   "distance": 4005,
+   "moving": 1569,
+   "hr": 138,
+   "elev": 10
+  },
+  {
+   "id": "s20067708348",
+   "date": "2026-09-07",
+   "type": "running",
+   "distance": 4165,
+   "moving": 1759,
+   "hr": 143,
+   "elev": 120
+  },
+  {
+   "id": "s20061311386",
+   "date": "2026-09-06",
+   "type": "running",
+   "distance": 5225,
+   "moving": 1782,
+   "hr": 135,
+   "elev": 72
+  },
+  {
+   "id": "s20061311964",
+   "date": "2026-09-05",
+   "type": "running",
+   "distance": 7637,
+   "moving": 3300,
+   "hr": 134,
+   "elev": 176
+  },
+  {
+   "id": "s20034640251",
+   "date": "2026-09-04",
+   "type": "running",
+   "distance": 12748,
+   "moving": 5313,
+   "hr": 137,
+   "elev": 267
+  },
+  {
+   "id": "s20026040260",
+   "date": "2026-09-04",
+   "type": "running",
+   "distance": 4474,
+   "moving": 1929,
+   "hr": 134,
+   "elev": 69
+  },
+  {
+   "id": "s20025237134",
+   "date": "2026-09-03",
+   "type": "running",
+   "distance": 7248,
+   "moving": 2567,
+   "hr": 136,
+   "elev": 58
+  },
+  {
+   "id": "s20011193312",
+   "date": "2026-09-02",
+   "type": "running",
+   "distance": 5582,
+   "moving": 1891,
+   "hr": 139,
+   "elev": 80
+  },
+  {
+   "id": "s19997261601",
+   "date": "2026-09-02",
+   "type": "running",
+   "distance": 7267,
+   "moving": 3939,
+   "hr": 101,
+   "elev": 149
+  },
+  {
+   "id": "s19981940758",
+   "date": "2026-08-30",
+   "type": "running",
+   "distance": 6902,
+   "moving": 2636,
+   "hr": 136,
+   "elev": 45
+  },
+  {
+   "id": "s19949043125",
+   "date": "2026-08-29",
+   "type": "running",
+   "distance": 2718,
+   "moving": 1709,
+   "hr": 142,
+   "elev": null
+  },
+  {
+   "id": "s19942704453",
+   "date": "2026-08-29",
+   "type": "running",
+   "distance": 4712,
+   "moving": 1813,
+   "hr": 158,
+   "elev": 63
+  },
+  {
+   "id": "s19937093753",
+   "date": "2026-08-28",
+   "type": "running",
+   "distance": 1522,
+   "moving": 684,
+   "hr": 117,
+   "elev": 19
+  },
+  {
+   "id": "s19937093838",
+   "date": "2026-08-28",
+   "type": "running",
+   "distance": 5117,
+   "moving": 2188,
+   "hr": 139,
+   "elev": 86
+  },
+  {
+   "id": "s19909753493",
+   "date": "2026-08-26",
+   "type": "running",
+   "distance": 4954,
+   "moving": 2052,
+   "hr": 130,
+   "elev": 91
+  },
+  {
+   "id": "s19894519146",
+   "date": "2026-08-25",
+   "type": "running",
+   "distance": 11941,
+   "moving": 6302,
+   "hr": 124,
+   "elev": 70
+  },
+  {
+   "id": "s19871265297",
+   "date": "2026-08-23",
+   "type": "running",
+   "distance": 5812,
+   "moving": 2293,
+   "hr": 143,
+   "elev": 68
+  },
+  {
+   "id": "s19857081952",
+   "date": "2026-08-22",
+   "type": "running",
+   "distance": 6568,
+   "moving": 2960,
+   "hr": 122,
+   "elev": 72
+  },
+  {
+   "id": "s19829055694",
+   "date": "2026-08-21",
+   "type": "running",
+   "distance": 3990,
+   "moving": 1471,
+   "hr": 132,
+   "elev": 59
+  },
+  {
+   "id": "s19809717634",
+   "date": "2026-08-19",
+   "type": "running",
+   "distance": 5374,
+   "moving": 1866,
+   "hr": 152,
+   "elev": 87
+  },
+  {
+   "id": "s19788910104",
+   "date": "2026-08-18",
+   "type": "running",
+   "distance": 4838,
+   "moving": 1908,
+   "hr": 132,
+   "elev": 41
+  },
+  {
+   "id": "s19744985206",
+   "date": "2026-08-15",
+   "type": "running",
+   "distance": 8158,
+   "moving": 3245,
+   "hr": 132,
+   "elev": 68
+  },
+  {
+   "id": "s19703670772",
+   "date": "2026-08-12",
+   "type": "running",
+   "distance": 6144,
+   "moving": 2798,
+   "hr": 139,
+   "elev": 55
+  },
+  {
+   "id": "s19677507645",
+   "date": "2026-08-10",
+   "type": "running",
+   "distance": 5927,
+   "moving": 3995,
+   "hr": 124,
+   "elev": 111
+  },
+  {
+   "id": "s19646511977",
+   "date": "2026-08-08",
+   "type": "running",
+   "distance": 5723,
+   "moving": 1972,
+   "hr": 136,
+   "elev": 61
+  },
+  {
+   "id": "s19611715978",
+   "date": "2026-08-05",
+   "type": "running",
+   "distance": 6410,
+   "moving": 2306,
+   "hr": 147,
+   "elev": 121
+  },
+  {
+   "id": "s19548386165",
+   "date": "2026-08-01",
+   "type": "running",
+   "distance": 7160,
+   "moving": 2917,
+   "hr": 136,
+   "elev": 211
+  },
+  {
+   "id": "s19543404819",
+   "date": "2026-07-31",
+   "type": "running",
+   "distance": 5100,
+   "moving": 2000,
+   "hr": 166,
+   "elev": 147
+  },
+  {
+   "id": "s19528782052",
+   "date": "2026-07-30",
+   "type": "running",
+   "distance": 6607,
+   "moving": 2239,
+   "hr": 140,
+   "elev": 155
+  },
+  {
+   "id": "s19514137502",
+   "date": "2026-07-29",
+   "type": "running",
+   "distance": 5429,
+   "moving": 1873,
+   "hr": 147,
+   "elev": 71
+  },
+  {
+   "id": "s19479390719",
+   "date": "2026-07-27",
+   "type": "running",
+   "distance": 4498,
+   "moving": 2496,
+   "hr": 134,
+   "elev": 125
+  },
+  {
+   "id": "s19466290572",
+   "date": "2026-07-26",
+   "type": "running",
+   "distance": 5522,
+   "moving": 2206,
+   "hr": 142,
+   "elev": 91
+  },
+  {
+   "id": "s19451527033",
+   "date": "2026-07-25",
+   "type": "running",
+   "distance": 5925,
+   "moving": 2122,
+   "hr": 148,
+   "elev": 81
+  },
+  {
+   "id": "s19416582149",
+   "date": "2026-07-22",
+   "type": "running",
+   "distance": 5480,
+   "moving": 1854,
+   "hr": 148,
+   "elev": 94
+  },
+  {
+   "id": "s19355375414",
+   "date": "2026-07-18",
+   "type": "running",
+   "distance": 5372,
+   "moving": 2035,
+   "hr": 150,
+   "elev": 62
+  },
+  {
+   "id": "s19288563679",
+   "date": "2026-07-13",
+   "type": "running",
+   "distance": 4512,
+   "moving": 1935,
+   "hr": 136,
+   "elev": 67
+  },
+  {
+   "id": "s19275233291",
+   "date": "2026-07-12",
+   "type": "running",
+   "distance": 15431,
+   "moving": 5513,
+   "hr": 155,
+   "elev": 130
+  },
+  {
+   "id": "s19230448260",
+   "date": "2026-07-08",
+   "type": "running",
+   "distance": 5557,
+   "moving": 1875,
+   "hr": 148,
+   "elev": 71
+  },
+  {
+   "id": "s19215620053",
+   "date": "2026-07-07",
+   "type": "running",
+   "distance": 5759,
+   "moving": 2162,
+   "hr": 165,
+   "elev": 135
+  },
+  {
+   "id": "s19151952857",
+   "date": "2026-07-02",
+   "type": "running",
+   "distance": 4763,
+   "moving": 2158,
+   "hr": 143,
+   "elev": 48
+  },
+  {
+   "id": "s19136136421",
+   "date": "2026-07-01",
+   "type": "running",
+   "distance": 5488,
+   "moving": 1775,
+   "hr": 167,
+   "elev": 90
+  },
+  {
+   "id": "s19078518823",
+   "date": "2026-06-27",
+   "type": "running",
+   "distance": 4693,
+   "moving": 1646,
+   "hr": 146,
+   "elev": 44
+  },
+  {
+   "id": "s19071157148",
+   "date": "2026-06-26",
+   "type": "running",
+   "distance": 5452,
+   "moving": 2133,
+   "hr": 155,
+   "elev": 116
+  },
+  {
+   "id": "s19071156736",
+   "date": "2026-06-24",
+   "type": "running",
+   "distance": 5478,
+   "moving": 1724,
+   "hr": 164,
+   "elev": 83
+  },
+  {
+   "id": "s18998073080",
+   "date": "2026-06-20",
+   "type": "running",
+   "distance": 5669,
+   "moving": 2332,
+   "hr": 136,
+   "elev": 90
+  },
+  {
+   "id": "s18950429273",
+   "date": "2026-06-17",
+   "type": "running",
+   "distance": 4622,
+   "moving": 1714,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s18923584193",
+   "date": "2026-06-15",
+   "type": "running",
+   "distance": 4017,
+   "moving": 1475,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s18899459237",
+   "date": "2026-06-13",
+   "type": "running",
+   "distance": 4375,
+   "moving": 2681,
+   "hr": 150,
+   "elev": 52
+  },
+  {
+   "id": "s18885856948",
+   "date": "2026-06-12",
+   "type": "running",
+   "distance": 4001,
+   "moving": 1514,
+   "hr": 144,
+   "elev": 69
+  },
+  {
+   "id": "s18866281330",
+   "date": "2026-06-10",
+   "type": "running",
+   "distance": 4640,
+   "moving": 1694,
+   "hr": 136,
+   "elev": 14
+  },
+  {
+   "id": "s18804717428",
+   "date": "2026-06-06",
+   "type": "running",
+   "distance": 5340,
+   "moving": 2084,
+   "hr": 148,
+   "elev": 124
+  },
+  {
+   "id": "s18794425094",
+   "date": "2026-06-05",
+   "type": "running",
+   "distance": 9475,
+   "moving": 3916,
+   "hr": 144,
+   "elev": 215
+  },
+  {
+   "id": "s18735900559",
    "date": "2026-06-01",
    "type": "running",
    "distance": 5441,
-   "moving": 1694,
+   "moving": 1704,
    "hr": 138,
    "elev": 26
   },
@@ -161,25 +926,34 @@
    "elev": 52
   },
   {
-   "id": "22923701239",
+   "id": "s18602420951",
+   "date": "2026-05-22",
+   "type": "running",
+   "distance": 3263,
+   "moving": 2770,
+   "hr": 127,
+   "elev": 20
+  },
+  {
+   "id": "s18554865539",
    "date": "2026-05-18",
    "type": "running",
    "distance": 4671,
-   "moving": 2087,
+   "moving": 2123,
    "hr": 121,
    "elev": 23
   },
   {
-   "id": "22918590936",
+   "id": "s18549507344",
    "date": "2026-05-18",
    "type": "running",
    "distance": 5201,
-   "moving": 1799,
-   "hr": 132,
+   "moving": 1883,
+   "hr": 133,
    "elev": 11
   },
   {
-   "id": "22918590845",
+   "id": "s18549507331",
    "date": "2026-05-13",
    "type": "running",
    "distance": 5006,
@@ -188,30 +962,57 @@
    "elev": 31
   },
   {
-   "id": "22784037910",
+   "id": "s18458195025",
+   "date": "2026-05-11",
+   "type": "running",
+   "distance": 4452,
+   "moving": 1783,
+   "hr": 129,
+   "elev": 50
+  },
+  {
+   "id": "s18432880892",
+   "date": "2026-05-09",
+   "type": "running",
+   "distance": 5526,
+   "moving": 2151,
+   "hr": 136,
+   "elev": 154
+  },
+  {
+   "id": "s18431695775",
+   "date": "2026-05-09",
+   "type": "running",
+   "distance": 4553,
+   "moving": 1615,
+   "hr": 147,
+   "elev": 53
+  },
+  {
+   "id": "s18397875962",
    "date": "2026-05-06",
    "type": "running",
    "distance": 5530,
-   "moving": 1969,
+   "moving": 1976,
    "hr": 140,
    "elev": 44
   },
   {
-   "id": "22760759008",
+   "id": "s18371913175",
    "date": "2026-05-04",
    "type": "running",
    "distance": 9158,
-   "moving": 3155,
+   "moving": 3167,
    "hr": 131,
    "elev": 52
   },
   {
-   "id": "22701074586",
+   "id": "s18305021653",
    "date": "2026-04-29",
    "type": "running",
    "distance": 5915,
-   "moving": 2205,
-   "hr": 143,
+   "moving": 2852,
+   "hr": 155,
    "elev": 43
   },
   {
@@ -224,84 +1025,84 @@
    "elev": 34
   },
   {
-   "id": "22665779509",
+   "id": "s18265598804",
    "date": "2026-04-26",
    "type": "running",
    "distance": 8070,
-   "moving": 2412,
-   "hr": 152,
+   "moving": 2451,
+   "hr": 153,
    "elev": 22
   },
   {
-   "id": "22617214665",
+   "id": "s18210718034",
    "date": "2026-04-22",
    "type": "running",
    "distance": 5308,
-   "moving": 2039,
-   "hr": 138,
+   "moving": 2036,
+   "hr": 139,
    "elev": 77
   },
   {
-   "id": "22588569216",
+   "id": "s18183127255",
+   "date": "2026-04-20",
+   "type": "running",
+   "distance": 9162,
+   "moving": 2011,
+   "hr": null,
+   "elev": 111
+  },
+  {
+   "id": "s18178732895",
    "date": "2026-04-20",
    "type": "running",
    "distance": 4390,
-   "moving": 1374,
+   "moving": 1384,
    "hr": 144,
    "elev": 5
   },
   {
-   "id": "22452229014",
-   "date": "2026-04-08",
+   "id": "s18059912217",
+   "date": "2026-04-11",
    "type": "running",
-   "distance": 163,
-   "moving": 65,
-   "hr": 123,
-   "elev": 1
+   "distance": 5665,
+   "moving": 2165,
+   "hr": 137,
+   "elev": 68
   },
   {
-   "id": "22452228935",
+   "id": "s18026283156",
    "date": "2026-04-08",
    "type": "running",
    "distance": 5488,
-   "moving": 1771,
+   "moving": 1775,
    "hr": 161,
    "elev": 44
   },
   {
-   "id": "22416450122",
+   "id": "s17987784706",
    "date": "2026-04-05",
    "type": "running",
    "distance": 13812,
-   "moving": 4561,
+   "moving": 4582,
    "hr": 148,
    "elev": 24
   },
   {
-   "id": "22338347616",
-   "date": "2026-03-29",
-   "type": "running",
-   "distance": 928,
-   "moving": 211,
-   "hr": 163,
-   "elev": 3
-  },
-  {
-   "id": "22338347529",
+   "id": "s17901108974",
    "date": "2026-03-29",
    "type": "running",
    "distance": 6000,
-   "moving": 1878,
-   "hr": 149,
+   "moving": 1902,
+   "hr": 150,
    "elev": 20
   },
   {
-   "id": "22266509877",
+   "id": "s17822654353",
    "date": "2026-03-23",
    "type": "running",
    "distance": 5301,
-   "moving": 1715,
-   "hr": 145,
+   "moving": 1753,
+   "hr": 146,
    "elev": 25
   },
   {
@@ -314,31 +1115,67 @@
    "elev": 37
   },
   {
-   "id": "22266509742",
-   "date": "2026-03-21",
+   "id": "s17742085190",
+   "date": "2026-03-16",
    "type": "running",
-   "distance": 713,
-   "moving": 263,
-   "hr": 135,
-   "elev": null
+   "distance": 2722,
+   "moving": 969,
+   "hr": null,
+   "elev": 37
   },
   {
-   "id": "21980006332",
+   "id": "s17685855185",
+   "date": "2026-03-11",
+   "type": "running",
+   "distance": 5521,
+   "moving": 1829,
+   "hr": 165,
+   "elev": 76
+  },
+  {
+   "id": "s17672661427",
+   "date": "2026-03-10",
+   "type": "running",
+   "distance": 5404,
+   "moving": 1939,
+   "hr": 162,
+   "elev": 21
+  },
+  {
+   "id": "s17654905258",
+   "date": "2026-03-09",
+   "type": "running",
+   "distance": 4575,
+   "moving": 1600,
+   "hr": 157,
+   "elev": 34
+  },
+  {
+   "id": "s17594498535",
+   "date": "2026-03-04",
+   "type": "running",
+   "distance": 3340,
+   "moving": 1163,
+   "hr": null,
+   "elev": 33
+  },
+  {
+   "id": "s17516986986",
    "date": "2026-02-25",
    "type": "running",
    "distance": 5530,
-   "moving": 1817,
+   "moving": 1818,
    "hr": 160,
    "elev": 44
   },
   {
-   "id": "21881033424",
-   "date": "2026-02-16",
+   "id": "s17493591859",
+   "date": "2026-02-23",
    "type": "running",
-   "distance": 301,
-   "moving": 96,
-   "hr": 143,
-   "elev": 1
+   "distance": 8116,
+   "moving": 2864,
+   "hr": 162,
+   "elev": 82
   },
   {
    "id": "21881033380",
@@ -359,11 +1196,20 @@
    "elev": 6
   },
   {
-   "id": "21788250631",
+   "id": "s17378833655",
+   "date": "2026-02-13",
+   "type": "running",
+   "distance": 4444,
+   "moving": 2022,
+   "hr": 155,
+   "elev": 39
+  },
+  {
+   "id": "s17312301866",
    "date": "2026-02-07",
    "type": "running",
    "distance": 1581,
-   "moving": 839,
+   "moving": 818,
    "hr": 121,
    "elev": 9
   },
@@ -377,6 +1223,15 @@
    "elev": 264
   },
   {
+   "id": "s17153993044",
+   "date": "2026-01-24",
+   "type": "running",
+   "distance": 7439,
+   "moving": 2259,
+   "hr": 164,
+   "elev": 29
+  },
+  {
    "id": "21634202077",
    "date": "2026-01-23",
    "type": "running",
@@ -386,11 +1241,11 @@
    "elev": 46
   },
   {
-   "id": "21592399737",
+   "id": "s17098861184",
    "date": "2026-01-19",
    "type": "running",
    "distance": 5618,
-   "moving": 1959,
+   "moving": 1973,
    "hr": 136,
    "elev": 65
   },
@@ -404,47 +1259,47 @@
    "elev": 12
   },
   {
-   "id": "21532398909",
+   "id": "s17033782636",
    "date": "2026-01-13",
    "type": "running",
    "distance": 8642,
-   "moving": 3284,
+   "moving": 3307,
    "hr": 130,
    "elev": 67
   },
   {
-   "id": "21471098433",
+   "id": "s16967335233",
    "date": "2026-01-07",
    "type": "running",
-   "distance": 5503,
-   "moving": 1991,
+   "distance": 5504,
+   "moving": 1997,
    "hr": 128,
    "elev": 49
   },
   {
-   "id": "21466751713",
+   "id": "s16962617292",
    "date": "2026-01-07",
    "type": "running",
    "distance": 1160,
-   "moving": 433,
+   "moving": 430,
    "hr": 137,
    "elev": 9
   },
   {
-   "id": "21466501719",
+   "id": "s16962274808",
    "date": "2026-01-07",
    "type": "running",
    "distance": 4537,
-   "moving": 1466,
+   "moving": 1477,
    "hr": 137,
    "elev": 10
   },
   {
-   "id": "21382521662",
+   "id": "s16873322600",
    "date": "2025-12-29",
    "type": "running",
    "distance": 6044,
-   "moving": 1843,
+   "moving": 1855,
    "hr": 139,
    "elev": 71
   },
@@ -458,11 +1313,11 @@
    "elev": 19
   },
   {
-   "id": "21330229790",
+   "id": "s16818652233",
    "date": "2025-12-23",
    "type": "running",
    "distance": 3853,
-   "moving": 1139,
+   "moving": 1155,
    "hr": 122,
    "elev": 11
   },
@@ -476,11 +1331,11 @@
    "elev": 19
   },
   {
-   "id": "21289732382",
+   "id": "s16776352598",
    "date": "2025-12-18",
    "type": "running",
    "distance": 6090,
-   "moving": 1809,
+   "moving": 1828,
    "hr": 147,
    "elev": 20
   },
@@ -503,20 +1358,20 @@
    "elev": 19
   },
   {
-   "id": "21219501056",
+   "id": "s16702858508",
    "date": "2025-12-10",
    "type": "running",
    "distance": 7351,
-   "moving": 2476,
-   "hr": 133,
+   "moving": 2566,
+   "hr": 135,
    "elev": 68
   },
   {
-   "id": "21197978172",
+   "id": "s16680632130",
    "date": "2025-12-08",
    "type": "running",
    "distance": 3320,
-   "moving": 1190,
+   "moving": 1194,
    "hr": 131,
    "elev": 9
   },
@@ -539,11 +1394,11 @@
    "elev": 54
   },
   {
-   "id": "21139079837",
+   "id": "s16618215175",
    "date": "2025-12-01",
    "type": "running",
    "distance": 5925,
-   "moving": 1777,
+   "moving": 1791,
    "hr": 152,
    "elev": 77
   },
@@ -575,21 +1430,30 @@
    "elev": 137
   },
   {
-   "id": "21086984398",
+   "id": "s16586632801",
+   "date": "2025-11-28",
+   "type": "running",
+   "distance": 10147,
+   "moving": 3724,
+   "hr": 109,
+   "elev": 137
+  },
+  {
+   "id": "s16562205345",
    "date": "2025-11-25",
    "type": "running",
    "distance": 5812,
-   "moving": 2170,
-   "hr": 124,
+   "moving": 2171,
+   "hr": 125,
    "elev": 28
   },
   {
-   "id": "21077166762",
+   "id": "s16551800465",
    "date": "2025-11-24",
    "type": "running",
    "distance": 6287,
-   "moving": 2410,
-   "hr": 133,
+   "moving": 2560,
+   "hr": 134,
    "elev": 91
   },
   {
@@ -602,11 +1466,11 @@
    "elev": 24
   },
   {
-   "id": "21012319359",
+   "id": "s16482798923",
    "date": "2025-11-17",
    "type": "running",
    "distance": 4985,
-   "moving": 1876,
+   "moving": 1896,
    "hr": 134,
    "elev": 135
   },
@@ -620,31 +1484,22 @@
    "elev": 41
   },
   {
-   "id": "20986729734",
+   "id": "s16455457116",
    "date": "2025-11-14",
    "type": "running",
    "distance": 5115,
-   "moving": 1713,
-   "hr": 140,
+   "moving": 1749,
+   "hr": 141,
    "elev": 67
   },
   {
-   "id": "20967348483",
+   "id": "s16435090070",
    "date": "2025-11-12",
    "type": "running",
    "distance": 1210,
-   "moving": 344,
-   "hr": 160,
-   "elev": null
-  },
-  {
-   "id": "20967273510",
-   "date": "2025-11-12",
-   "type": "running",
-   "distance": 950,
-   "moving": 276,
+   "moving": 346,
    "hr": 161,
-   "elev": 17
+   "elev": null
   },
   {
    "id": "20967100068",
@@ -656,110 +1511,92 @@
    "elev": 11
   },
   {
-   "id": "20952398128",
-   "date": "2025-11-11",
-   "type": "running",
-   "distance": 369,
-   "moving": 121,
-   "hr": 127,
-   "elev": 1
-  },
-  {
-   "id": "20952136317",
+   "id": "s16418740722",
    "date": "2025-11-11",
    "type": "running",
    "distance": 6082,
-   "moving": 2158,
+   "moving": 2171,
    "hr": 127,
    "elev": 15
   },
   {
-   "id": "20947012687",
-   "date": "2025-11-10",
-   "type": "running",
-   "distance": 643,
-   "moving": 206,
-   "hr": 145,
-   "elev": 6
-  },
-  {
-   "id": "20946761895",
+   "id": "s16413264780",
    "date": "2025-11-10",
    "type": "running",
    "distance": 4078,
-   "moving": 1228,
+   "moving": 1238,
    "hr": 146,
    "elev": 19
   },
   {
-   "id": "20937823162",
+   "id": "s16403842343",
    "date": "2025-11-09",
    "type": "running",
    "distance": 4801,
-   "moving": 1838,
+   "moving": 1860,
    "hr": 129,
    "elev": 43
   },
   {
-   "id": "20899259913",
+   "id": "s16362817281",
    "date": "2025-11-05",
    "type": "running",
    "distance": 5537,
-   "moving": 2021,
-   "hr": 142,
+   "moving": 2030,
+   "hr": 143,
    "elev": 42
   },
   {
-   "id": "20888055544",
+   "id": "s16350945598",
    "date": "2025-11-04",
    "type": "running",
    "distance": 7378,
-   "moving": 2553,
+   "moving": 2569,
    "hr": 142,
    "elev": 77
   },
   {
-   "id": "20878231496",
+   "id": "s16340640910",
    "date": "2025-11-03",
    "type": "running",
    "distance": 5047,
-   "moving": 1783,
+   "moving": 1792,
    "hr": 143,
    "elev": 60
   },
   {
-   "id": "20874581870",
+   "id": "s16337222453",
    "date": "2025-11-03",
    "type": "running",
    "distance": 1034,
-   "moving": 320,
+   "moving": 337,
    "hr": 139,
    "elev": 2
   },
   {
-   "id": "20874450517",
+   "id": "s16337067629",
    "date": "2025-11-03",
    "type": "running",
    "distance": 4106,
-   "moving": 1192,
-   "hr": 147,
+   "moving": 1195,
+   "hr": 148,
    "elev": 26
   },
   {
-   "id": "20853673181",
+   "id": "s16315648237",
    "date": "2025-11-01",
    "type": "running",
    "distance": 6468,
-   "moving": 2146,
+   "moving": 2178,
    "hr": 140,
    "elev": 16
   },
   {
-   "id": "20811520361",
+   "id": "s16271341101",
    "date": "2025-10-27",
    "type": "running",
    "distance": 12772,
-   "moving": 4751,
+   "moving": 4769,
    "hr": 136,
    "elev": 56
   },
@@ -773,7 +1610,7 @@
    "elev": 26
   },
   {
-   "id": "20744405149",
+   "id": "s16199803747",
    "date": "2025-10-20",
    "type": "running",
    "distance": 2027,
@@ -791,38 +1628,29 @@
    "elev": 62
   },
   {
-   "id": "20744404932",
+   "id": "s16199803879",
    "date": "2025-10-20",
    "type": "running",
    "distance": 8331,
-   "moving": 2678,
+   "moving": 2691,
    "hr": 144,
    "elev": 48
   },
   {
-   "id": "20696910004",
-   "date": "2025-10-15",
-   "type": "running",
-   "distance": 930,
-   "moving": 303,
-   "hr": 154,
-   "elev": 1
-  },
-  {
-   "id": "20696909923",
+   "id": "s16149119940",
    "date": "2025-10-15",
    "type": "running",
    "distance": 1811,
-   "moving": 529,
+   "moving": 530,
    "hr": 165,
    "elev": 19
   },
   {
-   "id": "20696909837",
+   "id": "s16149119964",
    "date": "2025-10-15",
    "type": "running",
    "distance": 4303,
-   "moving": 1571,
+   "moving": 1582,
    "hr": 142,
    "elev": 30
   },
@@ -845,11 +1673,11 @@
    "elev": 41
   },
   {
-   "id": "20651159344",
+   "id": "s16100576118",
    "date": "2025-10-11",
    "type": "running",
    "distance": 5338,
-   "moving": 2110,
+   "moving": 2122,
    "hr": 125,
    "elev": 26
   },
@@ -863,11 +1691,11 @@
    "elev": 28
   },
   {
-   "id": "20604060361",
+   "id": "s16050033287",
    "date": "2025-10-06",
    "type": "running",
    "distance": 6317,
-   "moving": 2445,
+   "moving": 2453,
    "hr": 135,
    "elev": 28
   },
@@ -881,65 +1709,65 @@
    "elev": 14
   },
   {
-   "id": "20545278082",
+   "id": "s15985542691",
    "date": "2025-09-30",
    "type": "running",
    "distance": 5504,
-   "moving": 1694,
+   "moving": 1700,
    "hr": 148,
    "elev": 53
   },
   {
-   "id": "20504524688",
+   "id": "s15940778164",
    "date": "2025-09-26",
    "type": "running",
    "distance": 7961,
-   "moving": 2686,
+   "moving": 2700,
    "hr": 139,
    "elev": 11
   },
   {
-   "id": "20486558479",
+   "id": "s15921257960",
    "date": "2025-09-24",
    "type": "running",
    "distance": 1780,
-   "moving": 579,
+   "moving": 586,
    "hr": 132,
    "elev": 21
   },
   {
-   "id": "20486558270",
+   "id": "s15921258104",
    "date": "2025-09-24",
    "type": "running",
    "distance": 2094,
-   "moving": 821,
+   "moving": 825,
    "hr": 137,
    "elev": 24
   },
   {
-   "id": "20486558160",
+   "id": "s15921257950",
    "date": "2025-09-23",
    "type": "running",
    "distance": 1375,
-   "moving": 482,
-   "hr": 130,
+   "moving": 490,
+   "hr": 131,
    "elev": 6
   },
   {
-   "id": "20454764502",
+   "id": "s15886674731",
    "date": "2025-09-21",
    "type": "running",
    "distance": 7034,
-   "moving": 2546,
+   "moving": 2558,
    "hr": 130,
    "elev": 51
   },
   {
-   "id": "20402624590",
+   "id": "s15829812202",
    "date": "2025-09-16",
    "type": "running",
    "distance": 6281,
-   "moving": 2504,
+   "moving": 2510,
    "hr": 138,
    "elev": 57
   },
@@ -953,20 +1781,20 @@
    "elev": 34
   },
   {
-   "id": "20369230962",
+   "id": "s15793258060",
    "date": "2025-09-13",
    "type": "running",
    "distance": 8458,
-   "moving": 3123,
+   "moving": 3140,
    "hr": 149,
    "elev": 43
   },
   {
-   "id": "20268586423",
+   "id": "s15683943672",
    "date": "2025-09-03",
    "type": "running",
    "distance": 5001,
-   "moving": 1803,
+   "moving": 1822,
    "hr": 141,
    "elev": 30
   },
@@ -989,11 +1817,11 @@
    "elev": 83
   },
   {
-   "id": "20194689429",
+   "id": "s15604501725",
    "date": "2025-08-27",
    "type": "running",
    "distance": 7178,
-   "moving": 2414,
+   "moving": 2425,
    "hr": 149,
    "elev": 56
   },
@@ -1007,20 +1835,20 @@
    "elev": 38
   },
   {
-   "id": "20167684803",
+   "id": "s15575796011",
    "date": "2025-08-25",
    "type": "running",
    "distance": 6061,
-   "moving": 2348,
+   "moving": 2353,
    "hr": 130,
    "elev": 55
   },
   {
-   "id": "20146089064",
+   "id": "s15551949585",
    "date": "2025-08-23",
    "type": "running",
    "distance": 4617,
-   "moving": 1897,
+   "moving": 1905,
    "hr": 123,
    "elev": 22
   },
@@ -1052,29 +1880,20 @@
    "elev": 30
   },
   {
-   "id": "20119779983",
+   "id": "s15524065677",
    "date": "2025-08-20",
    "type": "running",
    "distance": 5159,
-   "moving": 1830,
+   "moving": 1838,
    "hr": 146,
    "elev": 26
   },
   {
-   "id": "20092975016",
-   "date": "2025-08-18",
-   "type": "running",
-   "distance": 942,
-   "moving": 525,
-   "hr": 114,
-   "elev": null
-  },
-  {
-   "id": "20092712101",
+   "id": "s15495355511",
    "date": "2025-08-18",
    "type": "running",
    "distance": 4123,
-   "moving": 1731,
+   "moving": 1759,
    "hr": 139,
    "elev": 23
   },
@@ -1088,39 +1907,30 @@
    "elev": 28
   },
   {
-   "id": "20081962173",
+   "id": "s15483718368",
    "date": "2025-08-17",
    "type": "running",
    "distance": 5592,
-   "moving": 2054,
+   "moving": 2064,
    "hr": 144,
    "elev": 58
   },
   {
-   "id": "20045139261",
+   "id": "s15444516176",
    "date": "2025-08-13",
    "type": "running",
    "distance": 5180,
-   "moving": 1807,
+   "moving": 1811,
    "hr": 152,
    "elev": 33
   },
   {
-   "id": "20021433298",
-   "date": "2025-08-11",
-   "type": "running",
-   "distance": 871,
-   "moving": 221,
-   "hr": 125,
-   "elev": 2
-  },
-  {
-   "id": "20017766356",
+   "id": "s15415719281",
    "date": "2025-08-11",
    "type": "running",
    "distance": 5230,
-   "moving": 1674,
-   "hr": 144,
+   "moving": 1710,
+   "hr": 145,
    "elev": 8
   },
   {
@@ -1133,25 +1943,16 @@
    "elev": 39
   },
   {
-   "id": "19996846708",
+   "id": "s15393155704",
    "date": "2025-08-09",
    "type": "running",
    "distance": 3494,
-   "moving": 1440,
+   "moving": 1454,
    "hr": 124,
    "elev": 13
   },
   {
-   "id": "19980754696",
-   "date": "2025-08-07",
-   "type": "running",
-   "distance": 228,
-   "moving": 93,
-   "hr": 153,
-   "elev": 31
-  },
-  {
-   "id": "19980400236",
+   "id": "s15375796614",
    "date": "2025-08-07",
    "type": "running",
    "distance": 5536,
@@ -1178,38 +1979,47 @@
    "elev": 39
   },
   {
-   "id": "19905730158",
+   "id": "s15324349154",
+   "date": "2025-08-03",
+   "type": "running",
+   "distance": 8867,
+   "moving": 3083,
+   "hr": null,
+   "elev": 136
+  },
+  {
+   "id": "s15297268016",
    "date": "2025-07-31",
    "type": "running",
    "distance": 6819,
-   "moving": 2439,
+   "moving": 2449,
    "hr": 145,
    "elev": 68
   },
   {
-   "id": "19873306836",
+   "id": "s15262884848",
    "date": "2025-07-28",
    "type": "running",
    "distance": 5620,
-   "moving": 2121,
+   "moving": 2125,
    "hr": 137,
    "elev": 58
   },
   {
-   "id": "19823332614",
+   "id": "s15209323583",
    "date": "2025-07-23",
    "type": "running",
    "distance": 5175,
-   "moving": 1850,
+   "moving": 1851,
    "hr": 155,
    "elev": 30
   },
   {
-   "id": "19797055563",
+   "id": "s15181556436",
    "date": "2025-07-21",
    "type": "running",
    "distance": 1003,
-   "moving": 281,
+   "moving": 286,
    "hr": 155,
    "elev": 3
   },
@@ -1241,11 +2051,20 @@
    "elev": 36
   },
   {
-   "id": "19649636499",
+   "id": "s15105740542",
+   "date": "2025-07-14",
+   "type": "running",
+   "distance": 4895,
+   "moving": 1893,
+   "hr": null,
+   "elev": 23
+  },
+  {
+   "id": "s15025342719",
    "date": "2025-07-06",
    "type": "running",
    "distance": 6122,
-   "moving": 2559,
+   "moving": 2565,
    "hr": 130,
    "elev": 37
   },
@@ -1259,29 +2078,29 @@
    "elev": 68
   },
   {
-   "id": "19564689536",
+   "id": "s14936445419",
    "date": "2025-06-28",
    "type": "running",
    "distance": 8533,
-   "moving": 3525,
+   "moving": 3549,
    "hr": 126,
    "elev": 33
   },
   {
-   "id": "19540667969",
+   "id": "s14911299079",
    "date": "2025-06-25",
    "type": "running",
    "distance": 5166,
-   "moving": 2035,
+   "moving": 2043,
    "hr": 136,
    "elev": 32
   },
   {
-   "id": "19511585469",
+   "id": "s14881088880",
    "date": "2025-06-22",
    "type": "running",
    "distance": 5014,
-   "moving": 1774,
+   "moving": 1782,
    "hr": 125,
    "elev": 11
   },
@@ -1322,58 +2141,67 @@
    "elev": 14
   },
   {
-   "id": "19368770372",
-   "date": "2025-06-08",
-   "type": "running",
-   "distance": 223,
-   "moving": 95,
-   "hr": 151,
-   "elev": 33
-  },
-  {
-   "id": "19368672206",
+   "id": "s14733240637",
    "date": "2025-06-08",
    "type": "running",
    "distance": 5125,
-   "moving": 1685,
+   "moving": 1692,
    "hr": 145,
    "elev": 13
   },
   {
-   "id": "19360528870",
+   "id": "s14724572417",
    "date": "2025-06-07",
    "type": "running",
    "distance": 3896,
-   "moving": 1395,
+   "moving": 1399,
    "hr": 135,
    "elev": 34
   },
   {
-   "id": "19191868825",
+   "id": "s14710197786",
+   "date": "2025-06-06",
+   "type": "running",
+   "distance": 10986,
+   "moving": 8900,
+   "hr": null,
+   "elev": 157
+  },
+  {
+   "id": "s14682643461",
+   "date": "2025-06-03",
+   "type": "running",
+   "distance": 5424,
+   "moving": 2313,
+   "hr": null,
+   "elev": 123
+  },
+  {
+   "id": "s14657193367",
+   "date": "2025-06-01",
+   "type": "running",
+   "distance": 5004,
+   "moving": 1571,
+   "hr": null,
+   "elev": 27
+  },
+  {
+   "id": "s14550077329",
    "date": "2025-05-21",
    "type": "running",
    "distance": 5103,
-   "moving": 1905,
+   "moving": 1903,
    "hr": 142,
    "elev": 38
   },
   {
-   "id": "19170400406",
+   "id": "s14527747916",
    "date": "2025-05-19",
    "type": "running",
    "distance": 8871,
-   "moving": 3366,
+   "moving": 3374,
    "hr": 137,
    "elev": 21
-  },
-  {
-   "id": "19167248982",
-   "date": "2025-05-19",
-   "type": "running",
-   "distance": 721,
-   "moving": 173,
-   "hr": 127,
-   "elev": 1
   },
   {
    "id": "19167248943",
@@ -1385,56 +2213,56 @@
    "elev": 35
   },
   {
-   "id": "19122048695",
+   "id": "s14477588426",
    "date": "2025-05-14",
    "type": "running",
    "distance": 5152,
-   "moving": 1755,
+   "moving": 1762,
    "hr": 149,
    "elev": 30
   },
   {
-   "id": "19122048545",
+   "id": "s14477588461",
    "date": "2025-05-13",
    "type": "running",
    "distance": 6712,
-   "moving": 2458,
+   "moving": 2468,
    "hr": 138,
    "elev": 41
   },
   {
-   "id": "19051471355",
+   "id": "s14404897992",
    "date": "2025-05-07",
    "type": "running",
    "distance": 5178,
-   "moving": 1807,
+   "moving": 1813,
    "hr": 143,
    "elev": 31
   },
   {
-   "id": "19036695910",
+   "id": "s14389813734",
    "date": "2025-05-06",
    "type": "running",
    "distance": 9124,
-   "moving": 3947,
-   "hr": 128,
+   "moving": 3967,
+   "hr": 129,
    "elev": 64
   },
   {
-   "id": "18959592843",
+   "id": "s14310776585",
    "date": "2025-04-28",
    "type": "running",
    "distance": 10006,
-   "moving": 3573,
+   "moving": 3603,
    "hr": 119,
    "elev": 52
   },
   {
-   "id": "18929768077",
+   "id": "s14280426659",
    "date": "2025-04-25",
    "type": "running",
    "distance": 7402,
-   "moving": 3292,
+   "moving": 3392,
    "hr": 136,
    "elev": 70
   },
@@ -1448,11 +2276,11 @@
    "elev": 28
   },
   {
-   "id": "18889796280",
+   "id": "s14239990816",
    "date": "2025-04-21",
    "type": "running",
-   "distance": 4939,
-   "moving": 1663,
+   "distance": 4940,
+   "moving": 1697,
    "hr": 151,
    "elev": 54
   },
@@ -1466,31 +2294,22 @@
    "elev": 8
   },
   {
-   "id": "18862472864",
+   "id": "s14211931567",
    "date": "2025-04-18",
    "type": "running",
    "distance": 9064,
-   "moving": 4120,
+   "moving": 4047,
    "hr": 132,
    "elev": 45
   },
   {
-   "id": "18844645600",
+   "id": "s14193905512",
    "date": "2025-04-16",
    "type": "running",
    "distance": 5167,
-   "moving": 1787,
+   "moving": 1789,
    "hr": 145,
    "elev": 36
-  },
-  {
-   "id": "18782046137",
-   "date": "2025-04-09",
-   "type": "running",
-   "distance": 271,
-   "moving": 111,
-   "hr": 128,
-   "elev": null
   },
   {
    "id": "18777170363",
@@ -1520,22 +2339,22 @@
    "elev": 2
   },
   {
-   "id": "18756533529",
+   "id": "s14248013415",
    "date": "2025-04-07",
    "type": "running",
    "distance": 5743,
-   "moving": 2321,
+   "moving": 2327,
    "hr": 145,
-   "elev": 4
+   "elev": null
   },
   {
-   "id": "18708788822",
+   "id": "s14248013382",
    "date": "2025-04-02",
    "type": "running",
    "distance": 5194,
-   "moving": 1768,
-   "hr": 145,
-   "elev": 31
+   "moving": 1798,
+   "hr": 143,
+   "elev": null
   },
   {
    "id": "18680710521",
@@ -1547,13 +2366,22 @@
    "elev": 83
   },
   {
-   "id": "18642349009",
+   "id": "s14016445313",
+   "date": "2025-03-29",
+   "type": "running",
+   "distance": 14006,
+   "moving": 10218,
+   "hr": 103,
+   "elev": 253
+  },
+  {
+   "id": "s14083960422",
    "date": "2025-03-26",
    "type": "running",
    "distance": 5159,
-   "moving": 1776,
-   "hr": 142,
-   "elev": 31
+   "moving": 1844,
+   "hr": 136,
+   "elev": null
   },
   {
    "id": "18603476073",
@@ -1574,38 +2402,38 @@
    "elev": 29
   },
   {
-   "id": "18501186221",
+   "id": "s13866628399",
    "date": "2025-03-11",
    "type": "running",
    "distance": 7503,
-   "moving": 2647,
-   "hr": 150,
-   "elev": 4
+   "moving": 2821,
+   "hr": 145,
+   "elev": null
   },
   {
-   "id": "18492498456",
+   "id": "s13866628287",
    "date": "2025-03-10",
    "type": "running",
    "distance": 4082,
-   "moving": 1572,
-   "hr": 135,
-   "elev": 13
+   "moving": 1705,
+   "hr": 131,
+   "elev": null
   },
   {
-   "id": "18488620444",
+   "id": "s13866628130",
    "date": "2025-03-09",
    "type": "running",
    "distance": 5994,
-   "moving": 2455,
+   "moving": 2664,
    "hr": 124,
-   "elev": 26
+   "elev": null
   },
   {
-   "id": "18363265054",
+   "id": "s13713421991",
    "date": "2025-02-24",
    "type": "running",
    "distance": 5308,
-   "moving": 1686,
+   "moving": 1688,
    "hr": 136,
    "elev": 17
   },
@@ -1637,13 +2465,13 @@
    "elev": 31
   },
   {
-   "id": "18246565251",
+   "id": "s13615503890",
    "date": "2025-02-11",
    "type": "running",
    "distance": 11084,
-   "moving": 3940,
-   "hr": 147,
-   "elev": 24
+   "moving": 8122,
+   "hr": 150,
+   "elev": null
   },
   {
    "id": "18221612952",
@@ -1664,6 +2492,15 @@
    "elev": 18
   },
   {
+   "id": "s13500594788",
+   "date": "2025-01-31",
+   "type": "running",
+   "distance": 1913,
+   "moving": 2450,
+   "hr": 91,
+   "elev": null
+  },
+  {
    "id": "18141565014",
    "date": "2025-01-30",
    "type": "running",
@@ -1673,21 +2510,30 @@
    "elev": 17
   },
   {
-   "id": "18053205711",
+   "id": "s13615502675",
+   "date": "2025-01-23",
+   "type": "running",
+   "distance": 1455,
+   "moving": 921,
+   "hr": 122,
+   "elev": null
+  },
+  {
+   "id": "s13404630181",
    "date": "2025-01-20",
    "type": "running",
    "distance": 5258,
-   "moving": 1813,
+   "moving": 1822,
    "hr": 139,
    "elev": 14
   },
   {
-   "id": "17998076329",
+   "id": "s13411543914",
    "date": "2025-01-14",
-   "type": "treadmill_running",
+   "type": "running",
    "distance": 2960,
-   "moving": 1123,
-   "hr": 127,
+   "moving": 1166,
+   "hr": 126,
    "elev": null
   },
   {
@@ -1700,40 +2546,49 @@
    "elev": 10
   },
   {
-   "id": "17929723681",
+   "id": "s13348869297",
    "date": "2025-01-06",
    "type": "running",
    "distance": 4413,
-   "moving": 1780,
-   "hr": 126,
-   "elev": 69
+   "moving": 2160,
+   "hr": 128,
+   "elev": null
   },
   {
-   "id": "17869514643",
+   "id": "s13348869213",
    "date": "2024-12-30",
-   "type": "trail_running",
+   "type": "running",
    "distance": 2575,
-   "moving": 1078,
-   "hr": 125,
-   "elev": 22
+   "moving": 1182,
+   "hr": 120,
+   "elev": null
   },
   {
-   "id": "17779330946",
+   "id": "s13348869195",
    "date": "2024-12-17",
    "type": "running",
    "distance": 10007,
-   "moving": 3680,
-   "hr": 134,
-   "elev": 32
+   "moving": 5467,
+   "hr": 124,
+   "elev": null
   },
   {
-   "id": "17757740344",
+   "id": "s13146075633",
    "date": "2024-12-14",
    "type": "running",
    "distance": 6054,
-   "moving": 1988,
-   "hr": 139,
-   "elev": 23
+   "moving": 2928,
+   "hr": 128,
+   "elev": null
+  },
+  {
+   "id": "s13117673081",
+   "date": "2024-12-07",
+   "type": "running",
+   "distance": 12666,
+   "moving": 12934,
+   "hr": 92,
+   "elev": null
   },
   {
    "id": "17700719016",
@@ -1754,31 +2609,22 @@
    "elev": 32
   },
   {
-   "id": "17670880410",
+   "id": "s13117672634",
    "date": "2024-12-02",
    "type": "running",
    "distance": 11071,
-   "moving": 4291,
-   "hr": 124,
-   "elev": 62
+   "moving": 6378,
+   "hr": 110,
+   "elev": null
   },
   {
-   "id": "17656116081",
+   "id": "s13015612069",
    "date": "2024-11-30",
    "type": "running",
    "distance": 5232,
-   "moving": 2175,
+   "moving": 2181,
    "hr": 126,
    "elev": 22
-  },
-  {
-   "id": "17637988961",
-   "date": "2024-11-28",
-   "type": "running",
-   "distance": 276,
-   "moving": 51,
-   "hr": 132,
-   "elev": 10
   },
   {
    "id": "17637885567",
@@ -1799,15 +2645,6 @@
    "elev": 26
   },
   {
-   "id": "17633761371",
-   "date": "2024-11-27",
-   "type": "running",
-   "distance": 299,
-   "moving": 124,
-   "hr": 124,
-   "elev": 7
-  },
-  {
    "id": "17626470075",
    "date": "2024-11-26",
    "type": "running",
@@ -1817,13 +2654,13 @@
    "elev": 24
   },
   {
-   "id": "17600716550",
+   "id": "s13027609398",
    "date": "2024-11-23",
    "type": "running",
    "distance": 7075,
-   "moving": 2141,
-   "hr": 149,
-   "elev": 20
+   "moving": 5966,
+   "hr": 111,
+   "elev": null
   },
   {
    "id": "17597014981",
@@ -1835,13 +2672,706 @@
    "elev": 71
   },
   {
-   "id": "17596407843",
+   "id": "s13027609291",
    "date": "2024-11-22",
    "type": "running",
-   "distance": 692,
-   "moving": 353,
-   "hr": 118,
-   "elev": 12
+   "distance": 6644,
+   "moving": 7213,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s13027609223",
+   "date": "2024-11-21",
+   "type": "running",
+   "distance": 14540,
+   "moving": 7555,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s13027609170",
+   "date": "2024-11-18",
+   "type": "running",
+   "distance": 5458,
+   "moving": 2228,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s13027609155",
+   "date": "2024-11-16",
+   "type": "running",
+   "distance": 2823,
+   "moving": 3781,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s13027609092",
+   "date": "2024-11-16",
+   "type": "running",
+   "distance": 4683,
+   "moving": 1778,
+   "hr": null,
+   "elev": null
+  },
+  {
+   "id": "s12883104622",
+   "date": "2024-11-12",
+   "type": "running",
+   "distance": 9771,
+   "moving": 4117,
+   "hr": 149,
+   "elev": 89
+  },
+  {
+   "id": "s12872277879",
+   "date": "2024-11-11",
+   "type": "running",
+   "distance": 4024,
+   "moving": 1164,
+   "hr": 152,
+   "elev": 37
+  },
+  {
+   "id": "s12851568746",
+   "date": "2024-11-08",
+   "type": "running",
+   "distance": 2762,
+   "moving": 3052,
+   "hr": 111,
+   "elev": 30
+  },
+  {
+   "id": "s12844591490",
+   "date": "2024-11-07",
+   "type": "running",
+   "distance": 17037,
+   "moving": 6495,
+   "hr": 149,
+   "elev": 120
+  },
+  {
+   "id": "s12833444180",
+   "date": "2024-11-04",
+   "type": "running",
+   "distance": 6568,
+   "moving": 2622,
+   "hr": 135,
+   "elev": 121
+  },
+  {
+   "id": "s12788662901",
+   "date": "2024-10-31",
+   "type": "running",
+   "distance": 1760,
+   "moving": 751,
+   "hr": 152,
+   "elev": 20
+  },
+  {
+   "id": "s12781517600",
+   "date": "2024-10-30",
+   "type": "running",
+   "distance": 6255,
+   "moving": 2022,
+   "hr": 145,
+   "elev": 52
+  },
+  {
+   "id": "s12768791433",
+   "date": "2024-10-28",
+   "type": "running",
+   "distance": 6610,
+   "moving": 2901,
+   "hr": 149,
+   "elev": 73
+  },
+  {
+   "id": "s12739470759",
+   "date": "2024-10-25",
+   "type": "running",
+   "distance": 5232,
+   "moving": 3167,
+   "hr": null,
+   "elev": 6
+  },
+  {
+   "id": "s12739077286",
+   "date": "2024-10-25",
+   "type": "running",
+   "distance": 5454,
+   "moving": 2731,
+   "hr": null,
+   "elev": 276
+  },
+  {
+   "id": "s12708487203",
+   "date": "2024-10-21",
+   "type": "running",
+   "distance": 7400,
+   "moving": 3376,
+   "hr": 133,
+   "elev": 110
+  },
+  {
+   "id": "s12681853414",
+   "date": "2024-10-18",
+   "type": "running",
+   "distance": 7272,
+   "moving": 2782,
+   "hr": 146,
+   "elev": 142
+  },
+  {
+   "id": "s12678099474",
+   "date": "2024-10-17",
+   "type": "running",
+   "distance": 6959,
+   "moving": 3025,
+   "hr": 139,
+   "elev": 68
+  },
+  {
+   "id": "s12660192808",
+   "date": "2024-10-15",
+   "type": "running",
+   "distance": 3323,
+   "moving": 1416,
+   "hr": null,
+   "elev": 32
+  },
+  {
+   "id": "s12625942273",
+   "date": "2024-10-11",
+   "type": "running",
+   "distance": 5234,
+   "moving": 3441,
+   "hr": 91,
+   "elev": 123
+  },
+  {
+   "id": "s12594750490",
+   "date": "2024-10-07",
+   "type": "running",
+   "distance": 1765,
+   "moving": 1123,
+   "hr": 120,
+   "elev": 19
+  },
+  {
+   "id": "s12594570115",
+   "date": "2024-10-07",
+   "type": "running",
+   "distance": 8084,
+   "moving": 2967,
+   "hr": 158,
+   "elev": 62
+  },
+  {
+   "id": "s12576314594",
+   "date": "2024-10-05",
+   "type": "running",
+   "distance": 2624,
+   "moving": 1037,
+   "hr": 155,
+   "elev": 51
+  },
+  {
+   "id": "s12556183494",
+   "date": "2024-10-02",
+   "type": "running",
+   "distance": 6172,
+   "moving": 2286,
+   "hr": 138,
+   "elev": 70
+  },
+  {
+   "id": "s12539703000",
+   "date": "2024-09-30",
+   "type": "running",
+   "distance": 5143,
+   "moving": 3056,
+   "hr": 124,
+   "elev": 150
+  },
+  {
+   "id": "s12507158573",
+   "date": "2024-09-25",
+   "type": "running",
+   "distance": 1841,
+   "moving": 744,
+   "hr": 156,
+   "elev": 25
+  },
+  {
+   "id": "s12500446868",
+   "date": "2024-09-25",
+   "type": "running",
+   "distance": 5470,
+   "moving": 1870,
+   "hr": 157,
+   "elev": 73
+  },
+  {
+   "id": "s12496619670",
+   "date": "2024-09-23",
+   "type": "running",
+   "distance": 9868,
+   "moving": 4127,
+   "hr": 150,
+   "elev": 59
+  },
+  {
+   "id": "s12436884813",
+   "date": "2024-09-18",
+   "type": "running",
+   "distance": 8154,
+   "moving": 3367,
+   "hr": 139,
+   "elev": 87
+  },
+  {
+   "id": "s12383552408",
+   "date": "2024-09-11",
+   "type": "running",
+   "distance": 7315,
+   "moving": 3100,
+   "hr": 137,
+   "elev": 75
+  },
+  {
+   "id": "s12375769358",
+   "date": "2024-09-10",
+   "type": "running",
+   "distance": 6989,
+   "moving": 3015,
+   "hr": null,
+   "elev": 68
+  },
+  {
+   "id": "s12362301356",
+   "date": "2024-09-09",
+   "type": "running",
+   "distance": 5703,
+   "moving": 2400,
+   "hr": 144,
+   "elev": 40
+  },
+  {
+   "id": "s12354014582",
+   "date": "2024-09-08",
+   "type": "running",
+   "distance": 10255,
+   "moving": 4497,
+   "hr": 160,
+   "elev": 91
+  },
+  {
+   "id": "s12353330843",
+   "date": "2024-09-04",
+   "type": "running",
+   "distance": 2015,
+   "moving": 832,
+   "hr": 135,
+   "elev": 42
+  },
+  {
+   "id": "s12314710399",
+   "date": "2024-09-03",
+   "type": "running",
+   "distance": 5084,
+   "moving": 2459,
+   "hr": 132,
+   "elev": 50
+  },
+  {
+   "id": "s12314121788",
+   "date": "2024-09-03",
+   "type": "running",
+   "distance": 4530,
+   "moving": 2205,
+   "hr": 123,
+   "elev": 59
+  },
+  {
+   "id": "s12293851224",
+   "date": "2024-09-01",
+   "type": "running",
+   "distance": 7966,
+   "moving": 3829,
+   "hr": 117,
+   "elev": 32
+  },
+  {
+   "id": "s12293450479",
+   "date": "2024-08-28",
+   "type": "running",
+   "distance": 5784,
+   "moving": 2360,
+   "hr": 144,
+   "elev": 70
+  },
+  {
+   "id": "s12233771588",
+   "date": "2024-08-25",
+   "type": "running",
+   "distance": 5151,
+   "moving": 2578,
+   "hr": 116,
+   "elev": 51
+  },
+  {
+   "id": "s12228981584",
+   "date": "2024-08-24",
+   "type": "running",
+   "distance": 3246,
+   "moving": 2597,
+   "hr": 82,
+   "elev": 20
+  },
+  {
+   "id": "s12228194427",
+   "date": "2024-08-23",
+   "type": "running",
+   "distance": 7686,
+   "moving": 4731,
+   "hr": 112,
+   "elev": 131
+  },
+  {
+   "id": "s12204708315",
+   "date": "2024-08-21",
+   "type": "running",
+   "distance": 4810,
+   "moving": 1821,
+   "hr": 152,
+   "elev": 28
+  },
+  {
+   "id": "s12186575068",
+   "date": "2024-08-19",
+   "type": "running",
+   "distance": 9363,
+   "moving": 4645,
+   "hr": 125,
+   "elev": 82
+  },
+  {
+   "id": "s12149650298",
+   "date": "2024-08-15",
+   "type": "running",
+   "distance": 6565,
+   "moving": 2697,
+   "hr": 134,
+   "elev": 88
+  },
+  {
+   "id": "s12132007667",
+   "date": "2024-08-12",
+   "type": "running",
+   "distance": 4542,
+   "moving": 1864,
+   "hr": 143,
+   "elev": 55
+  },
+  {
+   "id": "s12121242053",
+   "date": "2024-08-11",
+   "type": "running",
+   "distance": 6286,
+   "moving": 2809,
+   "hr": 150,
+   "elev": 97
+  },
+  {
+   "id": "s12069075191",
+   "date": "2024-08-05",
+   "type": "running",
+   "distance": 9662,
+   "moving": 4645,
+   "hr": 131,
+   "elev": 80
+  },
+  {
+   "id": "s12069072607",
+   "date": "2024-08-04",
+   "type": "running",
+   "distance": 8059,
+   "moving": 4846,
+   "hr": 121,
+   "elev": 150
+  },
+  {
+   "id": "s11893123412",
+   "date": "2024-07-15",
+   "type": "running",
+   "distance": 11731,
+   "moving": 4091,
+   "hr": 152,
+   "elev": 69
+  },
+  {
+   "id": "s11834435571",
+   "date": "2024-07-08",
+   "type": "running",
+   "distance": 6006,
+   "moving": 2113,
+   "hr": 151,
+   "elev": 86
+  },
+  {
+   "id": "s11813702584",
+   "date": "2024-07-05",
+   "type": "running",
+   "distance": 10205,
+   "moving": 2941,
+   "hr": 169,
+   "elev": 121
+  },
+  {
+   "id": "s10350855136",
+   "date": "2023-12-09",
+   "type": "running",
+   "distance": 3989,
+   "moving": 2414,
+   "hr": 152,
+   "elev": 37
+  },
+  {
+   "id": "s10043133393",
+   "date": "2023-10-15",
+   "type": "running",
+   "distance": 6134,
+   "moving": 3583,
+   "hr": 116,
+   "elev": 70
+  },
+  {
+   "id": "s10000882195",
+   "date": "2023-10-08",
+   "type": "running",
+   "distance": 4511,
+   "moving": 2878,
+   "hr": null,
+   "elev": 47
+  },
+  {
+   "id": "s9911868682",
+   "date": "2023-09-24",
+   "type": "running",
+   "distance": 3866,
+   "moving": 2575,
+   "hr": null,
+   "elev": 21
+  },
+  {
+   "id": "s9899079722",
+   "date": "2023-09-22",
+   "type": "running",
+   "distance": 6293,
+   "moving": 3744,
+   "hr": null,
+   "elev": 34
+  },
+  {
+   "id": "s9826961548",
+   "date": "2023-09-11",
+   "type": "running",
+   "distance": 2174,
+   "moving": 1239,
+   "hr": null,
+   "elev": 62
+  },
+  {
+   "id": "s9795520589",
+   "date": "2023-09-06",
+   "type": "running",
+   "distance": 3846,
+   "moving": 2383,
+   "hr": null,
+   "elev": 35
+  },
+  {
+   "id": "s9785374534",
+   "date": "2023-09-05",
+   "type": "running",
+   "distance": 4497,
+   "moving": 2017,
+   "hr": null,
+   "elev": 55
+  },
+  {
+   "id": "s9739544665",
+   "date": "2023-08-28",
+   "type": "running",
+   "distance": 4998,
+   "moving": 4626,
+   "hr": 113,
+   "elev": 133
+  },
+  {
+   "id": "s9715233772",
+   "date": "2023-08-25",
+   "type": "running",
+   "distance": 3889,
+   "moving": 1747,
+   "hr": null,
+   "elev": 43
+  },
+  {
+   "id": "s9633314945",
+   "date": "2023-08-12",
+   "type": "running",
+   "distance": 9479,
+   "moving": 4940,
+   "hr": null,
+   "elev": 60
+  },
+  {
+   "id": "s9524991190",
+   "date": "2023-07-26",
+   "type": "running",
+   "distance": 6338,
+   "moving": 3372,
+   "hr": null,
+   "elev": 34
+  },
+  {
+   "id": "s9510676130",
+   "date": "2023-07-24",
+   "type": "running",
+   "distance": 1779,
+   "moving": 815,
+   "hr": null,
+   "elev": 15
+  },
+  {
+   "id": "s9506294912",
+   "date": "2023-07-23",
+   "type": "running",
+   "distance": 4464,
+   "moving": 2004,
+   "hr": null,
+   "elev": 14
+  },
+  {
+   "id": "s8795039509",
+   "date": "2023-03-29",
+   "type": "running",
+   "distance": 1866,
+   "moving": 1081,
+   "hr": null,
+   "elev": 127
+  },
+  {
+   "id": "s8791205533",
+   "date": "2023-03-28",
+   "type": "running",
+   "distance": 1444,
+   "moving": 766,
+   "hr": null,
+   "elev": 19
+  },
+  {
+   "id": "s8751992435",
+   "date": "2023-03-21",
+   "type": "running",
+   "distance": 1792,
+   "moving": 1070,
+   "hr": null,
+   "elev": 5
+  },
+  {
+   "id": "s8717119692",
+   "date": "2023-03-15",
+   "type": "running",
+   "distance": 1820,
+   "moving": 1127,
+   "hr": null,
+   "elev": 35
+  },
+  {
+   "id": "s8674915192",
+   "date": "2023-03-07",
+   "type": "running",
+   "distance": 7872,
+   "moving": 4487,
+   "hr": null,
+   "elev": 44
+  },
+  {
+   "id": "s8565358911",
+   "date": "2023-02-15",
+   "type": "running",
+   "distance": 3568,
+   "moving": 2065,
+   "hr": null,
+   "elev": 15
+  },
+  {
+   "id": "s8051019840",
+   "date": "2022-11-01",
+   "type": "running",
+   "distance": 20250,
+   "moving": 10179,
+   "hr": null,
+   "elev": 106
+  },
+  {
+   "id": "s7933211109",
+   "date": "2022-10-09",
+   "type": "running",
+   "distance": 12204,
+   "moving": 4152,
+   "hr": null,
+   "elev": 56
+  },
+  {
+   "id": "s7179144137",
+   "date": "2022-05-21",
+   "type": "running",
+   "distance": 5366,
+   "moving": 2703,
+   "hr": null,
+   "elev": 130
+  },
+  {
+   "id": "s7163256705",
+   "date": "2022-05-18",
+   "type": "running",
+   "distance": 7655,
+   "moving": 3446,
+   "hr": null,
+   "elev": 180
+  },
+  {
+   "id": "s4758491202",
+   "date": "2021-02-09",
+   "type": "running",
+   "distance": 8187,
+   "moving": 4882,
+   "hr": null,
+   "elev": 37
+  },
+  {
+   "id": "s3498306244",
+   "date": "2020-05-23",
+   "type": "running",
+   "distance": 2597,
+   "moving": 1502,
+   "hr": null,
+   "elev": 11
+  },
+  {
+   "id": "s3482555559",
+   "date": "2020-05-20",
+   "type": "running",
+   "distance": 9289,
+   "moving": 4943,
+   "hr": null,
+   "elev": 73
   }
  ]
 }
