@@ -257,6 +257,19 @@ ${bars}
   `;
 }
 
+// 날짜·거리(km)·시간(분)·페이스(초/km)·심박·상승고도
+function toRows(runs) {
+  return runs.map((r) => ({
+    id: String(r.id),
+    date: r.date,
+    km: Math.round(r.distance / 10) / 100,
+    minutes: Math.round(r.moving / 6) / 10,
+    pace: Math.round(r.moving / (r.distance / 1000)),
+    hr: r.hr ?? null,
+    elev: r.elev ?? null,
+  }));
+}
+
 async function main() {
   if (!CONFIG.garminKey && !CONFIG.apiKey && !CONFIG.fixture) {
     console.log('GARMIN_PERSONAL_API_KEY 가 없어 러닝 기록 갱신을 건너뜁니다.');
@@ -300,7 +313,9 @@ async function main() {
   const pub = ({ start, source, ...r }) => r; // 공개용: 출발 시각·기기 정보 제외
   const out = { ...summary, recent: summary.recent.map(pub), runs: runs.map(pub) };
   writeFileSync(join(HERE, 'data', 'runs.json'), JSON.stringify(out, null, 1) + '\n');
-  console.log('index.html 과 data/runs.json 을 갱신했습니다.');
+  // 대시보드용: 러닝 한 건이 한 줄인 표 (Claude 러닝 대시보드가 매일 이 파일을 읽어 간다)
+  writeFileSync(join(HERE, 'data', 'runs-rows.json'), JSON.stringify(toRows(runs)) + '\n');
+  console.log('index.html, data/runs.json, data/runs-rows.json 을 갱신했습니다.');
 }
 
 main();
