@@ -93,6 +93,29 @@ a.item:hover h3{text-decoration:underline;text-underline-offset:2px}
 .item h3{font-size:15.5px;font-weight:700;line-height:1.45;margin:0}
 .item .sub{font-size:13px;color:var(--muted)}
 
+/* 러닝 로그 */
+.log-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2px;background:var(--ink);color:var(--bg);border-radius:10px;padding:6px;margin-bottom:22px}
+.log-stats div{padding:14px 16px;display:grid;gap:4px}
+.log-stats span{font-size:12.5px;opacity:.65;letter-spacing:.04em}
+.log-stats b{font-weight:700;font-size:40px;line-height:1}
+.log-stats b small{font-size:17px;opacity:.7;margin-left:3px}
+.log-stats em{font-style:normal;font-size:12.5px;opacity:.65}
+.log-chart{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;align-items:end;height:150px;padding:0 2px 22px;border-bottom:1px solid var(--line);margin-bottom:8px;background:repeating-linear-gradient(0deg,transparent 0 31px,var(--lane) 31px 32px)}
+.log-bar{position:relative;height:100%;display:flex;align-items:flex-end}
+.log-bar span{display:block;width:100%;min-height:2px;background:color-mix(in srgb,var(--track) 45%,var(--lane));border-radius:3px 3px 0 0}
+.log-bar.cur span{background:var(--track)}
+.log-bar em{position:absolute;left:0;right:0;bottom:-20px;text-align:center;font-style:normal;font-size:11.5px;color:var(--muted);font-family:var(--display)}
+.log-runs{display:grid}
+.log-run{display:grid;grid-template-columns:110px 110px repeat(3,minmax(0,1fr));gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.log-run time{font-family:var(--display);font-size:17px;color:var(--muted)}
+.log-run b{font-weight:800;font-size:26px;line-height:1}
+.log-run b small{font-size:13px;color:var(--muted);margin-left:2px}
+.log-run span{font-family:var(--display);font-size:19px;font-variant-numeric:tabular-nums}
+.log-run i{font-style:normal;font-family:var(--body);font-size:11.5px;color:var(--muted);margin-right:6px}
+@media (max-width:600px){.log-run{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:6px}.log-run time{grid-column:1/3;font-size:15px}.log-run b{justify-self:end}.log-run span{grid-row:2;font-size:16px}.log-chart{gap:3px}}
+.log-upd{font-size:12.5px;color:var(--muted);margin:12px 0 0}
+.log-empty{background:var(--surface);border:1px dashed var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted);font-size:14px}
+
 /* 리뷰 */
 .review{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:22px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
 .review:hover h3{text-decoration:underline;text-underline-offset:2px}
@@ -161,7 +184,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 <div class="bar"><div class="wrap">
   <a class="logo" href="#top" id="top"><i></i>Slowandsteadyboy</a>
   <nav class="nav" aria-label="메뉴">
-    <a href="#videos">영상</a><a href="#reviews">리뷰</a><a href="#courses">부산 코스</a><a href="#races">대회 기록</a><a href="#gear">기어</a><a href="#insta">인스타</a><a href="#collab">협업</a>
+    <a href="#videos">영상</a><a href="#log">러닝 로그</a><a href="#reviews">리뷰</a><a href="#courses">부산 코스</a><a href="#races">대회 기록</a><a href="#gear">기어</a><a href="#insta">인스타</a><a href="#collab">협업</a>
   </nav>
 </div></div>
 
@@ -246,8 +269,15 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
   </div>
 </div></section>
 
+<section class="s" id="log"><div class="wrap">
+  <div class="s-head"><span class="lane-no">02</span><h2>러닝 로그</h2><p>가민·애플워치로 뛴 기록이 자동으로 쌓입니다.</p></div>
+  <!-- runs:start -->
+  <div class="log-empty">러닝 기록 연동 준비 중입니다.</div>
+  <!-- runs:end -->
+</div></section>
+
 <section class="s" id="reviews"><div class="wrap">
-  <div class="s-head"><span class="lane-no">02</span><h2>러닝 리뷰</h2><p>직접 달리고, 신고, 측정받은 것만 리뷰합니다.</p></div>
+  <div class="s-head"><span class="lane-no">03</span><h2>러닝 리뷰</h2><p>직접 달리고, 신고, 측정받은 것만 리뷰합니다.</p></div>
   <a class="review" href="reviews/racement-motionlab/">
     <span class="ph"><img src="reviews/racement-motionlab/01.jpg" alt="" loading="lazy" decoding="async"><span class="tag">EVENT</span></span>
     <span class="meta">
@@ -260,7 +290,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 </div></section>
 
 <section class="s" id="courses"><div class="wrap">
-  <div class="s-head"><span class="lane-no">03</span><h2>부산 러닝 코스</h2><p>직접 뛰어본 코스만. 거리, 노면, 추천 시간대를 정리합니다.</p></div>
+  <div class="s-head"><span class="lane-no">04</span><h2>부산 러닝 코스</h2><p>직접 뛰어본 코스만. 거리, 노면, 추천 시간대를 정리합니다.</p></div>
   <div class="grid">
     <article class="course">
       <svg viewBox="0 0 200 90" aria-hidden="true"><path d="M30 60 C 30 20, 90 15, 120 30 S 175 70, 140 75 S 40 85, 30 60 Z" fill="none" stroke="var(--track)" stroke-width="4" stroke-linecap="round"/><circle cx="30" cy="60" r="5" fill="var(--ink)"/></svg>
@@ -281,7 +311,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 </div></section>
 
 <section class="s" id="races"><div class="wrap">
-  <div class="s-head"><span class="lane-no">04</span><h2>대회 · 러닝 이벤트</h2><p>참가한 대회와 러닝 이벤트 기록.</p></div>
+  <div class="s-head"><span class="lane-no">05</span><h2>대회 · 러닝 이벤트</h2><p>참가한 대회와 러닝 이벤트 기록.</p></div>
   <div class="races">
     <div class="race"><time>2026.10</time><div><h3>첫 하프 마라톤</h3><p>평소 5~10km만 뛰다 첫 21.1km 도전. 목표였던 2시간 이내 달성.</p></div><span class="rec pb">1:46<small>PB</small></span></div>
     <div class="race"><time>2026</time><div><h3>올소울즈런 부산</h3><p>스탠리 협찬, 수나요가·로우앤스윗·BRC와 함께한 러닝 이벤트.</p></div><span class="rec">FUN</span></div>
@@ -290,7 +320,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 </div></section>
 
 <section class="s" id="gear"><div class="wrap">
-  <div class="s-head"><span class="lane-no">05</span><h2>러닝 기어 <span class="draft">상품 선정 필요</span></h2><p>직접 신고 입어본 것만. 쿠팡파트너스 링크로 수익 연결.</p></div>
+  <div class="s-head"><span class="lane-no">06</span><h2>러닝 기어 <span class="draft">상품 선정 필요</span></h2><p>직접 신고 입어본 것만. 쿠팡파트너스 링크로 수익 연결.</p></div>
   <div class="grid">
     <div class="item"><div class="ph" style="aspect-ratio:4/3"><span class="tag">예시</span>러닝화</div><h3>데일리 러닝화</h3><span class="sub">실착 거리 · 장단점 · 구매 링크</span></div>
     <div class="item"><div class="ph" style="aspect-ratio:4/3"><span class="tag">예시</span>트레일화</div><h3>트레일 러닝화</h3><span class="sub">동백섬 트레일 촬영용</span></div>
@@ -299,7 +329,7 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
 </div></section>
 
 <section class="s" id="insta"><div class="wrap">
-  <div class="s-head"><span class="lane-no">06</span><h2>인스타그램</h2><p>러닝 일상과 코스 사진은 인스타에 올립니다.</p></div>
+  <div class="s-head"><span class="lane-no">07</span><h2>인스타그램</h2><p>러닝 일상과 코스 사진은 인스타에 올립니다.</p></div>
   <div class="follow">
     <div class="who">
       <span class="handle">@slowandsteadyboy</span>
@@ -315,12 +345,13 @@ footer .wrap{padding-block:26px 40px;display:flex;justify-content:space-between;
       <thead><tr><th>레인</th><th>섹션</th><th>내용</th><th>데이터 소스</th><th>상태</th></tr></thead>
       <tbody>
         <tr><td>01</td><td>최신 영상</td><td>최근 영상 6~8개, 사이트 안 재생</td><td>유튜브 RSS (채널 ID 확보)</td><td>연동 완료</td></tr>
-        <tr><td>02</td><td>러닝 리뷰</td><td>리뷰 메이커로 만든 리뷰 카드 + 상세 페이지</td><td>리뷰 메이커 결과</td><td>1건 반영</td></tr>
-        <tr><td>03</td><td>부산 러닝 코스</td><td>코스별 거리·노면·시간대, 지도</td><td>직접 입력 (코스 목록 필요)</td><td>목록 받기</td></tr>
-        <tr><td>04</td><td>대회 기록</td><td>대회명·날짜·기록·후기 링크</td><td>직접 입력</td><td>초안 3건</td></tr>
-        <tr><td>05</td><td>러닝 기어</td><td>실착 기어 + 쿠팡파트너스 링크</td><td>직접 입력</td><td>상품 선정</td></tr>
-        <tr><td>06</td><td>인스타그램</td><td>팔로우 카드</td><td>고정 링크 (API 안 씀)</td><td>정리 완료</td></tr>
-        <tr><td>07</td><td>협업</td><td>크루·브랜드 협업 문의 창구</td><td>고정 문구</td><td>문구 확인</td></tr>
+        <tr><td>02</td><td>러닝 로그</td><td>월별 거리, 최근 러닝, 누적 km</td><td>intervals.icu (가민·애플워치)</td><td>키 등록 대기</td></tr>
+        <tr><td>03</td><td>러닝 리뷰</td><td>리뷰 메이커로 만든 리뷰 카드 + 상세 페이지</td><td>리뷰 메이커 결과</td><td>1건 반영</td></tr>
+        <tr><td>04</td><td>부산 러닝 코스</td><td>코스별 거리·노면·시간대, 지도</td><td>직접 입력 (코스 목록 필요)</td><td>목록 받기</td></tr>
+        <tr><td>05</td><td>대회 기록</td><td>대회명·날짜·기록·후기 링크</td><td>직접 입력</td><td>초안 3건</td></tr>
+        <tr><td>06</td><td>러닝 기어</td><td>실착 기어 + 쿠팡파트너스 링크</td><td>직접 입력</td><td>상품 선정</td></tr>
+        <tr><td>07</td><td>인스타그램</td><td>팔로우 카드</td><td>고정 링크 (API 안 씀)</td><td>정리 완료</td></tr>
+        <tr><td>08</td><td>협업</td><td>크루·브랜드 협업 문의 창구</td><td>고정 문구</td><td>문구 확인</td></tr>
       </tbody>
     </table></div>
   </div>

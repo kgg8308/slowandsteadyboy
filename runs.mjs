@@ -1,0 +1,219 @@
+// intervals.icu 에서 러닝 기록을 받아 index.html 의 '러닝 로그' 자리를 채우고,
+// 대시보드 등에서 쓸 수 있게 data/runs.json 도 만든다.
+//
+//   INTERVALS_API_KEY=xxxx node runs.mjs
+//
+// 흐름: 가민 시계 / 애플워치(HealthFit) → 가민 커넥트 → intervals.icu → 이 스크립트
+//
+// - API 키는 깃허브 저장소 Settings → Secrets 의 INTERVALS_API_KEY 에 넣는다. 코드에 쓰지 않는다.
+// - 선수 ID 는 비워 두면 '0'(= API 키 주인 본인)으로 조회한다.
+// - 키가 없으면 아무것도 바꾸지 않고 조용히 끝난다. 영상 갱신은 그대로 돈다.
+// - GPS 경로·출발 시각은 공개하지 않는다. 날짜·거리·시간·페이스·심박만 쓴다.
+
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+
+const CONFIG = {
+  apiKey: process.env.INTERVALS_API_KEY || '',
+  athleteId: process.env.INTERVALS_ATHLETE_ID || '0',
+  since: '2023-01-01', // 이 날짜 이후 기록만 받는다
+  recent: 6, // 최근 러닝 몇 개를 보여줄지
+  months: 12, // 월별 막대 몇 달치
+  types: ['Run', 'VirtualRun', 'TrailRun'],
+  fixture: process.env.RUNS_FIXTURE || '', // 테스트용: API 대신 이 JSON 파일을 읽는다
+};
+
+const START = '<!-- runs:start -->';
+const END = '<!-- runs:end -->';
+
+const esc = (s) =>
+  String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+const ymd = (d) => d.toISOString().slice(0, 10);
+
+// 한국 시간 기준 '오늘'. 액션은 UTC 로 돈다.
+const todayKST = () => {
+  const [y, m, d] = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(new Date()).split('-');
+  return { y: +y, m: +m, d: +d };
+};
+
+const fmtKm = (m) => (m / 1000).toFixed(m >= 100000 ? 0 : 1);
+const fmtDur = (s) => {
+  s = Math.round(s);
+  const h = Math.floor(s / 3600), mm = Math.floor((s % 3600) / 60), ss = s % 60;
+  return h ? `${h}:${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}` : `${mm}:${String(ss).padStart(2, '0')}`;
+};
+const fmtPace = (sec, meters) => {
+  if (!meters) return '-';
+  const p = Math.round(sec / (meters / 1000));
+  return `${Math.floor(p / 60)}'${String(p % 60).padStart(2, '0')}"`;
+};
+
+async function fetchActivities() {
+  if (CONFIG.fixture) return JSON.parse(readFileSync(CONFIG.fixture, 'utf8'));
+  const { y, m, d } = todayKST();
+  const newest = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+  const url = `https://intervals.icu/api/v1/athlete/${encodeURIComponent(CONFIG.athleteId)}/activities?oldest=${CONFIG.since}&newest=${newest}`;
+  const auth = Buffer.from(`API_KEY:${CONFIG.apiKey}`).toString('base64');
+  const res = await fetch(url, {
+    headers: { Authorization: `Basic ${auth}`, Accept: 'application/json' },
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+// intervals.icu 원본 → 필요한 칸만
+function normalize(list) {
+  return list
+    .filter((a) => CONFIG.types.includes(a.type) && a.distance > 0 && a.moving_time > 0)
+    .map((a) => ({
+      id: String(a.id),
+      date: String(a.start_date_local || a.start_date || '').slice(0, 10),
+      start: Date.parse(a.start_date || a.start_date_local),
+      type: a.type,
+      distance: Math.round(a.distance), // m
+      moving: Math.round(a.moving_time), // 초
+      hr: a.average_heartrate ? Math.round(a.average_heartrate) : null,
+      elev: a.total_elevation_gain ? Math.round(a.total_elevation_gain) : null,
+      source: a.device_name || a.source || '',
+    }))
+    .filter((r) => r.date);
+}
+
+// 가민·애플워치를 동시에 차고 뛰면 같은 러닝이 두 번 들어온다.
+// 출발 시각이 15분 이내이고 거리가 15% 이내로 같으면 하나로 본다.
+// 심박이 있는 쪽, 그다음 거리가 긴 쪽을 남긴다.
+function dedupe(runs) {
+  const sorted = [...runs].sort((a, b) => a.start - b.start);
+  const out = [];
+  for (const r of sorted) {
+    const twin = out.find(
+      (o) => Math.abs(o.start - r.start) <= 15 * 60 * 1000 &&
+        Math.abs(o.distance - r.distance) <= 0.15 * Math.max(o.distance, r.distance),
+    );
+    if (!twin) { out.push(r); continue; }
+    const better = (!!r.hr - !!twin.hr) || (r.distance - twin.distance);
+    if (better > 0) out[out.indexOf(twin)] = r;
+  }
+  return out.sort((a, b) => b.start - a.start);
+}
+
+function summarize(runs) {
+  const { y, m } = todayKST();
+  const mm = `${y}-${String(m).padStart(2, '0')}`;
+  const sum = (arr) => arr.reduce((s, r) => s + r.distance, 0);
+  const thisMonth = runs.filter((r) => r.date.startsWith(mm));
+  const thisYear = runs.filter((r) => r.date.startsWith(String(y)));
+  const longest = runs.reduce((a, r) => (!a || r.distance > a.distance ? r : a), null);
+
+  const monthly = [];
+  for (let i = CONFIG.months - 1; i >= 0; i--) {
+    const d = new Date(Date.UTC(y, m - 1 - i, 1));
+    const key = d.toISOString().slice(0, 7);
+    const list = runs.filter((r) => r.date.startsWith(key));
+    monthly.push({ month: key, km: +(sum(list) / 1000).toFixed(1), runs: list.length });
+  }
+
+  return {
+    updated: new Date().toISOString(),
+    month: { key: mm, km: +(sum(thisMonth) / 1000).toFixed(1), runs: thisMonth.length },
+    year: { key: String(y), km: +(sum(thisYear) / 1000).toFixed(1), runs: thisYear.length },
+    longest: longest && { date: longest.date, km: +(longest.distance / 1000).toFixed(2) },
+    monthly,
+    recent: runs.slice(0, CONFIG.recent),
+  };
+}
+
+function render(s) {
+  const max = Math.max(1, ...s.monthly.map((x) => x.km));
+  const bars = s.monthly.map((x) => {
+    const h = Math.round((x.km / max) * 100);
+    const cur = x.month === s.month.key ? ' cur' : '';
+    return `      <div class="log-bar${cur}" title="${esc(x.month)} · ${x.km}km · ${x.runs}회"><span style="height:${h}%"></span><em>${+x.month.slice(5)}</em></div>`;
+  }).join('\n');
+
+  const rows = s.recent.map((r) => `
+    <div class="log-run">
+      <time>${esc(r.date.replaceAll('-', '.'))}</time>
+      <b class="num">${fmtKm(r.distance)}<small>km</small></b>
+      <span><i>시간</i>${fmtDur(r.moving)}</span>
+      <span><i>페이스</i>${fmtPace(r.moving, r.distance)}</span>
+      <span><i>심박</i>${r.hr ?? '-'}</span>
+    </div>`).join('');
+
+  const upd = new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
+  }).format(new Date(s.updated));
+
+  return `
+  <div class="log-stats">
+    <div><span>이번 달</span><b class="num">${s.month.km}<small>km</small></b><em>${s.month.runs}회</em></div>
+    <div><span>${esc(s.year.key)}년 누적</span><b class="num">${s.year.km}<small>km</small></b><em>${s.year.runs}회</em></div>
+    <div><span>최장 거리</span><b class="num">${s.longest ? s.longest.km : '-'}<small>km</small></b><em>${s.longest ? esc(s.longest.date.replaceAll('-', '.')) : ''}</em></div>
+  </div>
+  <div class="log-chart" aria-label="최근 ${s.monthly.length}개월 월별 거리">
+${bars}
+  </div>
+  <div class="log-runs">${rows}
+  </div>
+  <p class="log-upd">가민·애플워치 기록 자동 반영 · ${esc(upd)} 갱신</p>
+  `;
+}
+
+async function main() {
+  if (!CONFIG.apiKey && !CONFIG.fixture) {
+    console.log('INTERVALS_API_KEY 가 없어 러닝 기록 갱신을 건너뜁니다.');
+    return;
+  }
+
+  let runs;
+  try {
+    runs = dedupe(normalize(await fetchActivities()));
+    console.log(`러닝 ${runs.length}개를 받았습니다.`);
+  } catch (err) {
+    console.error(`러닝 기록을 받지 못했습니다: ${err.message}`);
+    return; // 기존 화면을 그대로 둔다
+  }
+  if (!runs.length) {
+    console.log('러닝 기록이 없어 기존 내용을 그대로 둡니다.');
+    return;
+  }
+
+  const summary = summarize(runs);
+
+  const path = join(HERE, 'index.html');
+  const html = readFileSync(path, 'utf8');
+  const from = html.indexOf(START);
+  const to = html.indexOf(END);
+  if (from < 0 || to < 0) {
+    console.error(`index.html 에서 ${START} / ${END} 표시를 찾지 못했습니다.`);
+    process.exit(1);
+  }
+  const next = html.slice(0, from + START.length) + render(summary) + html.slice(to);
+
+  // 갱신 시각만 바뀐 경우엔 커밋하지 않는다
+  const strip = (t) => t.replace(/ · [^<]* 갱신</, '<');
+  if (strip(next) === strip(html)) {
+    console.log('러닝 기록에 바뀐 게 없습니다.');
+    return;
+  }
+  writeFileSync(path, next);
+
+  mkdirSync(join(HERE, 'data'), { recursive: true });
+  const pub = ({ start, source, ...r }) => r; // 공개용: 출발 시각·기기 정보 제외
+  const out = { ...summary, recent: summary.recent.map(pub), runs: runs.map(pub) };
+  writeFileSync(join(HERE, 'data', 'runs.json'), JSON.stringify(out, null, 1) + '\n');
+  console.log('index.html 과 data/runs.json 을 갱신했습니다.');
+}
+
+main();
