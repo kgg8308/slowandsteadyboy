@@ -1,5 +1,182 @@
 {
- "updated": "2026-11-08T14:22:11.718Z",
+ "updated": "2026-11-08T14:31:36.795Z",
+ "lastWeek": {
+  "from": "2026-10-26",
+  "to": "2026-11-01",
+  "km": 20.3,
+  "runs": 4
+ },
+ "thisWeek": {
+  "from": "2026-11-02",
+  "to": "2026-11-08",
+  "km": 21.2,
+  "runs": 3
+ },
+ "days": [
+  {
+   "date": "2026-10-26",
+   "km": 5.2,
+   "runs": 1,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-10-27",
+   "km": 4.1,
+   "runs": 1,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-10-28",
+   "km": 5.5,
+   "runs": 1,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-10-29",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-10-30",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-10-31",
+   "km": 5.5,
+   "runs": 1,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-01",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-02",
+   "km": 14.7,
+   "runs": 2,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-03",
+   "km": 6.5,
+   "runs": 1,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-04",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-05",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-06",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-07",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-08",
+   "km": 0,
+   "runs": 0,
+   "today": true,
+   "future": false
+  }
+ ],
+ "twoWeeks": [
+  {
+   "id": "s20835168505",
+   "date": "2026-11-03",
+   "type": "running",
+   "distance": 6450,
+   "moving": 2233,
+   "hr": 135,
+   "elev": 36
+  },
+  {
+   "id": "s20828871127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 8778,
+   "moving": 3672,
+   "hr": 125,
+   "elev": 74
+  },
+  {
+   "id": "s20823535127",
+   "date": "2026-11-02",
+   "type": "running",
+   "distance": 5958,
+   "moving": 2199,
+   "hr": 131,
+   "elev": 81
+  },
+  {
+   "id": "s20796989022",
+   "date": "2026-10-31",
+   "type": "running",
+   "distance": 5494,
+   "moving": 2717,
+   "hr": null,
+   "elev": 110
+  },
+  {
+   "id": "s20771790008",
+   "date": "2026-10-28",
+   "type": "running",
+   "distance": 5464,
+   "moving": 1808,
+   "hr": 150,
+   "elev": 72
+  },
+  {
+   "id": "s20743873024",
+   "date": "2026-10-27",
+   "type": "running",
+   "distance": 4145,
+   "moving": 1552,
+   "hr": 141,
+   "elev": 50
+  },
+  {
+   "id": "s20732012838",
+   "date": "2026-10-26",
+   "type": "running",
+   "distance": 5206,
+   "moving": 2036,
+   "hr": 126,
+   "elev": 90
+  }
+ ],
  "month": {
   "key": "2026-11",
   "km": 21.2,
