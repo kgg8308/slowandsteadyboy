@@ -1,8 +1,8 @@
 name: 최신 영상 · 러닝 기록 갱신
 
 # 유튜브 채널 RSS를 읽어 index.html 의 영상 칸을 다시 만들고,
-# intervals.icu 에서 러닝 기록(가민·애플워치)을 받아 러닝 로그 칸을 채운 뒤, 바뀐 게 있으면 커밋합니다.
-# 러닝 기록은 저장소 Settings → Secrets and variables → Actions 의 INTERVALS_API_KEY 가 있어야 돕니다.
+# 가민 커넥트(가민 개인 API)에서 러닝 기록을 받아 러닝 로그 칸을 채운 뒤, 바뀐 게 있으면 커밋합니다.
+# 러닝 기록은 저장소 Settings → Secrets and variables → Actions 의 GARMIN_PERSONAL_API_KEY 가 있어야 돕니다.
 # 커밋이 push 되면 GitHub Pages 가 자동으로 다시 배포합니다.
 # 내 PC가 꺼져 있어도 깃허브에서 알아서 돕니다.
 
@@ -31,8 +31,9 @@ jobs:
       - name: 유튜브 RSS 읽어 영상 칸 채우기
         run: node build.mjs
 
-      - name: intervals.icu 러닝 기록 읽어 러닝 로그 채우기
+      - name: 가민 러닝 기록 읽어 러닝 로그 채우기
         env:
+          GARMIN_PERSONAL_API_KEY: ${{ secrets.GARMIN_PERSONAL_API_KEY }}
           INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
           INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
         run: node runs.mjs

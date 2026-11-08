@@ -1,12 +1,14 @@
-// intervals.icu 에서 러닝 기록을 받아 index.html 의 '러닝 로그' 자리를 채우고,
+// 가민 커넥트에서 러닝 기록을 받아 index.html 의 '러닝 로그' 자리를 채우고,
 // 대시보드 등에서 쓸 수 있게 data/runs.json 도 만든다.
 //
-//   INTERVALS_API_KEY=xxxx node runs.mjs
+//   GARMIN_PERSONAL_API_KEY=xxxx node runs.mjs
 //
-// 흐름: 가민 시계 / 애플워치(HealthFit) → 가민 커넥트 → intervals.icu → 이 스크립트
+// 흐름: 가민 시계 → 가민 커넥트 → (가민 개인 API) → 이 스크립트
 //
-// - API 키는 깃허브 저장소 Settings → Secrets 의 INTERVALS_API_KEY 에 넣는다. 코드에 쓰지 않는다.
-// - 선수 ID 는 비워 두면 '0'(= API 키 주인 본인)으로 조회한다.
+// - 가민 개인 API 키는 connect.garmin.com/app/settings/personalApiToken 에서 무료로 만든다.
+//   깃허브 저장소 Settings → Secrets 의 GARMIN_PERSONAL_API_KEY 에 넣는다. 코드에 쓰지 않는다.
+//   키는 최대 1년짜리라, 만료 전에 가민이 메일을 보내면 새로 만들어 시크릿만 바꿔 넣으면 된다.
+// - 예비 경로로 intervals.icu API 키(INTERVALS_API_KEY)도 받는다. 가민 키가 있으면 가민을 쓴다.
 // - 키가 없으면 아무것도 바꾸지 않고 조용히 끝난다. 영상 갱신은 그대로 돈다.
 // - GPS 경로·출발 시각은 공개하지 않는다. 날짜·거리·시간·페이스·심박만 쓴다.
 
@@ -17,6 +19,8 @@ import { fileURLToPath } from 'node:url';
 const HERE = dirname(fileURLToPath(import.meta.url));
 
 const CONFIG = {
+  garminKey: process.env.GARMIN_PERSONAL_API_KEY || '',
+  garminBase: 'https://personal.connectapi.garmin.com',
   apiKey: process.env.INTERVALS_API_KEY || '',
   athleteId: process.env.INTERVALS_ATHLETE_ID || '0',
   since: '2023-01-01', // 이 날짜 이후 기록만 받는다
@@ -35,8 +39,6 @@ const esc = (s) =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-
-const ymd = (d) => d.toISOString().slice(0, 10);
 
 // 한국 시간 기준 '오늘'. 액션은 UTC 로 돈다.
 const todayKST = () => {
@@ -58,11 +60,68 @@ const fmtPace = (sec, meters) => {
   return `${Math.floor(p / 60)}'${String(p % 60).padStart(2, '0')}"`;
 };
 
-async function fetchActivities() {
-  if (CONFIG.fixture) return JSON.parse(readFileSync(CONFIG.fixture, 'utf8'));
+const todayStr = () => {
   const { y, m, d } = todayKST();
-  const newest = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-  const url = `https://intervals.icu/api/v1/athlete/${encodeURIComponent(CONFIG.athleteId)}/activities?oldest=${CONFIG.since}&newest=${newest}`;
+  return `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+};
+
+// ── 가민 개인 API ──────────────────────────────────────────────
+// 키 → 24시간짜리 토큰 → 활동 검색(100개씩 넘겨 가며). 가민 공식 예제와 같은 경로를 쓴다.
+async function garminToken() {
+  const res = await fetch(`${CONFIG.garminBase}/personalapitoken-service/personal-api/personal-api-key/token`, {
+    method: 'POST',
+    headers: { Accept: '*/*', Authorization: `ApiKey ${CONFIG.garminKey}` },
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!res.ok) throw new Error(`가민 토큰 발급 실패 HTTP ${res.status} (키가 틀렸거나 만료됐을 수 있습니다)`);
+  return (await res.text()).trim();
+}
+
+async function fetchGarmin() {
+  const token = await garminToken();
+  const all = [];
+  for (let start = 0; start < 5000; start += 100) {
+    const qs = new URLSearchParams({ start, limit: 100, startDate: CONFIG.since, endDate: todayStr() });
+    const res = await fetch(`${CONFIG.garminBase}/activitylist-service/activities/search/activities?${qs}`, {
+      headers: { Accept: 'application/json', Authorization: `Bearer ${token}` },
+      signal: AbortSignal.timeout(30000),
+    });
+    if (!res.ok) throw new Error(`가민 활동 조회 실패 HTTP ${res.status}`);
+    const page = (await res.json()) ?? [];
+    const list = Array.isArray(page) ? page : page.activityList ?? page.activities ?? [];
+    all.push(...list);
+    if (list.length < 100) break;
+  }
+  if (all.length) console.log(`가민 응답 항목: ${Object.keys(all[0]).slice(0, 40).join(', ')}`);
+  return all;
+}
+
+// 가민 '2026-11-01 07:02:11' 형식. GMT 쪽은 Z 를 붙여 UTC 로 읽는다.
+const gmt = (t) => (t ? Date.parse(String(t).replace(' ', 'T') + (/[zZ+]/.test(t) ? '' : 'Z')) : NaN);
+
+function normalizeGarmin(list) {
+  return list
+    .filter((a) => /running/.test(a.activityType?.typeKey ?? a.activityTypeDTO?.typeKey ?? '') && a.distance > 0)
+    .map((a) => {
+      const local = String(a.startTimeLocal ?? '');
+      return {
+        id: String(a.activityId),
+        date: local.slice(0, 10),
+        start: gmt(a.startTimeGMT) || Date.parse(local.replace(' ', 'T')),
+        type: a.activityType?.typeKey ?? 'running',
+        distance: Math.round(a.distance),
+        moving: Math.round(a.movingDuration || a.duration || 0),
+        hr: a.averageHR ? Math.round(a.averageHR) : null,
+        elev: a.elevationGain ? Math.round(a.elevationGain) : null,
+        source: 'garmin',
+      };
+    })
+    .filter((r) => r.date && r.moving > 0);
+}
+
+// ── intervals.icu (예비) ───────────────────────────────────────
+async function fetchIntervals() {
+  const url = `https://intervals.icu/api/v1/athlete/${encodeURIComponent(CONFIG.athleteId)}/activities?oldest=${CONFIG.since}&newest=${todayStr()}`;
   const auth = Buffer.from(`API_KEY:${CONFIG.apiKey}`).toString('base64');
   const res = await fetch(url, {
     headers: { Authorization: `Basic ${auth}`, Accept: 'application/json' },
@@ -72,8 +131,7 @@ async function fetchActivities() {
   return res.json();
 }
 
-// intervals.icu 원본 → 필요한 칸만
-function normalize(list) {
+function normalizeIntervals(list) {
   return list
     .filter((a) => CONFIG.types.includes(a.type) && a.distance > 0 && a.moving_time > 0)
     .map((a) => ({
@@ -88,6 +146,15 @@ function normalize(list) {
       source: a.device_name || a.source || '',
     }))
     .filter((r) => r.date);
+}
+
+async function fetchRuns() {
+  if (CONFIG.fixture) {
+    const raw = JSON.parse(readFileSync(CONFIG.fixture, 'utf8'));
+    return raw[0]?.activityId ? normalizeGarmin(raw) : normalizeIntervals(raw);
+  }
+  if (CONFIG.garminKey) return normalizeGarmin(await fetchGarmin());
+  return normalizeIntervals(await fetchIntervals());
 }
 
 // 가민·애플워치를 동시에 차고 뛰면 같은 러닝이 두 번 들어온다.
@@ -166,19 +233,19 @@ ${bars}
   </div>
   <div class="log-runs">${rows}
   </div>
-  <p class="log-upd">가민·애플워치 기록 자동 반영 · ${esc(upd)} 갱신</p>
+  <p class="log-upd">가민 기록 자동 반영 · ${esc(upd)} 갱신</p>
   `;
 }
 
 async function main() {
-  if (!CONFIG.apiKey && !CONFIG.fixture) {
-    console.log('INTERVALS_API_KEY 가 없어 러닝 기록 갱신을 건너뜁니다.');
+  if (!CONFIG.garminKey && !CONFIG.apiKey && !CONFIG.fixture) {
+    console.log('GARMIN_PERSONAL_API_KEY 가 없어 러닝 기록 갱신을 건너뜁니다.');
     return;
   }
 
   let runs;
   try {
-    runs = dedupe(normalize(await fetchActivities()));
+    runs = dedupe(await fetchRuns());
     console.log(`러닝 ${runs.length}개를 받았습니다.`);
   } catch (err) {
     console.error(`러닝 기록을 받지 못했습니다: ${err.message}`);
