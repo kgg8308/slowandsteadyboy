@@ -10,6 +10,9 @@
 //   키는 최대 1년짜리라, 만료 전에 가민이 메일을 보내면 새로 만들어 시크릿만 바꿔 넣으면 된다.
 // - 예비 경로로 intervals.icu API 키(INTERVALS_API_KEY)도 받는다. 가민 키가 있으면 가민을 쓴다.
 // - 키가 없으면 아무것도 바꾸지 않고 조용히 끝난다. 영상 갱신은 그대로 돈다.
+// - data/history.json 은 스트라바 아카이브(애플워치 기록 포함)에서 한 번 뽑아 둔 과거 기록이다.
+//   가민 기록과 합친 뒤, 두 시계로 같이 뛴 러닝은 하나로 합친다.
+// - 1km 미만(워밍업 등)은 뺀다.
 // - GPS 경로·출발 시각은 공개하지 않는다. 날짜·거리·시간·페이스·심박만 쓴다.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -27,6 +30,7 @@ const CONFIG = {
   recent: 6, // 최근 러닝 몇 개를 보여줄지
   months: 12, // 월별 막대 몇 달치
   types: ['Run', 'VirtualRun', 'TrailRun'],
+  minDistance: 1000, // m — 이보다 짧은 기록은 뺀다
   fixture: process.env.RUNS_FIXTURE || '', // 테스트용: API 대신 이 JSON 파일을 읽는다
 };
 
@@ -148,7 +152,23 @@ function normalizeIntervals(list) {
     .filter((r) => r.date);
 }
 
+function loadHistory() {
+  try {
+    const { runs } = JSON.parse(readFileSync(join(HERE, 'data', 'history.json'), 'utf8'));
+    return Array.isArray(runs) ? runs : [];
+  } catch {
+    return [];
+  }
+}
+
 async function fetchRuns() {
+  const history = loadHistory();
+  const live = await fetchLive();
+  if (history.length) console.log(`과거 기록 ${history.length}개를 합칩니다.`);
+  return [...live, ...history].filter((r) => r.distance >= CONFIG.minDistance);
+}
+
+async function fetchLive() {
   if (CONFIG.fixture) {
     const raw = JSON.parse(readFileSync(CONFIG.fixture, 'utf8'));
     return raw[0]?.activityId ? normalizeGarmin(raw) : normalizeIntervals(raw);

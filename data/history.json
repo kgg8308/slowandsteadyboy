@@ -1,0 +1,4195 @@
+{
+"source": "Strava 아카이브(애플워치 등) — 1회 가져오기, 2026-11-08",
+"runs": [
+{
+"id": "s20835168505",
+"date": "2026-11-03",
+"start": 1793653800000,
+"type": "running",
+"distance": 6450,
+"moving": 2233,
+"hr": 135,
+"elev": 36
+},
+{
+"id": "s20828871127",
+"date": "2026-11-02",
+"start": 1793617200000,
+"type": "running",
+"distance": 8778,
+"moving": 3672,
+"hr": 125,
+"elev": 74
+},
+{
+"id": "s20823535127",
+"date": "2026-11-02",
+"start": 1793572800000,
+"type": "running",
+"distance": 5958,
+"moving": 2199,
+"hr": 131,
+"elev": 81
+},
+{
+"id": "s20796989022",
+"date": "2026-10-31",
+"start": 1793400000000,
+"type": "running",
+"distance": 5494,
+"moving": 2717,
+"hr": null,
+"elev": 110
+},
+{
+"id": "s20771790008",
+"date": "2026-10-28",
+"start": 1793185800000,
+"type": "running",
+"distance": 5464,
+"moving": 1808,
+"hr": 150,
+"elev": 72
+},
+{
+"id": "s20743873024",
+"date": "2026-10-27",
+"start": 1793053800000,
+"type": "running",
+"distance": 4145,
+"moving": 1552,
+"hr": 141,
+"elev": 50
+},
+{
+"id": "s20732012838",
+"date": "2026-10-26",
+"start": 1792969200000,
+"type": "running",
+"distance": 5206,
+"moving": 2036,
+"hr": 126,
+"elev": 90
+},
+{
+"id": "s20693759090",
+"date": "2026-10-23",
+"start": 1792703400000,
+"type": "running",
+"distance": 3990,
+"moving": 2351,
+"hr": 142,
+"elev": 132
+},
+{
+"id": "s20686639135",
+"date": "2026-10-22",
+"start": 1792666200000,
+"type": "running",
+"distance": 6330,
+"moving": 2288,
+"hr": 147,
+"elev": 174
+},
+{
+"id": "s20674017740",
+"date": "2026-10-21",
+"start": 1792581000000,
+"type": "running",
+"distance": 5493,
+"moving": 1928,
+"hr": 131,
+"elev": 83
+},
+{
+"id": "s20646504541",
+"date": "2026-10-19",
+"start": 1792409400000,
+"type": "running",
+"distance": 4867,
+"moving": 1830,
+"hr": 163,
+"elev": 131
+},
+{
+"id": "s20615778814",
+"date": "2026-10-17",
+"start": 1792193400000,
+"type": "running",
+"distance": 21320,
+"moving": 6401,
+"hr": 166,
+"elev": 50
+},
+{
+"id": "s20601626003",
+"date": "2026-10-16",
+"start": 1792102200000,
+"type": "running",
+"distance": 1065,
+"moving": 357,
+"hr": 169,
+"elev": 4
+},
+{
+"id": "s20601232452",
+"date": "2026-10-16",
+"start": 1792098000000,
+"type": "running",
+"distance": 3204,
+"moving": 1200,
+"hr": 159,
+"elev": 24
+},
+{
+"id": "s20595334557",
+"date": "2026-10-15",
+"start": 1792068000000,
+"type": "running",
+"distance": 1552,
+"moving": 1385,
+"hr": null,
+"elev": null
+},
+{
+"id": "s20582372094",
+"date": "2026-10-14",
+"start": 1791976200000,
+"type": "running",
+"distance": 5550,
+"moving": 1771,
+"hr": 152,
+"elev": 81
+},
+{
+"id": "s20553337588",
+"date": "2026-10-12",
+"start": 1791803400000,
+"type": "running",
+"distance": 11071,
+"moving": 4714,
+"hr": null,
+"elev": 59
+},
+{
+"id": "s20521522522",
+"date": "2026-10-10",
+"start": 1791591000000,
+"type": "running",
+"distance": 5321,
+"moving": 1720,
+"hr": null,
+"elev": 4
+},
+{
+"id": "s20474464358",
+"date": "2026-10-05",
+"start": 1791198000000,
+"type": "running",
+"distance": 6316,
+"moving": 2409,
+"hr": 134,
+"elev": 36
+},
+{
+"id": "s20454336660",
+"date": "2026-10-05",
+"start": 1791153600000,
+"type": "running",
+"distance": 6091,
+"moving": 1962,
+"hr": null,
+"elev": 13
+},
+{
+"id": "s20440655261",
+"date": "2026-10-04",
+"start": 1791068400000,
+"type": "running",
+"distance": 3823,
+"moving": 2033,
+"hr": 154,
+"elev": 14
+},
+{
+"id": "s20391930180",
+"date": "2026-09-30",
+"start": 1790766600000,
+"type": "running",
+"distance": 4688,
+"moving": 1845,
+"hr": 137,
+"elev": 23
+},
+{
+"id": "s20384734344",
+"date": "2026-09-28",
+"start": 1790595000000,
+"type": "running",
+"distance": 5145,
+"moving": 1939,
+"hr": 150,
+"elev": 33
+},
+{
+"id": "s20350667018",
+"date": "2026-09-27",
+"start": 1790506800000,
+"type": "running",
+"distance": 8027,
+"moving": 3412,
+"hr": 126,
+"elev": 61
+},
+{
+"id": "s20342925001",
+"date": "2026-09-27",
+"start": 1790457600000,
+"type": "running",
+"distance": 5118,
+"moving": 1488,
+"hr": 155,
+"elev": 51
+},
+{
+"id": "s20273537325",
+"date": "2026-09-22",
+"start": 1790025000000,
+"type": "running",
+"distance": 1324,
+"moving": 711,
+"hr": 119,
+"elev": 13
+},
+{
+"id": "s20268694973",
+"date": "2026-09-21",
+"start": 1789989600000,
+"type": "running",
+"distance": 10573,
+"moving": 3416,
+"hr": 152,
+"elev": 131
+},
+{
+"id": "s20255164709",
+"date": "2026-09-20",
+"start": 1789908600000,
+"type": "running",
+"distance": 5440,
+"moving": 1869,
+"hr": null,
+"elev": 14
+},
+{
+"id": "s20213024060",
+"date": "2026-09-17",
+"start": 1789643400000,
+"type": "running",
+"distance": 8737,
+"moving": 3448,
+"hr": null,
+"elev": 41
+},
+{
+"id": "s20198550646",
+"date": "2026-09-16",
+"start": 1789557000000,
+"type": "running",
+"distance": 4661,
+"moving": 1666,
+"hr": null,
+"elev": 29
+},
+{
+"id": "s20192711670",
+"date": "2026-09-16",
+"start": 1789512600000,
+"type": "running",
+"distance": 5211,
+"moving": 1713,
+"hr": 135,
+"elev": 65
+},
+{
+"id": "s20170745751",
+"date": "2026-09-14",
+"start": 1789385400000,
+"type": "running",
+"distance": 6029,
+"moving": 2279,
+"hr": 149,
+"elev": 37
+},
+{
+"id": "s20135725645",
+"date": "2026-09-12",
+"start": 1789164000000,
+"type": "running",
+"distance": 5303,
+"moving": 1914,
+"hr": null,
+"elev": 4
+},
+{
+"id": "s20118618031",
+"date": "2026-09-10",
+"start": 1789037400000,
+"type": "running",
+"distance": 9742,
+"moving": 3853,
+"hr": 129,
+"elev": 98
+},
+{
+"id": "s20081045747",
+"date": "2026-09-08",
+"start": 1788815400000,
+"type": "running",
+"distance": 4005,
+"moving": 1569,
+"hr": 138,
+"elev": 10
+},
+{
+"id": "s20067708348",
+"date": "2026-09-07",
+"start": 1788735000000,
+"type": "running",
+"distance": 4165,
+"moving": 1759,
+"hr": 143,
+"elev": 120
+},
+{
+"id": "s20061311386",
+"date": "2026-09-06",
+"start": 1788697200000,
+"type": "running",
+"distance": 5225,
+"moving": 1782,
+"hr": 135,
+"elev": 72
+},
+{
+"id": "s20061311964",
+"date": "2026-09-05",
+"start": 1788572400000,
+"type": "running",
+"distance": 7637,
+"moving": 3300,
+"hr": 134,
+"elev": 176
+},
+{
+"id": "s20034640251",
+"date": "2026-09-04",
+"start": 1788518400000,
+"type": "running",
+"distance": 12748,
+"moving": 5313,
+"hr": 137,
+"elev": 267
+},
+{
+"id": "s20026040260",
+"date": "2026-09-04",
+"start": 1788469200000,
+"type": "running",
+"distance": 4474,
+"moving": 1929,
+"hr": 134,
+"elev": 69
+},
+{
+"id": "s20025237134",
+"date": "2026-09-03",
+"start": 1788383400000,
+"type": "running",
+"distance": 7248,
+"moving": 2567,
+"hr": 136,
+"elev": 58
+},
+{
+"id": "s20011193312",
+"date": "2026-09-02",
+"start": 1788347400000,
+"type": "running",
+"distance": 5582,
+"moving": 1891,
+"hr": 139,
+"elev": 80
+},
+{
+"id": "s19997261601",
+"date": "2026-09-02",
+"start": 1788296400000,
+"type": "running",
+"distance": 7267,
+"moving": 3939,
+"hr": 101,
+"elev": 149
+},
+{
+"id": "s19981940758",
+"date": "2026-08-30",
+"start": 1788039000000,
+"type": "running",
+"distance": 6902,
+"moving": 2636,
+"hr": 136,
+"elev": 45
+},
+{
+"id": "s19949043125",
+"date": "2026-08-29",
+"start": 1788002400000,
+"type": "running",
+"distance": 2718,
+"moving": 1709,
+"hr": 142,
+"elev": null
+},
+{
+"id": "s19942704453",
+"date": "2026-08-29",
+"start": 1787955000000,
+"type": "running",
+"distance": 4712,
+"moving": 1813,
+"hr": 158,
+"elev": 63
+},
+{
+"id": "s19937093753",
+"date": "2026-08-28",
+"start": 1787893200000,
+"type": "running",
+"distance": 1522,
+"moving": 684,
+"hr": 117,
+"elev": 19
+},
+{
+"id": "s19937093838",
+"date": "2026-08-28",
+"start": 1787878200000,
+"type": "running",
+"distance": 5117,
+"moving": 2188,
+"hr": 139,
+"elev": 86
+},
+{
+"id": "s19909753493",
+"date": "2026-08-26",
+"start": 1787740800000,
+"type": "running",
+"distance": 4954,
+"moving": 2052,
+"hr": 130,
+"elev": 91
+},
+{
+"id": "s19894519146",
+"date": "2026-08-25",
+"start": 1787656200000,
+"type": "running",
+"distance": 11941,
+"moving": 6302,
+"hr": 124,
+"elev": 70
+},
+{
+"id": "s19871265297",
+"date": "2026-08-23",
+"start": 1787436600000,
+"type": "running",
+"distance": 5812,
+"moving": 2293,
+"hr": 143,
+"elev": 68
+},
+{
+"id": "s19857081952",
+"date": "2026-08-22",
+"start": 1787350200000,
+"type": "running",
+"distance": 6568,
+"moving": 2960,
+"hr": 122,
+"elev": 72
+},
+{
+"id": "s19829055694",
+"date": "2026-08-21",
+"start": 1787259000000,
+"type": "running",
+"distance": 3990,
+"moving": 1471,
+"hr": 132,
+"elev": 59
+},
+{
+"id": "s19809717634",
+"date": "2026-08-19",
+"start": 1787137800000,
+"type": "running",
+"distance": 5374,
+"moving": 1866,
+"hr": 152,
+"elev": 87
+},
+{
+"id": "s19788910104",
+"date": "2026-08-18",
+"start": 1787025600000,
+"type": "running",
+"distance": 4838,
+"moving": 1908,
+"hr": 132,
+"elev": 41
+},
+{
+"id": "s19744985206",
+"date": "2026-08-15",
+"start": 1786745400000,
+"type": "running",
+"distance": 8158,
+"moving": 3245,
+"hr": 132,
+"elev": 68
+},
+{
+"id": "s19703670772",
+"date": "2026-08-12",
+"start": 1786487400000,
+"type": "running",
+"distance": 6144,
+"moving": 2798,
+"hr": 139,
+"elev": 55
+},
+{
+"id": "s19677507645",
+"date": "2026-08-10",
+"start": 1786321800000,
+"type": "running",
+"distance": 5927,
+"moving": 3995,
+"hr": 124,
+"elev": 111
+},
+{
+"id": "s19646511977",
+"date": "2026-08-08",
+"start": 1786140600000,
+"type": "running",
+"distance": 5723,
+"moving": 1972,
+"hr": 136,
+"elev": 61
+},
+{
+"id": "s19611715978",
+"date": "2026-08-05",
+"start": 1785928200000,
+"type": "running",
+"distance": 6410,
+"moving": 2306,
+"hr": 147,
+"elev": 121
+},
+{
+"id": "s19548386165",
+"date": "2026-08-01",
+"start": 1785535800000,
+"type": "running",
+"distance": 7160,
+"moving": 2917,
+"hr": 136,
+"elev": 211
+},
+{
+"id": "s19543404819",
+"date": "2026-07-31",
+"start": 1785445200000,
+"type": "running",
+"distance": 5100,
+"moving": 2000,
+"hr": 166,
+"elev": 147
+},
+{
+"id": "s19528782052",
+"date": "2026-07-30",
+"start": 1785412800000,
+"type": "running",
+"distance": 6607,
+"moving": 2239,
+"hr": 140,
+"elev": 155
+},
+{
+"id": "s19514137502",
+"date": "2026-07-29",
+"start": 1785323400000,
+"type": "running",
+"distance": 5429,
+"moving": 1873,
+"hr": 147,
+"elev": 71
+},
+{
+"id": "s19479390719",
+"date": "2026-07-27",
+"start": 1785106800000,
+"type": "running",
+"distance": 4498,
+"moving": 2496,
+"hr": 134,
+"elev": 125
+},
+{
+"id": "s19466290572",
+"date": "2026-07-26",
+"start": 1785020400000,
+"type": "running",
+"distance": 5522,
+"moving": 2206,
+"hr": 142,
+"elev": 91
+},
+{
+"id": "s19451527033",
+"date": "2026-07-25",
+"start": 1784931000000,
+"type": "running",
+"distance": 5925,
+"moving": 2122,
+"hr": 148,
+"elev": 81
+},
+{
+"id": "s19416582149",
+"date": "2026-07-22",
+"start": 1784718600000,
+"type": "running",
+"distance": 5480,
+"moving": 1854,
+"hr": 148,
+"elev": 94
+},
+{
+"id": "s19355375414",
+"date": "2026-07-18",
+"start": 1784326200000,
+"type": "running",
+"distance": 5372,
+"moving": 2035,
+"hr": 150,
+"elev": 62
+},
+{
+"id": "s19288563679",
+"date": "2026-07-13",
+"start": 1783897800000,
+"type": "running",
+"distance": 4512,
+"moving": 1935,
+"hr": 136,
+"elev": 67
+},
+{
+"id": "s19275233291",
+"date": "2026-07-12",
+"start": 1783804800000,
+"type": "running",
+"distance": 15431,
+"moving": 5513,
+"hr": 155,
+"elev": 130
+},
+{
+"id": "s19230448260",
+"date": "2026-07-08",
+"start": 1783508400000,
+"type": "running",
+"distance": 5557,
+"moving": 1875,
+"hr": 148,
+"elev": 71
+},
+{
+"id": "s19215620053",
+"date": "2026-07-07",
+"start": 1783425600000,
+"type": "running",
+"distance": 5759,
+"moving": 2162,
+"hr": 165,
+"elev": 135
+},
+{
+"id": "s19151952857",
+"date": "2026-07-02",
+"start": 1782996600000,
+"type": "running",
+"distance": 4763,
+"moving": 2158,
+"hr": 143,
+"elev": 48
+},
+{
+"id": "s19136136421",
+"date": "2026-07-01",
+"start": 1782904200000,
+"type": "running",
+"distance": 5488,
+"moving": 1775,
+"hr": 167,
+"elev": 90
+},
+{
+"id": "s19078518823",
+"date": "2026-06-27",
+"start": 1782511800000,
+"type": "running",
+"distance": 4693,
+"moving": 1646,
+"hr": 146,
+"elev": 44
+},
+{
+"id": "s19071157148",
+"date": "2026-06-26",
+"start": 1782451200000,
+"type": "running",
+"distance": 5452,
+"moving": 2133,
+"hr": 155,
+"elev": 116
+},
+{
+"id": "s19071156736",
+"date": "2026-06-24",
+"start": 1782298800000,
+"type": "running",
+"distance": 5478,
+"moving": 1724,
+"hr": 164,
+"elev": 83
+},
+{
+"id": "s18998073080",
+"date": "2026-06-20",
+"start": 1781957400000,
+"type": "running",
+"distance": 5669,
+"moving": 2332,
+"hr": 136,
+"elev": 90
+},
+{
+"id": "s18950429273",
+"date": "2026-06-17",
+"start": 1781647800000,
+"type": "running",
+"distance": 4622,
+"moving": 1714,
+"hr": null,
+"elev": null
+},
+{
+"id": "s18923584193",
+"date": "2026-06-15",
+"start": 1781479200000,
+"type": "running",
+"distance": 4017,
+"moving": 1475,
+"hr": null,
+"elev": null
+},
+{
+"id": "s18899459237",
+"date": "2026-06-13",
+"start": 1781305800000,
+"type": "running",
+"distance": 4375,
+"moving": 2681,
+"hr": 150,
+"elev": 52
+},
+{
+"id": "s18885856948",
+"date": "2026-06-12",
+"start": 1781219400000,
+"type": "running",
+"distance": 4001,
+"moving": 1514,
+"hr": 144,
+"elev": 69
+},
+{
+"id": "s18866281330",
+"date": "2026-06-10",
+"start": 1781089800000,
+"type": "running",
+"distance": 4640,
+"moving": 1694,
+"hr": 136,
+"elev": 14
+},
+{
+"id": "s18804717428",
+"date": "2026-06-06",
+"start": 1780707600000,
+"type": "running",
+"distance": 5340,
+"moving": 2084,
+"hr": 148,
+"elev": 124
+},
+{
+"id": "s18794425094",
+"date": "2026-06-05",
+"start": 1780642200000,
+"type": "running",
+"distance": 9475,
+"moving": 3916,
+"hr": 144,
+"elev": 215
+},
+{
+"id": "s18735900559",
+"date": "2026-06-01",
+"start": 1780264200000,
+"type": "running",
+"distance": 5441,
+"moving": 1704,
+"hr": 138,
+"elev": 26
+},
+{
+"id": "s18721701716",
+"date": "2026-05-31",
+"start": 1780179600000,
+"type": "running",
+"distance": 7326,
+"moving": 2476,
+"hr": 142,
+"elev": 52
+},
+{
+"id": "s18602420951",
+"date": "2026-05-22",
+"start": 1779405600000,
+"type": "running",
+"distance": 3263,
+"moving": 2770,
+"hr": 127,
+"elev": 20
+},
+{
+"id": "s18554865539",
+"date": "2026-05-18",
+"start": 1779101400000,
+"type": "running",
+"distance": 4671,
+"moving": 2123,
+"hr": 121,
+"elev": 23
+},
+{
+"id": "s18549507344",
+"date": "2026-05-18",
+"start": 1779060000000,
+"type": "running",
+"distance": 5201,
+"moving": 1883,
+"hr": 133,
+"elev": 11
+},
+{
+"id": "s18549507331",
+"date": "2026-05-13",
+"start": 1778671200000,
+"type": "running",
+"distance": 5006,
+"moving": 1698,
+"hr": 135,
+"elev": 31
+},
+{
+"id": "s18458195025",
+"date": "2026-05-11",
+"start": 1778451600000,
+"type": "running",
+"distance": 4452,
+"moving": 1783,
+"hr": 129,
+"elev": 50
+},
+{
+"id": "s18432880892",
+"date": "2026-05-09",
+"start": 1778288400000,
+"type": "running",
+"distance": 5526,
+"moving": 2151,
+"hr": 136,
+"elev": 154
+},
+{
+"id": "s18431695775",
+"date": "2026-05-09",
+"start": 1778278200000,
+"type": "running",
+"distance": 4553,
+"moving": 1615,
+"hr": 147,
+"elev": 53
+},
+{
+"id": "s18397875962",
+"date": "2026-05-06",
+"start": 1778065800000,
+"type": "running",
+"distance": 5530,
+"moving": 1976,
+"hr": 140,
+"elev": 44
+},
+{
+"id": "s18371913175",
+"date": "2026-05-04",
+"start": 1777896000000,
+"type": "running",
+"distance": 9158,
+"moving": 3167,
+"hr": 131,
+"elev": 52
+},
+{
+"id": "s18305021653",
+"date": "2026-04-29",
+"start": 1777461000000,
+"type": "running",
+"distance": 5915,
+"moving": 2852,
+"hr": 155,
+"elev": 43
+},
+{
+"id": "s18291200389",
+"date": "2026-04-28",
+"start": 1777375800000,
+"type": "running",
+"distance": 6165,
+"moving": 2348,
+"hr": 144,
+"elev": 34
+},
+{
+"id": "s18265598804",
+"date": "2026-04-26",
+"start": 1777203000000,
+"type": "running",
+"distance": 8070,
+"moving": 2451,
+"hr": 153,
+"elev": 22
+},
+{
+"id": "s18210718034",
+"date": "2026-04-22",
+"start": 1776856200000,
+"type": "running",
+"distance": 5308,
+"moving": 2036,
+"hr": 139,
+"elev": 77
+},
+{
+"id": "s18183127255",
+"date": "2026-04-20",
+"start": 1776681000000,
+"type": "running",
+"distance": 9162,
+"moving": 2011,
+"hr": null,
+"elev": 111
+},
+{
+"id": "s18178732895",
+"date": "2026-04-20",
+"start": 1776640800000,
+"type": "running",
+"distance": 4390,
+"moving": 1384,
+"hr": 144,
+"elev": 5
+},
+{
+"id": "s18059912217",
+"date": "2026-04-11",
+"start": 1775858400000,
+"type": "running",
+"distance": 5665,
+"moving": 2165,
+"hr": 137,
+"elev": 68
+},
+{
+"id": "s18026283156",
+"date": "2026-04-08",
+"start": 1775646600000,
+"type": "running",
+"distance": 5488,
+"moving": 1775,
+"hr": 161,
+"elev": 44
+},
+{
+"id": "s17987784706",
+"date": "2026-04-05",
+"start": 1775388000000,
+"type": "running",
+"distance": 13812,
+"moving": 4582,
+"hr": 148,
+"elev": 24
+},
+{
+"id": "s17901108974",
+"date": "2026-03-29",
+"start": 1774784400000,
+"type": "running",
+"distance": 6000,
+"moving": 1902,
+"hr": 150,
+"elev": 20
+},
+{
+"id": "s17822654353",
+"date": "2026-03-23",
+"start": 1774218000000,
+"type": "running",
+"distance": 5301,
+"moving": 1753,
+"hr": 146,
+"elev": 25
+},
+{
+"id": "s17822654258",
+"date": "2026-03-21",
+"start": 1774045800000,
+"type": "running",
+"distance": 7820,
+"moving": 2903,
+"hr": 131,
+"elev": 37
+},
+{
+"id": "s17742085190",
+"date": "2026-03-16",
+"start": 1773663000000,
+"type": "running",
+"distance": 2722,
+"moving": 969,
+"hr": null,
+"elev": 37
+},
+{
+"id": "s17685855185",
+"date": "2026-03-11",
+"start": 1773227400000,
+"type": "running",
+"distance": 5521,
+"moving": 1829,
+"hr": 165,
+"elev": 76
+},
+{
+"id": "s17672661427",
+"date": "2026-03-10",
+"start": 1773144000000,
+"type": "running",
+"distance": 5404,
+"moving": 1939,
+"hr": 162,
+"elev": 21
+},
+{
+"id": "s17654905258",
+"date": "2026-03-09",
+"start": 1773010200000,
+"type": "running",
+"distance": 4575,
+"moving": 1600,
+"hr": 157,
+"elev": 34
+},
+{
+"id": "s17594498535",
+"date": "2026-03-04",
+"start": 1772578200000,
+"type": "running",
+"distance": 3340,
+"moving": 1163,
+"hr": null,
+"elev": 33
+},
+{
+"id": "s17516986986",
+"date": "2026-02-25",
+"start": 1772017200000,
+"type": "running",
+"distance": 5530,
+"moving": 1818,
+"hr": 160,
+"elev": 44
+},
+{
+"id": "s17493591859",
+"date": "2026-02-23",
+"start": 1771845600000,
+"type": "running",
+"distance": 8116,
+"moving": 2864,
+"hr": 162,
+"elev": 82
+},
+{
+"id": "s17411494573",
+"date": "2026-02-16",
+"start": 1771196400000,
+"type": "running",
+"distance": 7557,
+"moving": 2622,
+"hr": 148,
+"elev": 9
+},
+{
+"id": "s17400569956",
+"date": "2026-02-15",
+"start": 1771111800000,
+"type": "running",
+"distance": 4258,
+"moving": 1335,
+"hr": 145,
+"elev": 6
+},
+{
+"id": "s17378833655",
+"date": "2026-02-13",
+"start": 1770930600000,
+"type": "running",
+"distance": 4444,
+"moving": 2022,
+"hr": 155,
+"elev": 39
+},
+{
+"id": "s17312301866",
+"date": "2026-02-07",
+"start": 1770430800000,
+"type": "running",
+"distance": 1581,
+"moving": 818,
+"hr": 121,
+"elev": 9
+},
+{
+"id": "s17312113471",
+"date": "2026-02-07",
+"start": 1770422400000,
+"type": "running",
+"distance": 11596,
+"moving": 4303,
+"hr": 146,
+"elev": 264
+},
+{
+"id": "s17153993044",
+"date": "2026-01-24",
+"start": 1769202600000,
+"type": "running",
+"distance": 7439,
+"moving": 2259,
+"hr": 164,
+"elev": 29
+},
+{
+"id": "s17143694729",
+"date": "2026-01-23",
+"start": 1769116200000,
+"type": "running",
+"distance": 7718,
+"moving": 2456,
+"hr": 151,
+"elev": 46
+},
+{
+"id": "s17098861184",
+"date": "2026-01-19",
+"start": 1768775400000,
+"type": "running",
+"distance": 5618,
+"moving": 1973,
+"hr": 136,
+"elev": 65
+},
+{
+"id": "s17045574218",
+"date": "2026-01-14",
+"start": 1768389600000,
+"type": "running",
+"distance": 3614,
+"moving": 1238,
+"hr": 144,
+"elev": 12
+},
+{
+"id": "s17033782636",
+"date": "2026-01-13",
+"start": 1768302000000,
+"type": "running",
+"distance": 8642,
+"moving": 3307,
+"hr": 130,
+"elev": 67
+},
+{
+"id": "s16967335233",
+"date": "2026-01-07",
+"start": 1767787800000,
+"type": "running",
+"distance": 5504,
+"moving": 1997,
+"hr": 128,
+"elev": 49
+},
+{
+"id": "s16962617292",
+"date": "2026-01-07",
+"start": 1767743400000,
+"type": "running",
+"distance": 1160,
+"moving": 430,
+"hr": 137,
+"elev": 9
+},
+{
+"id": "s16962274808",
+"date": "2026-01-07",
+"start": 1767739200000,
+"type": "running",
+"distance": 4537,
+"moving": 1477,
+"hr": 137,
+"elev": 10
+},
+{
+"id": "s16873322600",
+"date": "2025-12-29",
+"start": 1767009600000,
+"type": "running",
+"distance": 6044,
+"moving": 1855,
+"hr": 139,
+"elev": 71
+},
+{
+"id": "s16869266609",
+"date": "2025-12-29",
+"start": 1766961600000,
+"type": "running",
+"distance": 5137,
+"moving": 1491,
+"hr": 148,
+"elev": 19
+},
+{
+"id": "s16818652233",
+"date": "2025-12-23",
+"start": 1766483400000,
+"type": "running",
+"distance": 3853,
+"moving": 1155,
+"hr": 122,
+"elev": 11
+},
+{
+"id": "s16817460344",
+"date": "2025-12-23",
+"start": 1766475000000,
+"type": "running",
+"distance": 5798,
+"moving": 1774,
+"hr": 138,
+"elev": 19
+},
+{
+"id": "s16776352598",
+"date": "2025-12-18",
+"start": 1766061000000,
+"type": "running",
+"distance": 6090,
+"moving": 1828,
+"hr": 147,
+"elev": 20
+},
+{
+"id": "s16735987119",
+"date": "2025-12-14",
+"start": 1765670400000,
+"type": "running",
+"distance": 7337,
+"moving": 2226,
+"hr": 153,
+"elev": 50
+},
+{
+"id": "s16726898012",
+"date": "2025-12-13",
+"start": 1765590000000,
+"type": "running",
+"distance": 3628,
+"moving": 1091,
+"hr": 128,
+"elev": 19
+},
+{
+"id": "s16702858508",
+"date": "2025-12-10",
+"start": 1765365000000,
+"type": "running",
+"distance": 7351,
+"moving": 2566,
+"hr": 135,
+"elev": 68
+},
+{
+"id": "s16680632130",
+"date": "2025-12-08",
+"start": 1765158000000,
+"type": "running",
+"distance": 3320,
+"moving": 1194,
+"hr": 131,
+"elev": 9
+},
+{
+"id": "s16680366358",
+"date": "2025-12-08",
+"start": 1765151400000,
+"type": "running",
+"distance": 4352,
+"moving": 1596,
+"hr": 137,
+"elev": 100
+},
+{
+"id": "s16637543807",
+"date": "2025-12-03",
+"start": 1764760200000,
+"type": "running",
+"distance": 5343,
+"moving": 1890,
+"hr": 140,
+"elev": 54
+},
+{
+"id": "s16618215175",
+"date": "2025-12-01",
+"start": 1764590400000,
+"type": "running",
+"distance": 5925,
+"moving": 1791,
+"hr": 152,
+"elev": 77
+},
+{
+"id": "s16615339860",
+"date": "2025-12-01",
+"start": 1764550800000,
+"type": "running",
+"distance": 6601,
+"moving": 2826,
+"hr": 141,
+"elev": 153
+},
+{
+"id": "s16595118468",
+"date": "2025-11-29",
+"start": 1764364200000,
+"type": "running",
+"distance": 5301,
+"moving": 2934,
+"hr": 115,
+"elev": 31
+},
+{
+"id": "s16586632801",
+"date": "2025-11-28",
+"start": 1764277200000,
+"type": "running",
+"distance": 10147,
+"moving": 3724,
+"hr": 109,
+"elev": 137
+},
+{
+"id": "s16562205345",
+"date": "2025-11-25",
+"start": 1764072000000,
+"type": "running",
+"distance": 5812,
+"moving": 2171,
+"hr": 125,
+"elev": 28
+},
+{
+"id": "s16551800465",
+"date": "2025-11-24",
+"start": 1763980200000,
+"type": "running",
+"distance": 6287,
+"moving": 2560,
+"hr": 134,
+"elev": 91
+},
+{
+"id": "s16514272524",
+"date": "2025-11-20",
+"start": 1763640000000,
+"type": "running",
+"distance": 5142,
+"moving": 1901,
+"hr": 129,
+"elev": 24
+},
+{
+"id": "s16482798923",
+"date": "2025-11-17",
+"start": 1763340000000,
+"type": "running",
+"distance": 4985,
+"moving": 1896,
+"hr": 134,
+"elev": 135
+},
+{
+"id": "s16462032463",
+"date": "2025-11-15",
+"start": 1763166600000,
+"type": "running",
+"distance": 15371,
+"moving": 5764,
+"hr": 133,
+"elev": 41
+},
+{
+"id": "s16455457116",
+"date": "2025-11-14",
+"start": 1763122200000,
+"type": "running",
+"distance": 5115,
+"moving": 1749,
+"hr": 141,
+"elev": 67
+},
+{
+"id": "s16435090070",
+"date": "2025-11-12",
+"start": 1762951800000,
+"type": "running",
+"distance": 1210,
+"moving": 346,
+"hr": 161,
+"elev": null
+},
+{
+"id": "s16434835060",
+"date": "2025-11-12",
+"start": 1762949400000,
+"type": "running",
+"distance": 4108,
+"moving": 1335,
+"hr": 149,
+"elev": 11
+},
+{
+"id": "s16418740722",
+"date": "2025-11-11",
+"start": 1762812000000,
+"type": "running",
+"distance": 6082,
+"moving": 2171,
+"hr": 127,
+"elev": 15
+},
+{
+"id": "s16413264780",
+"date": "2025-11-10",
+"start": 1762775400000,
+"type": "running",
+"distance": 4078,
+"moving": 1238,
+"hr": 146,
+"elev": 19
+},
+{
+"id": "s16403842343",
+"date": "2025-11-09",
+"start": 1762655400000,
+"type": "running",
+"distance": 4801,
+"moving": 1860,
+"hr": 129,
+"elev": 43
+},
+{
+"id": "s16362817281",
+"date": "2025-11-05",
+"start": 1762344600000,
+"type": "running",
+"distance": 5537,
+"moving": 2030,
+"hr": 143,
+"elev": 42
+},
+{
+"id": "s16350945598",
+"date": "2025-11-04",
+"start": 1762254000000,
+"type": "running",
+"distance": 7378,
+"moving": 2569,
+"hr": 142,
+"elev": 77
+},
+{
+"id": "s16340640910",
+"date": "2025-11-03",
+"start": 1762170000000,
+"type": "running",
+"distance": 5047,
+"moving": 1792,
+"hr": 143,
+"elev": 60
+},
+{
+"id": "s16337222453",
+"date": "2025-11-03",
+"start": 1762127400000,
+"type": "running",
+"distance": 1034,
+"moving": 337,
+"hr": 139,
+"elev": 2
+},
+{
+"id": "s16337067629",
+"date": "2025-11-03",
+"start": 1762124400000,
+"type": "running",
+"distance": 4106,
+"moving": 1195,
+"hr": 148,
+"elev": 26
+},
+{
+"id": "s16315648237",
+"date": "2025-11-01",
+"start": 1761945000000,
+"type": "running",
+"distance": 6468,
+"moving": 2178,
+"hr": 140,
+"elev": 16
+},
+{
+"id": "s16271341101",
+"date": "2025-10-27",
+"start": 1761559800000,
+"type": "running",
+"distance": 12772,
+"moving": 4769,
+"hr": 136,
+"elev": 56
+},
+{
+"id": "s16237774040",
+"date": "2025-10-23",
+"start": 1761163200000,
+"type": "running",
+"distance": 4224,
+"moving": 1370,
+"hr": 143,
+"elev": 26
+},
+{
+"id": "s16199803747",
+"date": "2025-10-20",
+"start": 1760956800000,
+"type": "running",
+"distance": 2027,
+"moving": 801,
+"hr": 134,
+"elev": 5
+},
+{
+"id": "s16199809662",
+"date": "2025-10-20",
+"start": 1760954400000,
+"type": "running",
+"distance": 5497,
+"moving": 2127,
+"hr": 132,
+"elev": 62
+},
+{
+"id": "s16199803879",
+"date": "2025-10-20",
+"start": 1760917800000,
+"type": "running",
+"distance": 8331,
+"moving": 2691,
+"hr": 144,
+"elev": 48
+},
+{
+"id": "s16149119940",
+"date": "2025-10-15",
+"start": 1760532600000,
+"type": "running",
+"distance": 1811,
+"moving": 530,
+"hr": 165,
+"elev": 19
+},
+{
+"id": "s16149119964",
+"date": "2025-10-15",
+"start": 1760530200000,
+"type": "running",
+"distance": 4303,
+"moving": 1582,
+"hr": 142,
+"elev": 30
+},
+{
+"id": "s16127092266",
+"date": "2025-10-13",
+"start": 1760359800000,
+"type": "running",
+"distance": 4915,
+"moving": 1997,
+"hr": 128,
+"elev": 25
+},
+{
+"id": "s16100576231",
+"date": "2025-10-11",
+"start": 1760140200000,
+"type": "running",
+"distance": 2745,
+"moving": 1196,
+"hr": 128,
+"elev": 41
+},
+{
+"id": "s16100576118",
+"date": "2025-10-11",
+"start": 1760134200000,
+"type": "running",
+"distance": 5338,
+"moving": 2122,
+"hr": 125,
+"elev": 26
+},
+{
+"id": "s16095936557",
+"date": "2025-10-10",
+"start": 1760094600000,
+"type": "running",
+"distance": 10752,
+"moving": 4401,
+"hr": 128,
+"elev": 28
+},
+{
+"id": "s16050033287",
+"date": "2025-10-06",
+"start": 1759739400000,
+"type": "running",
+"distance": 6317,
+"moving": 2453,
+"hr": 135,
+"elev": 28
+},
+{
+"id": "s15986014591",
+"date": "2025-09-30",
+"start": 1759232400000,
+"type": "running",
+"distance": 2627,
+"moving": 1112,
+"hr": 133,
+"elev": 14
+},
+{
+"id": "s15985542691",
+"date": "2025-09-30",
+"start": 1759230000000,
+"type": "running",
+"distance": 5504,
+"moving": 1700,
+"hr": 148,
+"elev": 53
+},
+{
+"id": "s15940778164",
+"date": "2025-09-26",
+"start": 1758879600000,
+"type": "running",
+"distance": 7961,
+"moving": 2700,
+"hr": 139,
+"elev": 11
+},
+{
+"id": "s15921257960",
+"date": "2025-09-24",
+"start": 1758718800000,
+"type": "running",
+"distance": 1780,
+"moving": 586,
+"hr": 132,
+"elev": 21
+},
+{
+"id": "s15921258104",
+"date": "2025-09-24",
+"start": 1758715800000,
+"type": "running",
+"distance": 2094,
+"moving": 825,
+"hr": 137,
+"elev": 24
+},
+{
+"id": "s15921257950",
+"date": "2025-09-23",
+"start": 1758630600000,
+"type": "running",
+"distance": 1375,
+"moving": 490,
+"hr": 131,
+"elev": 6
+},
+{
+"id": "s15886674731",
+"date": "2025-09-21",
+"start": 1758450000000,
+"type": "running",
+"distance": 7034,
+"moving": 2558,
+"hr": 130,
+"elev": 51
+},
+{
+"id": "s15829812202",
+"date": "2025-09-16",
+"start": 1758021000000,
+"type": "running",
+"distance": 6281,
+"moving": 2510,
+"hr": 138,
+"elev": 57
+},
+{
+"id": "s15803248965",
+"date": "2025-09-14",
+"start": 1757810400000,
+"type": "running",
+"distance": 4387,
+"moving": 1663,
+"hr": 134,
+"elev": 34
+},
+{
+"id": "s15793258060",
+"date": "2025-09-13",
+"start": 1757745000000,
+"type": "running",
+"distance": 8458,
+"moving": 3140,
+"hr": 149,
+"elev": 43
+},
+{
+"id": "s15683943672",
+"date": "2025-09-03",
+"start": 1756901400000,
+"type": "running",
+"distance": 5001,
+"moving": 1822,
+"hr": 141,
+"elev": 30
+},
+{
+"id": "s15681932344",
+"date": "2025-09-02",
+"start": 1756812600000,
+"type": "running",
+"distance": 10027,
+"moving": 4224,
+"hr": 127,
+"elev": 13
+},
+{
+"id": "s15622546248",
+"date": "2025-08-29",
+"start": 1756430400000,
+"type": "running",
+"distance": 10228,
+"moving": 4003,
+"hr": 143,
+"elev": 83
+},
+{
+"id": "s15604501725",
+"date": "2025-08-27",
+"start": 1756296600000,
+"type": "running",
+"distance": 7178,
+"moving": 2425,
+"hr": 149,
+"elev": 56
+},
+{
+"id": "s15588951798",
+"date": "2025-08-26",
+"start": 1756189200000,
+"type": "running",
+"distance": 6893,
+"moving": 2568,
+"hr": 146,
+"elev": 38
+},
+{
+"id": "s15575796011",
+"date": "2025-08-25",
+"start": 1756076400000,
+"type": "running",
+"distance": 6061,
+"moving": 2353,
+"hr": 130,
+"elev": 55
+},
+{
+"id": "s15551949585",
+"date": "2025-08-23",
+"start": 1755902400000,
+"type": "running",
+"distance": 4617,
+"moving": 1905,
+"hr": 123,
+"elev": 22
+},
+{
+"id": "s15544063490",
+"date": "2025-08-22",
+"start": 1755843600000,
+"type": "running",
+"distance": 7843,
+"moving": 3378,
+"hr": 144,
+"elev": 181
+},
+{
+"id": "s15542359208",
+"date": "2025-08-22",
+"start": 1755824400000,
+"type": "running",
+"distance": 5616,
+"moving": 2311,
+"hr": 146,
+"elev": 28
+},
+{
+"id": "s15524326229",
+"date": "2025-08-20",
+"start": 1755694200000,
+"type": "running",
+"distance": 2798,
+"moving": 922,
+"hr": 159,
+"elev": 30
+},
+{
+"id": "s15524065677",
+"date": "2025-08-20",
+"start": 1755691800000,
+"type": "running",
+"distance": 5159,
+"moving": 1838,
+"hr": 146,
+"elev": 26
+},
+{
+"id": "s15495355511",
+"date": "2025-08-18",
+"start": 1755469800000,
+"type": "running",
+"distance": 4123,
+"moving": 1759,
+"hr": 139,
+"elev": 23
+},
+{
+"id": "s15489190105",
+"date": "2025-08-17",
+"start": 1755428400000,
+"type": "running",
+"distance": 9684,
+"moving": 3775,
+"hr": 140,
+"elev": 28
+},
+{
+"id": "s15483718368",
+"date": "2025-08-17",
+"start": 1755385800000,
+"type": "running",
+"distance": 5592,
+"moving": 2064,
+"hr": 144,
+"elev": 58
+},
+{
+"id": "s15444516176",
+"date": "2025-08-13",
+"start": 1755087000000,
+"type": "running",
+"distance": 5180,
+"moving": 1811,
+"hr": 152,
+"elev": 33
+},
+{
+"id": "s15415719281",
+"date": "2025-08-11",
+"start": 1754863800000,
+"type": "running",
+"distance": 5230,
+"moving": 1710,
+"hr": 145,
+"elev": 8
+},
+{
+"id": "s15393627543",
+"date": "2025-08-09",
+"start": 1754701200000,
+"type": "running",
+"distance": 4558,
+"moving": 1872,
+"hr": 136,
+"elev": 39
+},
+{
+"id": "s15393155704",
+"date": "2025-08-09",
+"start": 1754695800000,
+"type": "running",
+"distance": 3494,
+"moving": 1454,
+"hr": 124,
+"elev": 13
+},
+{
+"id": "s15375796614",
+"date": "2025-08-07",
+"start": 1754566200000,
+"type": "running",
+"distance": 5536,
+"moving": 2044,
+"hr": 138,
+"elev": 57
+},
+{
+"id": "s15365143721",
+"date": "2025-08-06",
+"start": 1754482200000,
+"type": "running",
+"distance": 5165,
+"moving": 1867,
+"hr": 150,
+"elev": 38
+},
+{
+"id": "s15336860939",
+"date": "2025-08-04",
+"start": 1754265600000,
+"type": "running",
+"distance": 5896,
+"moving": 1864,
+"hr": 156,
+"elev": 39
+},
+{
+"id": "s15324349154",
+"date": "2025-08-03",
+"start": 1754172600000,
+"type": "running",
+"distance": 8867,
+"moving": 3083,
+"hr": null,
+"elev": 136
+},
+{
+"id": "s15297268016",
+"date": "2025-07-31",
+"start": 1753963200000,
+"type": "running",
+"distance": 6819,
+"moving": 2449,
+"hr": 145,
+"elev": 68
+},
+{
+"id": "s15262884848",
+"date": "2025-07-28",
+"start": 1753704000000,
+"type": "running",
+"distance": 5620,
+"moving": 2125,
+"hr": 137,
+"elev": 58
+},
+{
+"id": "s15209323583",
+"date": "2025-07-23",
+"start": 1753272600000,
+"type": "running",
+"distance": 5175,
+"moving": 1851,
+"hr": 155,
+"elev": 30
+},
+{
+"id": "s15181556436",
+"date": "2025-07-21",
+"start": 1753049400000,
+"type": "running",
+"distance": 1003,
+"moving": 286,
+"hr": 155,
+"elev": 3
+},
+{
+"id": "s15181432940",
+"date": "2025-07-21",
+"start": 1753047000000,
+"type": "running",
+"distance": 4159,
+"moving": 1385,
+"hr": 136,
+"elev": 11
+},
+{
+"id": "s15163300179",
+"date": "2025-07-19",
+"start": 1752914400000,
+"type": "running",
+"distance": 6712,
+"moving": 2438,
+"hr": 143,
+"elev": 26
+},
+{
+"id": "s15152006572",
+"date": "2025-07-18",
+"start": 1752820800000,
+"type": "running",
+"distance": 5265,
+"moving": 1769,
+"hr": 147,
+"elev": 36
+},
+{
+"id": "s15105740542",
+"date": "2025-07-14",
+"start": 1752447600000,
+"type": "running",
+"distance": 4895,
+"moving": 1893,
+"hr": null,
+"elev": 23
+},
+{
+"id": "s15025342719",
+"date": "2025-07-06",
+"start": 1751803800000,
+"type": "running",
+"distance": 6122,
+"moving": 2565,
+"hr": 130,
+"elev": 37
+},
+{
+"id": "s14962019996",
+"date": "2025-06-30",
+"start": 1751279400000,
+"type": "running",
+"distance": 14255,
+"moving": 5564,
+"hr": 159,
+"elev": 68
+},
+{
+"id": "s14936445419",
+"date": "2025-06-28",
+"start": 1751062200000,
+"type": "running",
+"distance": 8533,
+"moving": 3549,
+"hr": 126,
+"elev": 33
+},
+{
+"id": "s14911299079",
+"date": "2025-06-25",
+"start": 1750854000000,
+"type": "running",
+"distance": 5166,
+"moving": 2043,
+"hr": 136,
+"elev": 32
+},
+{
+"id": "s14881088880",
+"date": "2025-06-22",
+"start": 1750596600000,
+"type": "running",
+"distance": 5014,
+"moving": 1782,
+"hr": 125,
+"elev": 11
+},
+{
+"id": "s14838510444",
+"date": "2025-06-18",
+"start": 1750248600000,
+"type": "running",
+"distance": 5166,
+"moving": 1664,
+"hr": 147,
+"elev": 28
+},
+{
+"id": "s14816690851",
+"date": "2025-06-16",
+"start": 1750073400000,
+"type": "running",
+"distance": 10721,
+"moving": 3584,
+"hr": 143,
+"elev": 33
+},
+{
+"id": "s14801944312",
+"date": "2025-06-15",
+"start": 1749947400000,
+"type": "running",
+"distance": 4545,
+"moving": 1538,
+"hr": 141,
+"elev": 4
+},
+{
+"id": "s14776564229",
+"date": "2025-06-12",
+"start": 1749732000000,
+"type": "running",
+"distance": 5639,
+"moving": 2135,
+"hr": 128,
+"elev": 14
+},
+{
+"id": "s14733240637",
+"date": "2025-06-08",
+"start": 1749381000000,
+"type": "running",
+"distance": 5125,
+"moving": 1692,
+"hr": 145,
+"elev": 13
+},
+{
+"id": "s14724572417",
+"date": "2025-06-07",
+"start": 1749290400000,
+"type": "running",
+"distance": 3896,
+"moving": 1399,
+"hr": 135,
+"elev": 34
+},
+{
+"id": "s14710197786",
+"date": "2025-06-06",
+"start": 1749165000000,
+"type": "running",
+"distance": 10986,
+"moving": 8900,
+"hr": null,
+"elev": 157
+},
+{
+"id": "s14682643461",
+"date": "2025-06-03",
+"start": 1748953200000,
+"type": "running",
+"distance": 5424,
+"moving": 2313,
+"hr": null,
+"elev": 123
+},
+{
+"id": "s14657193367",
+"date": "2025-06-01",
+"start": 1748735400000,
+"type": "running",
+"distance": 5004,
+"moving": 1571,
+"hr": null,
+"elev": 27
+},
+{
+"id": "s14550077329",
+"date": "2025-05-21",
+"start": 1747829400000,
+"type": "running",
+"distance": 5103,
+"moving": 1903,
+"hr": 142,
+"elev": 38
+},
+{
+"id": "s14527747916",
+"date": "2025-05-19",
+"start": 1747650600000,
+"type": "running",
+"distance": 8871,
+"moving": 3374,
+"hr": 137,
+"elev": 21
+},
+{
+"id": "s14524693581",
+"date": "2025-05-19",
+"start": 1747605600000,
+"type": "running",
+"distance": 6463,
+"moving": 2538,
+"hr": 119,
+"elev": 35
+},
+{
+"id": "s14477588426",
+"date": "2025-05-14",
+"start": 1747223400000,
+"type": "running",
+"distance": 5152,
+"moving": 1762,
+"hr": 149,
+"elev": 30
+},
+{
+"id": "s14477588461",
+"date": "2025-05-13",
+"start": 1747127400000,
+"type": "running",
+"distance": 6712,
+"moving": 2468,
+"hr": 138,
+"elev": 41
+},
+{
+"id": "s14404897992",
+"date": "2025-05-07",
+"start": 1746619800000,
+"type": "running",
+"distance": 5178,
+"moving": 1813,
+"hr": 143,
+"elev": 31
+},
+{
+"id": "s14389813734",
+"date": "2025-05-06",
+"start": 1746482400000,
+"type": "running",
+"distance": 9124,
+"moving": 3967,
+"hr": 129,
+"elev": 64
+},
+{
+"id": "s14310776585",
+"date": "2025-04-28",
+"start": 1745835600000,
+"type": "running",
+"distance": 10006,
+"moving": 3603,
+"hr": 119,
+"elev": 52
+},
+{
+"id": "s14280426659",
+"date": "2025-04-25",
+"start": 1745573400000,
+"type": "running",
+"distance": 7402,
+"moving": 3392,
+"hr": 136,
+"elev": 70
+},
+{
+"id": "s14262033432",
+"date": "2025-04-23",
+"start": 1745409000000,
+"type": "running",
+"distance": 5155,
+"moving": 1821,
+"hr": 134,
+"elev": 28
+},
+{
+"id": "s14248013824",
+"date": "2025-04-21",
+"start": 1745225400000,
+"type": "running",
+"distance": 4940,
+"moving": 2391,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14239990816",
+"date": "2025-04-21",
+"start": 1745225400000,
+"type": "running",
+"distance": 4940,
+"moving": 1697,
+"hr": 151,
+"elev": 54
+},
+{
+"id": "s14248013788",
+"date": "2025-04-19",
+"start": 1745026200000,
+"type": "running",
+"distance": 5534,
+"moving": 2068,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14239989251",
+"date": "2025-04-19",
+"start": 1745026200000,
+"type": "running",
+"distance": 5534,
+"moving": 1912,
+"hr": 149,
+"elev": 8
+},
+{
+"id": "s14248013748",
+"date": "2025-04-18",
+"start": 1744968600000,
+"type": "running",
+"distance": 9064,
+"moving": 4333,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14211931567",
+"date": "2025-04-18",
+"start": 1744968600000,
+"type": "running",
+"distance": 9064,
+"moving": 4047,
+"hr": 132,
+"elev": 45
+},
+{
+"id": "s14248013647",
+"date": "2025-04-16",
+"start": 1744806000000,
+"type": "running",
+"distance": 5167,
+"moving": 1802,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14193905512",
+"date": "2025-04-16",
+"start": 1744806000000,
+"type": "running",
+"distance": 5167,
+"moving": 1789,
+"hr": 145,
+"elev": 36
+},
+{
+"id": "s14248013576",
+"date": "2025-04-09",
+"start": 1744200600000,
+"type": "running",
+"distance": 5117,
+"moving": 1748,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14126357418",
+"date": "2025-04-09",
+"start": 1744200600000,
+"type": "running",
+"distance": 5117,
+"moving": 1748,
+"hr": 152,
+"elev": 29
+},
+{
+"id": "s14248013527",
+"date": "2025-04-09",
+"start": 1744153200000,
+"type": "running",
+"distance": 2622,
+"moving": 1176,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14121829283",
+"date": "2025-04-09",
+"start": 1744153200000,
+"type": "running",
+"distance": 2622,
+"moving": 1023,
+"hr": 139,
+"elev": 2
+},
+{
+"id": "s14248013467",
+"date": "2025-04-07",
+"start": 1744034400000,
+"type": "running",
+"distance": 1190,
+"moving": 471,
+"hr": 129,
+"elev": null
+},
+{
+"id": "s14106779763",
+"date": "2025-04-07",
+"start": 1744034400000,
+"type": "running",
+"distance": 1190,
+"moving": 399,
+"hr": 135,
+"elev": 2
+},
+{
+"id": "s14248013415",
+"date": "2025-04-07",
+"start": 1744023600000,
+"type": "running",
+"distance": 5743,
+"moving": 2327,
+"hr": 145,
+"elev": null
+},
+{
+"id": "s14105649743",
+"date": "2025-04-07",
+"start": 1744023600000,
+"type": "running",
+"distance": 5743,
+"moving": 2316,
+"hr": 145,
+"elev": 4
+},
+{
+"id": "s14248013382",
+"date": "2025-04-02",
+"start": 1743595800000,
+"type": "running",
+"distance": 5194,
+"moving": 1798,
+"hr": 143,
+"elev": null
+},
+{
+"id": "s14083960555",
+"date": "2025-04-02",
+"start": 1743595800000,
+"type": "running",
+"distance": 5194,
+"moving": 1798,
+"hr": null,
+"elev": null
+},
+{
+"id": "s14058067329",
+"date": "2025-04-02",
+"start": 1743595800000,
+"type": "running",
+"distance": 5194,
+"moving": 1796,
+"hr": 145,
+"elev": 31
+},
+{
+"id": "s14083960568",
+"date": "2025-03-30",
+"start": 1743339000000,
+"type": "running",
+"distance": 4767,
+"moving": 2301,
+"hr": 130,
+"elev": null
+},
+{
+"id": "s14030098150",
+"date": "2025-03-30",
+"start": 1743339000000,
+"type": "running",
+"distance": 4767,
+"moving": 2272,
+"hr": 134,
+"elev": 83
+},
+{
+"id": "s14016445313",
+"date": "2025-03-29",
+"start": 1743207600000,
+"type": "running",
+"distance": 14006,
+"moving": 10218,
+"hr": 103,
+"elev": 253
+},
+{
+"id": "s14083960422",
+"date": "2025-03-26",
+"start": 1742991600000,
+"type": "running",
+"distance": 5159,
+"moving": 1844,
+"hr": 136,
+"elev": null
+},
+{
+"id": "s14009378104",
+"date": "2025-03-26",
+"start": 1742991600000,
+"type": "running",
+"distance": 5159,
+"moving": 1844,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13992093857",
+"date": "2025-03-26",
+"start": 1742991600000,
+"type": "running",
+"distance": 5159,
+"moving": 1783,
+"hr": 142,
+"elev": 31
+},
+{
+"id": "s14009378055",
+"date": "2025-03-22",
+"start": 1742642400000,
+"type": "running",
+"distance": 5144,
+"moving": 2483,
+"hr": 126,
+"elev": null
+},
+{
+"id": "s13953284749",
+"date": "2025-03-22",
+"start": 1742642400000,
+"type": "running",
+"distance": 5144,
+"moving": 2189,
+"hr": 132,
+"elev": 27
+},
+{
+"id": "s14009377953",
+"date": "2025-03-12",
+"start": 1741781400000,
+"type": "running",
+"distance": 5141,
+"moving": 1809,
+"hr": 141,
+"elev": null
+},
+{
+"id": "s13866628479",
+"date": "2025-03-12",
+"start": 1741781400000,
+"type": "running",
+"distance": 5141,
+"moving": 1809,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13861317632",
+"date": "2025-03-12",
+"start": 1741781400000,
+"type": "running",
+"distance": 5141,
+"moving": 1806,
+"hr": 143,
+"elev": 29
+},
+{
+"id": "s13866628399",
+"date": "2025-03-11",
+"start": 1741689000000,
+"type": "running",
+"distance": 7503,
+"moving": 2821,
+"hr": 145,
+"elev": null
+},
+{
+"id": "s13850852083",
+"date": "2025-03-11",
+"start": 1741689000000,
+"type": "running",
+"distance": 7503,
+"moving": 2650,
+"hr": 150,
+"elev": 4
+},
+{
+"id": "s13866628287",
+"date": "2025-03-10",
+"start": 1741609800000,
+"type": "running",
+"distance": 4082,
+"moving": 1705,
+"hr": 131,
+"elev": null
+},
+{
+"id": "s13842267320",
+"date": "2025-03-10",
+"start": 1741609800000,
+"type": "running",
+"distance": 4082,
+"moving": 1573,
+"hr": 135,
+"elev": 13
+},
+{
+"id": "s13866628130",
+"date": "2025-03-09",
+"start": 1741474200000,
+"type": "running",
+"distance": 5994,
+"moving": 2664,
+"hr": 124,
+"elev": null
+},
+{
+"id": "s13838609717",
+"date": "2025-03-09",
+"start": 1741474200000,
+"type": "running",
+"distance": 5994,
+"moving": 2463,
+"hr": 124,
+"elev": 26
+},
+{
+"id": "s13866628025",
+"date": "2025-02-24",
+"start": 1740400800000,
+"type": "running",
+"distance": 5308,
+"moving": 1835,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13746100742",
+"date": "2025-02-24",
+"start": 1740400800000,
+"type": "running",
+"distance": 5308,
+"moving": 1835,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13713421991",
+"date": "2025-02-24",
+"start": 1740400800000,
+"type": "running",
+"distance": 5308,
+"moving": 1688,
+"hr": 136,
+"elev": 17
+},
+{
+"id": "s13746100652",
+"date": "2025-02-19",
+"start": 1739967000000,
+"type": "running",
+"distance": 5155,
+"moving": 2046,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13668984549",
+"date": "2025-02-19",
+"start": 1739967000000,
+"type": "running",
+"distance": 5155,
+"moving": 2042,
+"hr": 144,
+"elev": 31
+},
+{
+"id": "s13746100545",
+"date": "2025-02-16",
+"start": 1739707200000,
+"type": "running",
+"distance": 5277,
+"moving": 1843,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13642164022",
+"date": "2025-02-16",
+"start": 1739707200000,
+"type": "running",
+"distance": 5277,
+"moving": 1644,
+"hr": 141,
+"elev": 14
+},
+{
+"id": "s13746100466",
+"date": "2025-02-12",
+"start": 1739362200000,
+"type": "running",
+"distance": 5145,
+"moving": 1706,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13615504024",
+"date": "2025-02-12",
+"start": 1739362200000,
+"type": "running",
+"distance": 5145,
+"moving": 1706,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13607803430",
+"date": "2025-02-12",
+"start": 1739362200000,
+"type": "running",
+"distance": 5145,
+"moving": 1706,
+"hr": 151,
+"elev": 31
+},
+{
+"id": "s13615503890",
+"date": "2025-02-11",
+"start": 1739251800000,
+"type": "running",
+"distance": 11084,
+"moving": 8122,
+"hr": 150,
+"elev": null
+},
+{
+"id": "s13596929318",
+"date": "2025-02-11",
+"start": 1739251800000,
+"type": "running",
+"distance": 11084,
+"moving": 3944,
+"hr": 147,
+"elev": 24
+},
+{
+"id": "s13615503498",
+"date": "2025-02-08",
+"start": 1739015400000,
+"type": "running",
+"distance": 5019,
+"moving": 1815,
+"hr": 149,
+"elev": null
+},
+{
+"id": "s13572074091",
+"date": "2025-02-08",
+"start": 1739015400000,
+"type": "running",
+"distance": 5019,
+"moving": 1742,
+"hr": 149,
+"elev": 15
+},
+{
+"id": "s13615503129",
+"date": "2025-02-03",
+"start": 1738536000000,
+"type": "running",
+"distance": 5320,
+"moving": 2226,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13524134976",
+"date": "2025-02-03",
+"start": 1738536000000,
+"type": "running",
+"distance": 5320,
+"moving": 2034,
+"hr": 132,
+"elev": 18
+},
+{
+"id": "s13500594788",
+"date": "2025-01-31",
+"start": 1738321800000,
+"type": "running",
+"distance": 1913,
+"moving": 2450,
+"hr": 91,
+"elev": null
+},
+{
+"id": "s13615503029",
+"date": "2025-01-30",
+"start": 1738238400000,
+"type": "running",
+"distance": 5159,
+"moving": 2510,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13492297530",
+"date": "2025-01-30",
+"start": 1738238400000,
+"type": "running",
+"distance": 5159,
+"moving": 1829,
+"hr": 147,
+"elev": 17
+},
+{
+"id": "s13615502675",
+"date": "2025-01-23",
+"start": 1737629400000,
+"type": "running",
+"distance": 1455,
+"moving": 921,
+"hr": 122,
+"elev": null
+},
+{
+"id": "s13430395973",
+"date": "2025-01-23",
+"start": 1737629400000,
+"type": "running",
+"distance": 1455,
+"moving": 921,
+"hr": 122,
+"elev": null
+},
+{
+"id": "s13615502586",
+"date": "2025-01-20",
+"start": 1737373200000,
+"type": "running",
+"distance": 5258,
+"moving": 2027,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13411543981",
+"date": "2025-01-20",
+"start": 1737373200000,
+"type": "running",
+"distance": 5258,
+"moving": 2027,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13404630181",
+"date": "2025-01-20",
+"start": 1737373200000,
+"type": "running",
+"distance": 5258,
+"moving": 1822,
+"hr": 139,
+"elev": 14
+},
+{
+"id": "s13411543914",
+"date": "2025-01-14",
+"start": 1736842200000,
+"type": "running",
+"distance": 2960,
+"moving": 1166,
+"hr": 126,
+"elev": null
+},
+{
+"id": "s13350037988",
+"date": "2025-01-14",
+"start": 1736842200000,
+"type": "running",
+"distance": 2960,
+"moving": 1166,
+"hr": 127,
+"elev": null
+},
+{
+"id": "s13411543887",
+"date": "2025-01-13",
+"start": 1736728800000,
+"type": "running",
+"distance": 3141,
+"moving": 9022,
+"hr": 136,
+"elev": null
+},
+{
+"id": "s13348869364",
+"date": "2025-01-13",
+"start": 1736728800000,
+"type": "running",
+"distance": 3141,
+"moving": 9022,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13340314145",
+"date": "2025-01-13",
+"start": 1736728800000,
+"type": "running",
+"distance": 3141,
+"moving": 1141,
+"hr": 139,
+"elev": 10
+},
+{
+"id": "s13348869297",
+"date": "2025-01-06",
+"start": 1736162400000,
+"type": "running",
+"distance": 4413,
+"moving": 2160,
+"hr": 128,
+"elev": null
+},
+{
+"id": "s13280355777",
+"date": "2025-01-06",
+"start": 1736162400000,
+"type": "running",
+"distance": 4413,
+"moving": 1785,
+"hr": 126,
+"elev": 69
+},
+{
+"id": "s13348869213",
+"date": "2024-12-30",
+"start": 1735520400000,
+"type": "running",
+"distance": 2575,
+"moving": 1182,
+"hr": 120,
+"elev": null
+},
+{
+"id": "s13220347857",
+"date": "2024-12-30",
+"start": 1735520400000,
+"type": "running",
+"distance": 2575,
+"moving": 1082,
+"hr": 125,
+"elev": 22
+},
+{
+"id": "s13348869195",
+"date": "2024-12-17",
+"start": 1734433800000,
+"type": "running",
+"distance": 10007,
+"moving": 5467,
+"hr": 124,
+"elev": null
+},
+{
+"id": "s13146075723",
+"date": "2024-12-17",
+"start": 1734433800000,
+"type": "running",
+"distance": 10007,
+"moving": 5467,
+"hr": 124,
+"elev": null
+},
+{
+"id": "s13134309636",
+"date": "2024-12-17",
+"start": 1734433800000,
+"type": "running",
+"distance": 10007,
+"moving": 3699,
+"hr": 134,
+"elev": 32
+},
+{
+"id": "s13146075633",
+"date": "2024-12-14",
+"start": 1734172800000,
+"type": "running",
+"distance": 6054,
+"moving": 2928,
+"hr": 128,
+"elev": null
+},
+{
+"id": "s13117673091",
+"date": "2024-12-14",
+"start": 1734172800000,
+"type": "running",
+"distance": 6054,
+"moving": 2928,
+"hr": 128,
+"elev": null
+},
+{
+"id": "s13113182722",
+"date": "2024-12-14",
+"start": 1734172800000,
+"type": "running",
+"distance": 6054,
+"moving": 1995,
+"hr": 139,
+"elev": 23
+},
+{
+"id": "s13117673081",
+"date": "2024-12-07",
+"start": 1733526600000,
+"type": "running",
+"distance": 12666,
+"moving": 12934,
+"hr": 92,
+"elev": null
+},
+{
+"id": "s13062571918",
+"date": "2024-12-07",
+"start": 1733526600000,
+"type": "running",
+"distance": 12666,
+"moving": 7645,
+"hr": null,
+"elev": 559
+},
+{
+"id": "s13117672693",
+"date": "2024-12-06",
+"start": 1733485200000,
+"type": "running",
+"distance": 5439,
+"moving": 1997,
+"hr": 140,
+"elev": null
+},
+{
+"id": "s13058355674",
+"date": "2024-12-06",
+"start": 1733485200000,
+"type": "running",
+"distance": 5439,
+"moving": 1997,
+"hr": 142,
+"elev": 59
+},
+{
+"id": "s13117672695",
+"date": "2024-12-04",
+"start": 1733313600000,
+"type": "running",
+"distance": 5156,
+"moving": 1724,
+"hr": 139,
+"elev": null
+},
+{
+"id": "s13044713982",
+"date": "2024-12-04",
+"start": 1733313600000,
+"type": "running",
+"distance": 5156,
+"moving": 1721,
+"hr": 144,
+"elev": 32
+},
+{
+"id": "s13117672634",
+"date": "2024-12-02",
+"start": 1733138400000,
+"type": "running",
+"distance": 11071,
+"moving": 6378,
+"hr": 110,
+"elev": null
+},
+{
+"id": "s13030336771",
+"date": "2024-12-02",
+"start": 1733138400000,
+"type": "running",
+"distance": 11071,
+"moving": 6378,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13030025002",
+"date": "2024-12-02",
+"start": 1733138400000,
+"type": "running",
+"distance": 11071,
+"moving": 4320,
+"hr": 124,
+"elev": 62
+},
+{
+"id": "s13030336564",
+"date": "2024-11-30",
+"start": 1732969800000,
+"type": "running",
+"distance": 5232,
+"moving": 2592,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13027617551",
+"date": "2024-11-30",
+"start": 1732969800000,
+"type": "running",
+"distance": 5232,
+"moving": 2592,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13027609531",
+"date": "2024-11-30",
+"start": 1732969800000,
+"type": "running",
+"distance": 5232,
+"moving": 2592,
+"hr": null,
+"elev": null
+},
+{
+"id": "s13015612069",
+"date": "2024-11-30",
+"start": 1732969800000,
+"type": "running",
+"distance": 5232,
+"moving": 2181,
+"hr": 126,
+"elev": 22
+},
+{
+"id": "s13027609493",
+"date": "2024-11-28",
+"start": 1732740600000,
+"type": "running",
+"distance": 5866,
+"moving": 2739,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12998027668",
+"date": "2024-11-28",
+"start": 1732740600000,
+"type": "running",
+"distance": 5866,
+"moving": 2130,
+"hr": 139,
+"elev": 45
+},
+{
+"id": "s13027609472",
+"date": "2024-11-27",
+"start": 1732709400000,
+"type": "running",
+"distance": 5090,
+"moving": 1635,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12994386314",
+"date": "2024-11-27",
+"start": 1732709400000,
+"type": "running",
+"distance": 5090,
+"moving": 1635,
+"hr": 126,
+"elev": 26
+},
+{
+"id": "s13027609425",
+"date": "2024-11-26",
+"start": 1732618800000,
+"type": "running",
+"distance": 10999,
+"moving": 6190,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12987055314",
+"date": "2024-11-26",
+"start": 1732618800000,
+"type": "running",
+"distance": 10999,
+"moving": 4212,
+"hr": 124,
+"elev": 24
+},
+{
+"id": "s13027609398",
+"date": "2024-11-23",
+"start": 1732321200000,
+"type": "running",
+"distance": 7075,
+"moving": 5966,
+"hr": 111,
+"elev": null
+},
+{
+"id": "s12961836823",
+"date": "2024-11-23",
+"start": 1732321200000,
+"type": "running",
+"distance": 7075,
+"moving": 2161,
+"hr": 150,
+"elev": 20
+},
+{
+"id": "s13027609369",
+"date": "2024-11-22",
+"start": 1732277400000,
+"type": "running",
+"distance": 10436,
+"moving": 5001,
+"hr": 143,
+"elev": null
+},
+{
+"id": "s12958184883",
+"date": "2024-11-22",
+"start": 1732277400000,
+"type": "running",
+"distance": 10436,
+"moving": 4291,
+"hr": 148,
+"elev": 71
+},
+{
+"id": "s13027609291",
+"date": "2024-11-22",
+"start": 1732222200000,
+"type": "running",
+"distance": 6644,
+"moving": 7213,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12954728179",
+"date": "2024-11-22",
+"start": 1732222200000,
+"type": "running",
+"distance": 6644,
+"moving": 2719,
+"hr": null,
+"elev": 70
+},
+{
+"id": "s13027609223",
+"date": "2024-11-21",
+"start": 1732186200000,
+"type": "running",
+"distance": 14540,
+"moving": 7555,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12951164657",
+"date": "2024-11-21",
+"start": 1732186200000,
+"type": "running",
+"distance": 14540,
+"moving": 5867,
+"hr": null,
+"elev": 25
+},
+{
+"id": "s13027609170",
+"date": "2024-11-18",
+"start": 1731883800000,
+"type": "running",
+"distance": 5458,
+"moving": 2228,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12925830177",
+"date": "2024-11-18",
+"start": 1731883800000,
+"type": "running",
+"distance": 5458,
+"moving": 2003,
+"hr": null,
+"elev": 14
+},
+{
+"id": "s13027609155",
+"date": "2024-11-16",
+"start": 1731725400000,
+"type": "running",
+"distance": 2823,
+"moving": 3781,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12910574699",
+"date": "2024-11-16",
+"start": 1731725400000,
+"type": "running",
+"distance": 2823,
+"moving": 1436,
+"hr": null,
+"elev": 68
+},
+{
+"id": "s13027609092",
+"date": "2024-11-16",
+"start": 1731712800000,
+"type": "running",
+"distance": 4683,
+"moving": 1778,
+"hr": null,
+"elev": null
+},
+{
+"id": "s12909776882",
+"date": "2024-11-16",
+"start": 1731712800000,
+"type": "running",
+"distance": 4683,
+"moving": 1769,
+"hr": null,
+"elev": 79
+},
+{
+"id": "s12883104622",
+"date": "2024-11-12",
+"start": 1731410400000,
+"type": "running",
+"distance": 9771,
+"moving": 4117,
+"hr": 149,
+"elev": 89
+},
+{
+"id": "s12872277879",
+"date": "2024-11-11",
+"start": 1731286200000,
+"type": "running",
+"distance": 4024,
+"moving": 1164,
+"hr": 152,
+"elev": 37
+},
+{
+"id": "s12851568746",
+"date": "2024-11-08",
+"start": 1731012000000,
+"type": "running",
+"distance": 2762,
+"moving": 3052,
+"hr": 111,
+"elev": 30
+},
+{
+"id": "s12844591490",
+"date": "2024-11-07",
+"start": 1730977800000,
+"type": "running",
+"distance": 17037,
+"moving": 6495,
+"hr": 149,
+"elev": 120
+},
+{
+"id": "s12833444180",
+"date": "2024-11-04",
+"start": 1730717400000,
+"type": "running",
+"distance": 6568,
+"moving": 2622,
+"hr": 135,
+"elev": 121
+},
+{
+"id": "s12788662901",
+"date": "2024-10-31",
+"start": 1730370000000,
+"type": "running",
+"distance": 1760,
+"moving": 751,
+"hr": 152,
+"elev": 20
+},
+{
+"id": "s12781517600",
+"date": "2024-10-30",
+"start": 1730289600000,
+"type": "running",
+"distance": 6255,
+"moving": 2022,
+"hr": 145,
+"elev": 52
+},
+{
+"id": "s12768791433",
+"date": "2024-10-28",
+"start": 1730068200000,
+"type": "running",
+"distance": 6610,
+"moving": 2901,
+"hr": 149,
+"elev": 73
+},
+{
+"id": "s12739470759",
+"date": "2024-10-25",
+"start": 1729842000000,
+"type": "running",
+"distance": 5232,
+"moving": 3167,
+"hr": null,
+"elev": 6
+},
+{
+"id": "s12739077286",
+"date": "2024-10-25",
+"start": 1729836600000,
+"type": "running",
+"distance": 5454,
+"moving": 2731,
+"hr": null,
+"elev": 276
+},
+{
+"id": "s12708487203",
+"date": "2024-10-21",
+"start": 1729512600000,
+"type": "running",
+"distance": 7400,
+"moving": 3376,
+"hr": 133,
+"elev": 110
+},
+{
+"id": "s12681853414",
+"date": "2024-10-18",
+"start": 1729197600000,
+"type": "running",
+"distance": 7272,
+"moving": 2782,
+"hr": 146,
+"elev": 142
+},
+{
+"id": "s12678099474",
+"date": "2024-10-17",
+"start": 1729167000000,
+"type": "running",
+"distance": 6959,
+"moving": 3025,
+"hr": 139,
+"elev": 68
+},
+{
+"id": "s12660192808",
+"date": "2024-10-15",
+"start": 1728989400000,
+"type": "running",
+"distance": 3323,
+"moving": 1416,
+"hr": null,
+"elev": 32
+},
+{
+"id": "s12625942273",
+"date": "2024-10-11",
+"start": 1728606600000,
+"type": "running",
+"distance": 5234,
+"moving": 3441,
+"hr": 91,
+"elev": 123
+},
+{
+"id": "s12594750490",
+"date": "2024-10-07",
+"start": 1728268200000,
+"type": "running",
+"distance": 1765,
+"moving": 1123,
+"hr": 120,
+"elev": 19
+},
+{
+"id": "s12594570115",
+"date": "2024-10-07",
+"start": 1728261600000,
+"type": "running",
+"distance": 8084,
+"moving": 2967,
+"hr": 158,
+"elev": 62
+},
+{
+"id": "s12576314594",
+"date": "2024-10-05",
+"start": 1728088800000,
+"type": "running",
+"distance": 2624,
+"moving": 1037,
+"hr": 155,
+"elev": 51
+},
+{
+"id": "s12556183494",
+"date": "2024-10-02",
+"start": 1727869800000,
+"type": "running",
+"distance": 6172,
+"moving": 2286,
+"hr": 138,
+"elev": 70
+},
+{
+"id": "s12539703000",
+"date": "2024-09-30",
+"start": 1727693400000,
+"type": "running",
+"distance": 5143,
+"moving": 3056,
+"hr": 124,
+"elev": 150
+},
+{
+"id": "s12507158573",
+"date": "2024-09-25",
+"start": 1727269800000,
+"type": "running",
+"distance": 1841,
+"moving": 744,
+"hr": 156,
+"elev": 25
+},
+{
+"id": "s12500446868",
+"date": "2024-09-25",
+"start": 1727266200000,
+"type": "running",
+"distance": 5470,
+"moving": 1870,
+"hr": 157,
+"elev": 73
+},
+{
+"id": "s12496619670",
+"date": "2024-09-23",
+"start": 1727091600000,
+"type": "running",
+"distance": 9868,
+"moving": 4127,
+"hr": 150,
+"elev": 59
+},
+{
+"id": "s12436884813",
+"date": "2024-09-18",
+"start": 1726606200000,
+"type": "running",
+"distance": 8154,
+"moving": 3367,
+"hr": 139,
+"elev": 87
+},
+{
+"id": "s12383552408",
+"date": "2024-09-11",
+"start": 1726054800000,
+"type": "running",
+"distance": 7315,
+"moving": 3100,
+"hr": 137,
+"elev": 75
+},
+{
+"id": "s12375769358",
+"date": "2024-09-10",
+"start": 1725973200000,
+"type": "running",
+"distance": 6989,
+"moving": 3015,
+"hr": null,
+"elev": 68
+},
+{
+"id": "s12362301356",
+"date": "2024-09-09",
+"start": 1725828600000,
+"type": "running",
+"distance": 5703,
+"moving": 2400,
+"hr": 144,
+"elev": 40
+},
+{
+"id": "s12354014582",
+"date": "2024-09-08",
+"start": 1725748800000,
+"type": "running",
+"distance": 10255,
+"moving": 4497,
+"hr": 160,
+"elev": 91
+},
+{
+"id": "s12353330843",
+"date": "2024-09-04",
+"start": 1725450600000,
+"type": "running",
+"distance": 2015,
+"moving": 832,
+"hr": 135,
+"elev": 42
+},
+{
+"id": "s12314710399",
+"date": "2024-09-03",
+"start": 1725365400000,
+"type": "running",
+"distance": 5084,
+"moving": 2459,
+"hr": 132,
+"elev": 50
+},
+{
+"id": "s12314121788",
+"date": "2024-09-03",
+"start": 1725360000000,
+"type": "running",
+"distance": 4530,
+"moving": 2205,
+"hr": 123,
+"elev": 59
+},
+{
+"id": "s12293851224",
+"date": "2024-09-01",
+"start": 1725147600000,
+"type": "running",
+"distance": 7966,
+"moving": 3829,
+"hr": 117,
+"elev": 32
+},
+{
+"id": "s12293450479",
+"date": "2024-08-28",
+"start": 1724847000000,
+"type": "running",
+"distance": 5784,
+"moving": 2360,
+"hr": 144,
+"elev": 70
+},
+{
+"id": "s12233771588",
+"date": "2024-08-25",
+"start": 1724537400000,
+"type": "running",
+"distance": 5151,
+"moving": 2578,
+"hr": 116,
+"elev": 51
+},
+{
+"id": "s12228981584",
+"date": "2024-08-24",
+"start": 1724493000000,
+"type": "running",
+"distance": 3246,
+"moving": 2597,
+"hr": 82,
+"elev": 20
+},
+{
+"id": "s12228194427",
+"date": "2024-08-23",
+"start": 1724408400000,
+"type": "running",
+"distance": 7686,
+"moving": 4731,
+"hr": 112,
+"elev": 131
+},
+{
+"id": "s12204708315",
+"date": "2024-08-21",
+"start": 1724242800000,
+"type": "running",
+"distance": 4810,
+"moving": 1821,
+"hr": 152,
+"elev": 28
+},
+{
+"id": "s12186575068",
+"date": "2024-08-19",
+"start": 1724061000000,
+"type": "running",
+"distance": 9363,
+"moving": 4645,
+"hr": 125,
+"elev": 82
+},
+{
+"id": "s12149650298",
+"date": "2024-08-15",
+"start": 1723674000000,
+"type": "running",
+"distance": 6565,
+"moving": 2697,
+"hr": 134,
+"elev": 88
+},
+{
+"id": "s12132007667",
+"date": "2024-08-12",
+"start": 1723468200000,
+"type": "running",
+"distance": 4542,
+"moving": 1864,
+"hr": 143,
+"elev": 55
+},
+{
+"id": "s12121242053",
+"date": "2024-08-11",
+"start": 1723380600000,
+"type": "running",
+"distance": 6286,
+"moving": 2809,
+"hr": 150,
+"elev": 97
+},
+{
+"id": "s12069075191",
+"date": "2024-08-05",
+"start": 1722861000000,
+"type": "running",
+"distance": 9662,
+"moving": 4645,
+"hr": 131,
+"elev": 80
+},
+{
+"id": "s12069072607",
+"date": "2024-08-04",
+"start": 1722771600000,
+"type": "running",
+"distance": 8059,
+"moving": 4846,
+"hr": 121,
+"elev": 150
+},
+{
+"id": "s11893123412",
+"date": "2024-07-15",
+"start": 1721040600000,
+"type": "running",
+"distance": 11731,
+"moving": 4091,
+"hr": 152,
+"elev": 69
+},
+{
+"id": "s11834435571",
+"date": "2024-07-08",
+"start": 1720402200000,
+"type": "running",
+"distance": 6006,
+"moving": 2113,
+"hr": 151,
+"elev": 86
+},
+{
+"id": "s11813702584",
+"date": "2024-07-05",
+"start": 1720173000000,
+"type": "running",
+"distance": 10205,
+"moving": 2941,
+"hr": 169,
+"elev": 121
+},
+{
+"id": "s10350855136",
+"date": "2023-12-09",
+"start": 1702089600000,
+"type": "running",
+"distance": 3989,
+"moving": 2414,
+"hr": 152,
+"elev": 37
+},
+{
+"id": "s10043133393",
+"date": "2023-10-15",
+"start": 1697370000000,
+"type": "running",
+"distance": 6134,
+"moving": 3583,
+"hr": 116,
+"elev": 70
+},
+{
+"id": "s10000882195",
+"date": "2023-10-08",
+"start": 1696771800000,
+"type": "running",
+"distance": 4511,
+"moving": 2878,
+"hr": null,
+"elev": 47
+},
+{
+"id": "s9911868682",
+"date": "2023-09-24",
+"start": 1695560400000,
+"type": "running",
+"distance": 3866,
+"moving": 2575,
+"hr": null,
+"elev": 21
+},
+{
+"id": "s9899079722",
+"date": "2023-09-22",
+"start": 1695390600000,
+"type": "running",
+"distance": 6293,
+"moving": 3744,
+"hr": null,
+"elev": 34
+},
+{
+"id": "s9826961548",
+"date": "2023-09-11",
+"start": 1694427600000,
+"type": "running",
+"distance": 2174,
+"moving": 1239,
+"hr": null,
+"elev": 62
+},
+{
+"id": "s9795520589",
+"date": "2023-09-06",
+"start": 1694007600000,
+"type": "running",
+"distance": 3846,
+"moving": 2383,
+"hr": null,
+"elev": 35
+},
+{
+"id": "s9785374534",
+"date": "2023-09-05",
+"start": 1693873800000,
+"type": "running",
+"distance": 4497,
+"moving": 2017,
+"hr": null,
+"elev": 55
+},
+{
+"id": "s9739544665",
+"date": "2023-08-28",
+"start": 1693228200000,
+"type": "running",
+"distance": 4998,
+"moving": 4626,
+"hr": 113,
+"elev": 133
+},
+{
+"id": "s9736781772",
+"date": "2023-08-28",
+"start": 1693227600000,
+"type": "running",
+"distance": 5593,
+"moving": 2977,
+"hr": null,
+"elev": 64
+},
+{
+"id": "s9715233772",
+"date": "2023-08-25",
+"start": 1692920400000,
+"type": "running",
+"distance": 3889,
+"moving": 1747,
+"hr": null,
+"elev": 43
+},
+{
+"id": "s9633314945",
+"date": "2023-08-12",
+"start": 1691845800000,
+"type": "running",
+"distance": 9479,
+"moving": 4940,
+"hr": null,
+"elev": 60
+},
+{
+"id": "s9524991190",
+"date": "2023-07-26",
+"start": 1690372800000,
+"type": "running",
+"distance": 6338,
+"moving": 3372,
+"hr": null,
+"elev": 34
+},
+{
+"id": "s9510676130",
+"date": "2023-07-24",
+"start": 1690183800000,
+"type": "running",
+"distance": 1779,
+"moving": 815,
+"hr": null,
+"elev": 15
+},
+{
+"id": "s9506294912",
+"date": "2023-07-23",
+"start": 1690116000000,
+"type": "running",
+"distance": 4464,
+"moving": 2004,
+"hr": null,
+"elev": 14
+},
+{
+"id": "s8795039509",
+"date": "2023-03-29",
+"start": 1680053400000,
+"type": "running",
+"distance": 1866,
+"moving": 1081,
+"hr": null,
+"elev": 127
+},
+{
+"id": "s8791205533",
+"date": "2023-03-28",
+"start": 1680005400000,
+"type": "running",
+"distance": 1444,
+"moving": 766,
+"hr": null,
+"elev": 19
+},
+{
+"id": "s8751992435",
+"date": "2023-03-21",
+"start": 1679402400000,
+"type": "running",
+"distance": 1792,
+"moving": 1070,
+"hr": null,
+"elev": 5
+},
+{
+"id": "s8717119692",
+"date": "2023-03-15",
+"start": 1678867200000,
+"type": "running",
+"distance": 1820,
+"moving": 1127,
+"hr": null,
+"elev": 35
+},
+{
+"id": "s8674915192",
+"date": "2023-03-07",
+"start": 1678188000000,
+"type": "running",
+"distance": 7872,
+"moving": 4487,
+"hr": null,
+"elev": 44
+},
+{
+"id": "s8565358911",
+"date": "2023-02-15",
+"start": 1676466600000,
+"type": "running",
+"distance": 3568,
+"moving": 2065,
+"hr": null,
+"elev": 15
+},
+{
+"id": "s8051019840",
+"date": "2022-11-01",
+"start": 1667278800000,
+"type": "running",
+"distance": 20250,
+"moving": 10179,
+"hr": null,
+"elev": 106
+},
+{
+"id": "s7933211109",
+"date": "2022-10-09",
+"start": 1665267600000,
+"type": "running",
+"distance": 12204,
+"moving": 4152,
+"hr": null,
+"elev": 56
+},
+{
+"id": "s7179144137",
+"date": "2022-05-21",
+"start": 1653139200000,
+"type": "running",
+"distance": 5366,
+"moving": 2703,
+"hr": null,
+"elev": 130
+},
+{
+"id": "s7163256705",
+"date": "2022-05-18",
+"start": 1652878200000,
+"type": "running",
+"distance": 7655,
+"moving": 3446,
+"hr": null,
+"elev": 180
+},
+{
+"id": "s4758491202",
+"date": "2021-02-09",
+"start": 1612846200000,
+"type": "running",
+"distance": 8187,
+"moving": 4882,
+"hr": null,
+"elev": 37
+},
+{
+"id": "s3498306244",
+"date": "2020-05-23",
+"start": 1590238200000,
+"type": "running",
+"distance": 2597,
+"moving": 1502,
+"hr": null,
+"elev": 11
+},
+{
+"id": "s3482555559",
+"date": "2020-05-20",
+"start": 1589978400000,
+"type": "running",
+"distance": 9289,
+"moving": 4943,
+"hr": null,
+"elev": 73
+}
+]
+}
