@@ -8,7 +8,7 @@ name: 최신 영상 · 러닝 기록 갱신
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # 6시간마다 (UTC 기준)
+    - cron: '17 * * * *' # 매시 17분 (가민 러닝이 1시간 안에 반영)
   workflow_dispatch: # Actions 탭에서 수동 실행
 
 permissions:
