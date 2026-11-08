@@ -211,8 +211,27 @@ function summarize(runs) {
     monthly.push({ month: key, km: +(sum(list) / 1000).toFixed(1), runs: list.length });
   }
 
+  // 주간: 월요일 시작, 한국 시간. 지난주 월요일 ~ 이번 주 일요일 14일.
+  const { d } = todayKST();
+  const today = new Date(Date.UTC(y, m - 1, d));
+  const dow = (today.getUTCDay() + 6) % 7; // 월=0 … 일=6
+  const lastMon = new Date(today.getTime() - (dow + 7) * 864e5);
+  const iso = (t) => t.toISOString().slice(0, 10);
+  const todayIso = iso(today);
+  const days = [];
+  for (let i = 0; i < 14; i++) {
+    const date = iso(new Date(lastMon.getTime() + i * 864e5));
+    const list = runs.filter((r) => r.date === date);
+    days.push({ date, km: +(sum(list) / 1000).toFixed(1), runs: list.length, today: date === todayIso, future: date > todayIso });
+  }
+  const week = (arr) => ({ from: arr[0].date, to: arr[6].date, km: +arr.reduce((a, x) => a + x.km, 0).toFixed(1), runs: arr.reduce((a, x) => a + x.runs, 0) });
+
   return {
     updated: new Date().toISOString(),
+    lastWeek: week(days.slice(0, 7)),
+    thisWeek: week(days.slice(7)),
+    days,
+    twoWeeks: runs.filter((r) => r.date >= days[0].date && r.date <= todayIso),
     month: { key: mm, km: +(sum(thisMonth) / 1000).toFixed(1), runs: thisMonth.length },
     year: { key: String(y), km: +(sum(thisYear) / 1000).toFixed(1), runs: thisYear.length },
     longest: longest && { date: longest.date, km: +(longest.distance / 1000).toFixed(2) },
@@ -229,20 +248,47 @@ function render(s) {
     return `      <div class="log-bar${cur}" title="${esc(x.month)} · ${x.km}km · ${x.runs}회"><span style="height:${h}%"></span><em>${+x.month.slice(5)}</em></div>`;
   }).join('\n');
 
-  const rows = s.recent.map((r) => `
+  const runRow = (r) => `
     <div class="log-run">
-      <time>${esc(r.date.replaceAll('-', '.'))}</time>
+      <time>${esc(r.date.replaceAll('-', '.'))} <small>${'일월화수목금토'[new Date(r.date + 'T00:00:00Z').getUTCDay()]}</small></time>
       <b class="num">${fmtKm(r.distance)}<small>km</small></b>
       <span><i>시간</i>${fmtDur(r.moving)}</span>
       <span><i>페이스</i>${fmtPace(r.moving, r.distance)}</span>
       <span><i>심박</i>${r.hr ?? '-'}</span>
-    </div>`).join('');
+    </div>`;
+  const rows = s.twoWeeks.length
+    ? s.twoWeeks.map(runRow).join('')
+    : '\n    <p class="log-none">최근 2주 동안 기록된 러닝이 없습니다.</p>';
+
+  const md = (iso) => `${+iso.slice(5, 7)}.${+iso.slice(8)}`;
+  const diff = +(s.thisWeek.km - s.lastWeek.km).toFixed(1);
+  const nudge = diff >= 0
+    ? `지난주보다 <b>${diff}km</b> 더 달렸어요`
+    : `지난주 기록까지 <b>${-diff}km</b> 남았어요`;
+  const dmax = Math.max(1, ...s.days.map((x) => x.km));
+  const dayCell = (x, i) => {
+    const cls = ['log-day', x.km ? 'on' : '', x.today ? 'today' : '', x.future ? 'future' : ''].filter(Boolean).join(' ');
+    return `<div class="${cls}" title="${esc(md(x.date))} · ${x.km}km"><i>${'월화수목금토일'[i % 7]}</i><span><span style="height:${Math.round((x.km / dmax) * 100)}%"></span></span><em>${x.km ? x.km : ''}</em></div>`;
+  };
+  const weekRow = (label, arr) => `
+      <div class="log-wrow"><strong>${label}</strong>${arr.map(dayCell).join('')}</div>`;
 
   const upd = new Intl.DateTimeFormat('ko-KR', {
     timeZone: 'Asia/Seoul', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
   }).format(new Date(s.updated));
 
   return `
+  <div class="log-week">
+    <div class="log-wk now"><span>이번 주 · ${md(s.thisWeek.from)}–${md(s.thisWeek.to)}</span><b class="num">${s.thisWeek.km}<small>km</small></b><em>${s.thisWeek.runs}회</em></div>
+    <div class="log-wk"><span>지난주 · ${md(s.lastWeek.from)}–${md(s.lastWeek.to)}</span><b class="num">${s.lastWeek.km}<small>km</small></b><em>${s.lastWeek.runs}회</em></div>
+    <p class="log-nudge">${nudge}</p>
+    <div class="log-days" aria-label="최근 2주 날짜별 거리">${weekRow('지난주', s.days.slice(0, 7))}${weekRow('이번 주', s.days.slice(7))}
+    </div>
+  </div>
+  <h3 class="log-sub">최근 2주 러닝</h3>
+  <div class="log-runs">${rows}
+  </div>
+  <h3 class="log-sub">누적 기록</h3>
   <div class="log-stats">
     <div><span>이번 달</span><b class="num">${s.month.km}<small>km</small></b><em>${s.month.runs}회</em></div>
     <div><span>${esc(s.year.key)}년 누적</span><b class="num">${s.year.km}<small>km</small></b><em>${s.year.runs}회</em></div>
@@ -250,8 +296,6 @@ function render(s) {
   </div>
   <div class="log-chart" aria-label="최근 ${s.monthly.length}개월 월별 거리">
 ${bars}
-  </div>
-  <div class="log-runs">${rows}
   </div>
   <p class="log-upd">가민 기록 자동 반영 · ${esc(upd)} 갱신</p>
   `;
@@ -311,7 +355,7 @@ async function main() {
 
   mkdirSync(join(HERE, 'data'), { recursive: true });
   const pub = ({ start, source, ...r }) => r; // 공개용: 출발 시각·기기 정보 제외
-  const out = { ...summary, recent: summary.recent.map(pub), runs: runs.map(pub) };
+  const out = { ...summary, recent: summary.recent.map(pub), twoWeeks: summary.twoWeeks.map(pub), runs: runs.map(pub) };
   writeFileSync(join(HERE, 'data', 'runs.json'), JSON.stringify(out, null, 1) + '\n');
   // 대시보드용: 러닝 한 건이 한 줄인 표 (Claude 러닝 대시보드가 매일 이 파일을 읽어 간다)
   writeFileSync(join(HERE, 'data', 'runs-rows.json'), JSON.stringify(toRows(runs)) + '\n');
