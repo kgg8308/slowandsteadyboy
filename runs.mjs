@@ -81,11 +81,12 @@ async function garminToken() {
   return (await res.text()).trim();
 }
 
-async function fetchGarmin() {
-  const token = await garminToken();
-  const all = [];
-  for (let start = 0; start < 5000; start += 100) {
-    const qs = new URLSearchParams({ start, limit: 100, startDate: CONFIG.since, endDate: todayStr() });
+// 가민 검색은 한 번에 넓은 기간을 주면 앞쪽 일부만 돌려준다(2026-11 확인: 6월 초에서 끊김).
+// 그래서 날짜 없이 최신순 한 번 + 60일 단위 구간으로 나눠 받아 activityId 로 합친다.
+async function garminPages(token, extra) {
+  const out = [];
+  for (let start = 0; start < 2000; start += 100) {
+    const qs = new URLSearchParams({ start, limit: 100, ...extra });
     const res = await fetch(`${CONFIG.garminBase}/activitylist-service/activities/search/activities?${qs}`, {
       headers: { Accept: 'application/json', Authorization: `Bearer ${token}` },
       signal: AbortSignal.timeout(30000),
@@ -93,11 +94,33 @@ async function fetchGarmin() {
     if (!res.ok) throw new Error(`가민 활동 조회 실패 HTTP ${res.status}`);
     const page = (await res.json()) ?? [];
     const list = Array.isArray(page) ? page : page.activityList ?? page.activities ?? [];
-    all.push(...list);
+    out.push(...list);
     if (list.length < 100) break;
   }
-  const newest = all.map((a) => String(a.startTimeLocal ?? '')).sort().pop();
-  console.log(`가민 활동 ${all.length}개, 가장 최근: ${newest || '없음'}`);
+  return out;
+}
+
+const addDays = (iso, n) => new Date(Date.parse(iso + 'T00:00:00Z') + n * 864e5).toISOString().slice(0, 10);
+
+async function fetchGarmin() {
+  const token = await garminToken();
+  const byId = new Map();
+  const keep = (list) => list.forEach((a) => a?.activityId != null && byId.set(String(a.activityId), a));
+  const newestOf = (list) => list.map((a) => String(a.startTimeLocal ?? '')).sort().pop() || '없음';
+
+  const latest = await garminPages(token, {});
+  keep(latest);
+  console.log(`가민 최신순 조회: ${latest.length}개, 가장 최근 ${newestOf(latest)}`);
+
+  const end = addDays(todayStr(), 1);
+  for (let from = CONFIG.since; from <= end; from = addDays(from, 60)) {
+    const to = addDays(from, 59) < end ? addDays(from, 59) : end;
+    const part = await garminPages(token, { startDate: from, endDate: to });
+    keep(part);
+    if (part.length) console.log(`  ${from}~${to}: ${part.length}개`);
+  }
+  const all = [...byId.values()];
+  console.log(`가민 활동 ${all.length}개, 가장 최근: ${newestOf(all)}`);
   return all;
 }
 
