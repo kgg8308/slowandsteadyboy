@@ -96,7 +96,8 @@ async function fetchGarmin() {
     all.push(...list);
     if (list.length < 100) break;
   }
-  if (all.length) console.log(`가민 응답 항목: ${Object.keys(all[0]).slice(0, 40).join(', ')}`);
+  const newest = all.map((a) => String(a.startTimeLocal ?? '')).sort().pop();
+  console.log(`가민 활동 ${all.length}개, 가장 최근: ${newest || '없음'}`);
   return all;
 }
 
