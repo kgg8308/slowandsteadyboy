@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:34:25.955Z",
+ "updated": "2026-11-10T17:53:37.110Z",
  "lastWeek": {
   "from": "2026-11-02",
   "to": "2026-11-08",
@@ -73,15 +73,15 @@
    "date": "2026-11-10",
    "km": 0,
    "runs": 0,
-   "today": true,
+   "today": false,
    "future": false
   },
   {
    "date": "2026-11-11",
    "km": 0,
    "runs": 0,
-   "today": false,
-   "future": true
+   "today": true,
+   "future": false
   },
   {
    "date": "2026-11-12",
