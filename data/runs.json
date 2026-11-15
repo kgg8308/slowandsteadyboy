@@ -1,67 +1,18 @@
 {
- "updated": "2026-11-14T19:12:19.561Z",
+ "updated": "2026-11-15T17:45:17.679Z",
  "lastWeek": {
-  "from": "2026-11-02",
-  "to": "2026-11-08",
-  "km": 21.2,
-  "runs": 3
- },
- "thisWeek": {
   "from": "2026-11-09",
   "to": "2026-11-15",
   "km": 4.1,
   "runs": 1
  },
+ "thisWeek": {
+  "from": "2026-11-16",
+  "to": "2026-11-22",
+  "km": 0,
+  "runs": 0
+ },
  "days": [
-  {
-   "date": "2026-11-02",
-   "km": 14.7,
-   "runs": 2,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-03",
-   "km": 6.5,
-   "runs": 1,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-04",
-   "km": 0,
-   "runs": 0,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-05",
-   "km": 0,
-   "runs": 0,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-06",
-   "km": 0,
-   "runs": 0,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-07",
-   "km": 0,
-   "runs": 0,
-   "today": false,
-   "future": false
-  },
-  {
-   "date": "2026-11-08",
-   "km": 0,
-   "runs": 0,
-   "today": false,
-   "future": false
-  },
   {
    "date": "2026-11-09",
    "km": 0,
@@ -108,8 +59,57 @@
    "date": "2026-11-15",
    "km": 0,
    "runs": 0,
+   "today": false,
+   "future": false
+  },
+  {
+   "date": "2026-11-16",
+   "km": 0,
+   "runs": 0,
    "today": true,
    "future": false
+  },
+  {
+   "date": "2026-11-17",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
+  },
+  {
+   "date": "2026-11-18",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
+  },
+  {
+   "date": "2026-11-19",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
+  },
+  {
+   "date": "2026-11-20",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
+  },
+  {
+   "date": "2026-11-21",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
+  },
+  {
+   "date": "2026-11-22",
+   "km": 0,
+   "runs": 0,
+   "today": false,
+   "future": true
   }
  ],
  "twoWeeks": [
@@ -121,33 +121,6 @@
    "moving": 1634,
    "hr": 137,
    "elev": 92
-  },
-  {
-   "id": "s20835168505",
-   "date": "2026-11-03",
-   "type": "running",
-   "distance": 6450,
-   "moving": 2233,
-   "hr": 135,
-   "elev": 36
-  },
-  {
-   "id": "s20828871127",
-   "date": "2026-11-02",
-   "type": "running",
-   "distance": 8778,
-   "moving": 3672,
-   "hr": 125,
-   "elev": 74
-  },
-  {
-   "id": "s20823535127",
-   "date": "2026-11-02",
-   "type": "running",
-   "distance": 5958,
-   "moving": 2199,
-   "hr": 131,
-   "elev": 81
   }
  ],
  "month": {
