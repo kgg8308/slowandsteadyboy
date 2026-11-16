@@ -102,8 +102,11 @@ async function garminPages(token, extra) {
 
 const addDays = (iso, n) => new Date(Date.parse(iso + 'T00:00:00Z') + n * 864e5).toISOString().slice(0, 10);
 
+const GARMIN = { token: '', raw: [] }; // 상세 리포트(latest-runs.json)용
+
 async function fetchGarmin() {
   const token = await garminToken();
+  GARMIN.token = token;
   const byId = new Map();
   const keep = (list) => list.forEach((a) => a?.activityId != null && byId.set(String(a.activityId), a));
   const newestOf = (list) => list.map((a) => String(a.startTimeLocal ?? '')).sort().pop() || '없음';
@@ -121,6 +124,7 @@ async function fetchGarmin() {
   }
   const all = [...byId.values()];
   console.log(`가민 활동 ${all.length}개, 가장 최근: ${newestOf(all)}`);
+  GARMIN.raw = all;
   return all;
 }
 
@@ -338,6 +342,171 @@ function toRows(runs) {
   }));
 }
 
+
+// ── 리뷰 메이커용 상세 리포트 ─────────────────────────────────────
+// 최근 가민 러닝 몇 개만 골라 심박·VO2max·케이던스·km 스플릿·코스 모양·날씨까지 담아
+// data/latest-runs.json 에 쓴다. 러닝 리뷰 메이커가 이 파일로 '가민 리포트' 한 장을 만든다.
+// 공개 원칙: 위도·경도·출발 시각은 쓰지 않는다. 코스는 앞뒤 300m 를 잘라낸 '모양'만 0~1 좌표로 남긴다.
+const LATEST_N = 5;
+const PRIVACY_TRIM_M = 300;
+
+// 자주 달리는 코스 이름 맞추기 (러닝홈피·리뷰 메이커의 코스 목록과 같은 이름)
+const PLACES = {
+  dongbaek: [35.1530, 129.1525],
+  gwangalli: [35.1532, 129.1186],
+  cheongsapo: [35.1606, 129.1918],
+};
+
+const toRad = (d) => (d * Math.PI) / 180;
+function meters(a, b) {
+  const R = 6371000;
+  const dLat = toRad(b[0] - a[0]), dLon = toRad(b[1] - a[1]);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a[0])) * Math.cos(toRad(b[0])) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function guessCourse(pts) {
+  if (!pts.length) return '';
+  const near = (p, m) => pts.some((q) => meters(q, p) < m);
+  const maxLon = Math.max(...pts.map((p) => p[1]));
+  const minLon = Math.min(...pts.map((p) => p[1]));
+  if (!near(PLACES.dongbaek, 700)) return '';
+  if (maxLon > 129.185 && near(PLACES.cheongsapo, 900)) return '동백섬 → 청사포 등대';
+  if (pts.some((p) => p[0] > 35.165 && p[1] < 129.14)) return '동백섬 ↔ 수영강 휴먼브릿지';
+  if (minLon < 129.125 && near(PLACES.gwangalli, 900)) return '동백섬 ↔ 광안리';
+  return '동백섬 BRC 코스';
+}
+
+// 앞뒤를 잘라내고 모양만 남긴다 (0~1, 가로세로 비율 유지)
+function routeShape(pts) {
+  if (pts.length < 10) return null;
+  const cum = [0];
+  for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + meters(pts[i - 1], pts[i]));
+  const total = cum[cum.length - 1];
+  if (total < PRIVACY_TRIM_M * 3) return null;
+  const mid = pts.filter((_, i) => cum[i] >= PRIVACY_TRIM_M && cum[i] <= total - PRIVACY_TRIM_M);
+  if (mid.length < 8) return null;
+  const lat0 = mid.reduce((a, p) => a + p[0], 0) / mid.length;
+  const xy = mid.map((p) => [p[1] * Math.cos(toRad(lat0)), -p[0]]);
+  const xs = xy.map((p) => p[0]), ys = xy.map((p) => p[1]);
+  const x0 = Math.min(...xs), y0 = Math.min(...ys);
+  const span = Math.max(Math.max(...xs) - x0, Math.max(...ys) - y0) || 1;
+  const step = Math.max(1, Math.ceil(xy.length / 160));
+  const out = xy.filter((_, i) => i % step === 0 || i === xy.length - 1)
+    .map((p) => [+((p[0] - x0) / span).toFixed(3), +((p[1] - y0) / span).toFixed(3)]);
+  return { w: +((Math.max(...xs) - x0) / span).toFixed(3), h: +((Math.max(...ys) - y0) / span).toFixed(3), pts: out };
+}
+
+async function garminGet(path) {
+  const res = await fetch(`${CONFIG.garminBase}${path}`, {
+    headers: { Accept: 'application/json', Authorization: `Bearer ${GARMIN.token}` },
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const t = await res.text();
+  return t ? JSON.parse(t) : null;
+}
+
+const num = (v, d = 0) => (v == null || Number.isNaN(+v) ? null : +(+v).toFixed(d));
+const daypart = (h) => (h < 5 ? '새벽' : h < 11 ? '아침' : h < 14 ? '점심' : h < 18 ? '오후' : h < 22 ? '저녁' : '밤');
+
+let fieldsLogged = false;
+async function detailOf(a) {
+  const id = String(a.activityId);
+  if (!fieldsLogged) { fieldsLogged = true; console.log('  가민 활동 항목: ' + Object.keys(a).sort().join(',')); }
+  const local = String(a.startTimeLocal ?? '');
+  const dist = a.distance || 0;
+  const moving = a.movingDuration || a.duration || 0;
+  const r = {
+    id,
+    date: local.slice(0, 10),
+    daypart: daypart(+local.slice(11, 13) || 0),
+    name: a.activityName || '',
+    location: a.locationName || '',
+    km: +(dist / 1000).toFixed(2),
+    moving: Math.round(moving),
+    elapsed: Math.round(a.elapsedDuration || a.duration || moving),
+    pace: dist ? Math.round(moving / (dist / 1000)) : null,
+    bestPace: a.maxSpeed ? Math.round(1000 / a.maxSpeed) : null,
+    hr: num(a.averageHR), hrMax: num(a.maxHR),
+    cadence: num(a.averageRunningCadenceInStepsPerMinute), cadenceMax: num(a.maxRunningCadenceInStepsPerMinute),
+    stride: a.avgStrideLength ? num(a.avgStrideLength) : null, // cm
+    elev: num(a.elevationGain), elevLoss: num(a.elevationLoss),
+    calories: num(a.calories),
+    vo2max: num(a.vO2MaxValue),
+    teAerobic: num(a.aerobicTrainingEffect, 1), teAnaerobic: num(a.anaerobicTrainingEffect, 1),
+    teLabel: a.trainingEffectLabel || '',
+    load: num(a.activityTrainingLoad),
+    power: num(a.avgPower),
+    steps: num(a.steps),
+    splits: [], course: '', route: null, weather: null,
+  };
+  const notes = [];
+  try {
+    const sp = await garminGet(`/activity-service/activity/${id}/splits`);
+    const laps = sp?.lapDTOs ?? [];
+    r.splits = laps.filter((l) => l.distance > 50).map((l) => ({
+      km: +(l.distance / 1000).toFixed(2),
+      pace: l.distance ? Math.round((l.movingDuration || l.duration) / (l.distance / 1000)) : null,
+      hr: num(l.averageHR),
+      elev: num(l.elevationGain),
+    }));
+  } catch (e) { notes.push(`splits ${e.message}`); }
+  try {
+    const d = await garminGet(`/activity-service/activity/${id}/details?maxChartSize=10&maxPolylineSize=600`);
+    const pts = (d?.geoPolylineDTO?.polyline ?? []).map((p) => [p.lat, p.lon]).filter((p) => p[0] && p[1]);
+    r.course = guessCourse(pts);
+    r.route = routeShape(pts);
+  } catch (e) { notes.push(`route ${e.message}`); }
+  try {
+    const w = await garminGet(`/weather-service/weather/${id}`);
+    if (w && w.temp != null) {
+      r.weather = {
+        c: Math.round(((w.temp - 32) * 5) / 9), // 가민 날씨는 화씨
+        desc: w.weatherTypeDTO?.desc || '',
+        humidity: num(w.relativeHumidity),
+        wind: w.windSpeed != null ? num(w.windSpeed * 0.44704, 1) : null, // mph → m/s
+      };
+    }
+  } catch (e) { notes.push(`weather ${e.message}`); }
+  if (r.vo2max == null && r.date) {
+    try {
+      const m = await garminGet(`/metrics-service/metrics/maxmet/daily/${r.date}/${r.date}`);
+      const g = (Array.isArray(m) ? m : [m]).map((x) => x?.generic).find(Boolean);
+      r.vo2max = num(g?.vo2MaxPreciseValue ?? g?.vo2MaxValue, g?.vo2MaxPreciseValue ? 1 : 0);
+    } catch (e) { notes.push(`vo2max ${e.message}`); }
+  }
+  console.log(`  상세 ${r.date} ${r.km}km: 스플릿 ${r.splits.length}개, 코스 ${r.course || (r.route ? '모양만' : '없음')}, VO2max ${r.vo2max ?? '-'}, 날씨 ${r.weather ? r.weather.c + '°C' : '-'}${notes.length ? ' · 못 받음: ' + notes.join(', ') : ''}`);
+  return r;
+}
+
+async function writeLatest() {
+  if (!GARMIN.token || !GARMIN.raw.length) return;
+  const path = join(HERE, 'data', 'latest-runs.json');
+  let prev = { runs: [] };
+  try { prev = JSON.parse(readFileSync(path, 'utf8')); } catch {}
+  const known = new Map((prev.runs || []).map((r) => [r.id, r]));
+  const recent = GARMIN.raw
+    .filter((a) => /running/.test(a.activityType?.typeKey ?? '') && a.distance >= CONFIG.minDistance)
+    .sort((a, b) => String(b.startTimeLocal).localeCompare(String(a.startTimeLocal)))
+    .slice(0, LATEST_N);
+  const runs = [];
+  for (const a of recent) {
+    const id = String(a.activityId);
+    const old = known.get(id);
+    // 이미 상세를 받은 러닝은 다시 묻지 않는다 (코스·스플릿 둘 다 있을 때)
+    if (old && old.splits?.length && (old.route || old.course)) { runs.push(old); continue; }
+    try { runs.push(await detailOf(a)); } catch (e) { console.error(`상세 실패 ${id}: ${e.message}`); if (old) runs.push(old); }
+  }
+  if (!runs.length) return;
+  const next = JSON.stringify({ runs }, null, 1);
+  const before = JSON.stringify({ runs: prev.runs || [] }, null, 1);
+  if (next === before) { console.log('상세 리포트에 바뀐 게 없습니다.'); return; }
+  mkdirSync(join(HERE, 'data'), { recursive: true });
+  writeFileSync(path, JSON.stringify({ updated: new Date().toISOString(), runs }, null, 1) + '\n');
+  console.log(`data/latest-runs.json 갱신: 최근 ${runs.length}개 (가장 최근 ${runs[0].date} ${runs[0].km}km)`);
+}
+
 async function main() {
   if (!CONFIG.garminKey && !CONFIG.apiKey && !CONFIG.fixture) {
     console.log('GARMIN_PERSONAL_API_KEY 가 없어 러닝 기록 갱신을 건너뜁니다.');
@@ -356,6 +525,8 @@ async function main() {
     console.log('러닝 기록이 없어 기존 내용을 그대로 둡니다.');
     return;
   }
+
+  try { await writeLatest(); } catch (e) { console.error(`상세 리포트를 만들지 못했습니다: ${e.message}`); }
 
   const summary = summarize(runs);
 
