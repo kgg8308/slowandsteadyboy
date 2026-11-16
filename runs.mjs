@@ -410,11 +410,38 @@ async function garminGet(path) {
 const num = (v, d = 0) => (v == null || Number.isNaN(+v) ? null : +(+v).toFixed(d));
 const daypart = (h) => (h < 5 ? '새벽' : h < 11 ? '아침' : h < 14 ? '점심' : h < 18 ? '오후' : h < 22 ? '저녁' : '밤');
 
+
+// 상세 시계열(거리·시간·심박·고도)로 1km 스플릿을 계산한다
+function splitsFrom(d) {
+  const desc = d?.metricDescriptors ?? [];
+  const idx = (k) => desc.find((m) => m.key === k)?.metricsIndex;
+  const iD = idx('sumDistance'), iT = idx('sumMovingDuration') ?? idx('sumDuration') ?? idx('sumElapsedDuration');
+  const iH = idx('directHeartRate'), iE = idx('directElevation');
+  const rows = (d?.activityDetailMetrics ?? []).map((m) => m.metrics);
+  if (iD == null || iT == null || rows.length < 10) return [];
+  const out = [];
+  let k = 1, t0 = 0, d0 = 0, hs = [], e0 = null, gain = 0, eLast = null;
+  for (const r of rows) {
+    const dist = r[iD], t = r[iT];
+    if (dist == null || t == null) continue;
+    const h = iH != null ? r[iH] : null, e = iE != null ? r[iE] : null;
+    if (h) hs.push(h);
+    if (e != null) { if (eLast != null && e > eLast) gain += e - eLast; eLast = e; }
+    if (dist >= k * 1000) {
+      out.push({ km: 1, pace: Math.round(((t - t0) / (dist - d0)) * 1000), hr: hs.length ? Math.round(hs.reduce((a, b) => a + b, 0) / hs.length) : null, elev: Math.round(gain) });
+      k++; t0 = t; d0 = dist; hs = []; gain = 0;
+    }
+  }
+  const last = rows[rows.length - 1];
+  const rest = (last?.[iD] ?? 0) - d0;
+  if (rest >= 150) out.push({ km: +(rest / 1000).toFixed(2), pace: Math.round(((last[iT] - t0) / rest) * 1000), hr: hs.length ? Math.round(hs.reduce((a, b) => a + b, 0) / hs.length) : null, elev: Math.round(gain) });
+  return out;
+}
+
 let fieldsLogged = false;
 async function detailOf(a) {
   const id = String(a.activityId);
-  if (!fieldsLogged) { fieldsLogged = true; console.log('  가민 활동 항목: ' + Object.keys(a).sort().join(',')); }
-  const local = String(a.startTimeLocal ?? '');
+    const local = String(a.startTimeLocal ?? '');
   const dist = a.distance || 0;
   const moving = a.movingDuration || a.duration || 0;
   const r = {
@@ -439,27 +466,22 @@ async function detailOf(a) {
     load: num(a.activityTrainingLoad),
     power: num(a.avgPower),
     steps: num(a.steps),
+    fastestKm: a.fastestSplit_1000 ? Math.round(a.fastestSplit_1000) : null,
+    zones: [1, 2, 3, 4, 5].map((z) => Math.round(a[`hrTimeInZone_${z}`] || 0)),
+    pr: !!(a.pr || a.isPR),
     splits: [], course: '', route: null, weather: null,
   };
   const notes = [];
   try {
-    const sp = await garminGet(`/activity-service/activity/${id}/splits`);
-    const laps = sp?.lapDTOs ?? [];
-    r.splits = laps.filter((l) => l.distance > 50).map((l) => ({
-      km: +(l.distance / 1000).toFixed(2),
-      pace: l.distance ? Math.round((l.movingDuration || l.duration) / (l.distance / 1000)) : null,
-      hr: num(l.averageHR),
-      elev: num(l.elevationGain),
-    }));
-  } catch (e) { notes.push(`splits ${e.message}`); }
-  try {
-    const d = await garminGet(`/activity-service/activity/${id}/details?maxChartSize=10&maxPolylineSize=600`);
+    const d = await garminGet(`/activity-service/activity/${id}/details?maxChartSize=3000&maxPolylineSize=600`);
     const pts = (d?.geoPolylineDTO?.polyline ?? []).map((p) => [p.lat, p.lon]).filter((p) => p[0] && p[1]);
     r.course = guessCourse(pts);
     r.route = routeShape(pts);
+    r.splits = splitsFrom(d);
+    if (!r.splits.length) notes.push('splits 계산 불가 (항목: ' + (d?.metricDescriptors ?? []).map((m) => m.key).join('/') + ')');
   } catch (e) { notes.push(`route ${e.message}`); }
   try {
-    const w = await garminGet(`/weather-service/weather/${id}`);
+    const w = await garminGet(`/activity-service/activity/${id}/weather`).catch(() => garminGet(`/weather-service/weather/${id}`));
     if (w && w.temp != null) {
       r.weather = {
         c: Math.round(((w.temp - 32) * 5) / 9), // 가민 날씨는 화씨
@@ -495,7 +517,7 @@ async function writeLatest() {
     const id = String(a.activityId);
     const old = known.get(id);
     // 이미 상세를 받은 러닝은 다시 묻지 않는다 (코스·스플릿 둘 다 있을 때)
-    if (old && old.splits?.length && (old.route || old.course)) { runs.push(old); continue; }
+    if (old && old.splits?.length && (old.route || old.course) && old.zones) { runs.push(old); continue; }
     try { runs.push(await detailOf(a)); } catch (e) { console.error(`상세 실패 ${id}: ${e.message}`); if (old) runs.push(old); }
   }
   if (!runs.length) return;
